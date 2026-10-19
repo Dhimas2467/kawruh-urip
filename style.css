@@ -1,53 +1,97 @@
-/* KAWRUH URIP — kayu gelap pada header, kayu terang pada latar halaman */
+
+/* KAWRUH URIP — Latar Kayu Terang dan Header Kayu Gelap */
+
 :root {
-  --gold: #e5c58d;
-  --gold-dark: #8d673b;
-  --ink: #352619;
-  --paper: #fff8eb;
-  --paper-border: #c6a879;
-  --green: #294333;
+  --emas: #e5c58d;
+  --emas-tua: #8d673b;
+  --teks: #382719;
+  --krem: #fff8eb;
+  --garis: #c6a879;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  color: var(--ink);
-  background: #c9a477 url("assets/latar-kayu-terang.jpg") center top / cover fixed;
+  color: var(--teks);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.7;
+
+  /* GAMBAR KAYU TERANG DI HALAMAN UTAMA */
+  background-color: #c9a477;
+  background-image: url("latar-kayu-terang.jpg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  background-attachment: scroll;
 }
+
+/* HEADER KAYU GELAP */
+
 .site-header {
   position: relative;
   isolation: isolate;
-  color: #fff4dc;
+  overflow: hidden;
   text-align: center;
-  background: #493222 url("assets/header-kayu-gelap.jpg") center 43% / cover;
-  border-bottom: 4px solid var(--gold-dark);
+  color: #fff4dc;
+
+  background-color: #493222;
+  background-image: url("header-kayu-gelap.jpg");
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+
+  border-bottom: 4px solid var(--emas-tua);
   box-shadow: 0 5px 18px #24170d55;
 }
+
 .header-shade {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, #24160bc2, #35201299 65%, #24160bc9);
+  background: linear-gradient(
+    180deg,
+    #24160b75,
+    #35201245 55%,
+    #24160b85
+  );
 }
-.header-content { padding: 34px 18px 0; }
+
+.header-content {
+  padding: 36px 18px 0;
+}
+
 .eyebrow {
   margin: 0 0 8px;
-  color: var(--gold);
-  font: 600 .72rem/1.5 Arial, sans-serif;
-  letter-spacing: .19em;
+  color: var(--emas);
+  font: 600 0.72rem/1.5 Arial, sans-serif;
+  letter-spacing: 0.19em;
 }
+
 h1 {
   margin: 0;
   color: #f1d49a;
   font-size: clamp(2rem, 7vw, 3.7rem);
   font-weight: 700;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   line-height: 1.2;
-  text-shadow: 0 2px 3px #160d07, 0 0 15px #0006;
+  text-shadow: 0 2px 4px #160d07, 0 0 15px #0006;
 }
-.tagline { margin: 12px auto 25px; max-width: 650px; color: #fff4df; }
+
+.tagline {
+  max-width: 650px;
+  margin: 12px auto 25px;
+  color: #fff4df;
+}
+
+/* NAVIGASI */
+
 .main-nav {
   display: flex;
   flex-wrap: wrap;
@@ -56,41 +100,76 @@ h1 {
   margin: 0 auto;
   padding: 11px 8px;
   border-top: 1px solid #e5c58d70;
-  background: #2a1b12a8;
-  font: 600 .9rem/1.4 Arial, sans-serif;
+  background: #2a1b12c9;
+  font: 600 0.9rem/1.4 Arial, sans-serif;
 }
+
 .main-nav a {
-  color: #f7e5c2;
-  text-decoration: none;
   padding: 8px 12px;
   border-radius: 4px;
+  color: #f7e5c2;
+  text-decoration: none;
 }
-.main-nav a:hover, .main-nav a:focus-visible {
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
   color: #fff;
   background: #8b663b99;
-  outline: none;
+  outline: 1px solid var(--emas);
 }
-.page-wrap { width: min(920px, calc(100% - 28px)); margin: 25px auto 40px; }
-.paper, .content-card {
-  border: 1px solid var(--paper-border);
+
+/* AREA KONTEN */
+
+.page-wrap {
+  width: min(920px, calc(100% - 28px));
+  margin: 25px auto 40px;
+}
+
+.paper,
+.content-card {
+  margin-bottom: 18px;
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid var(--garis);
   border-radius: 8px;
   background: #fff8ebed;
-  box-shadow: 0 4px 15px #4b301b24;
-  padding: clamp(20px, 4vw, 34px);
-  margin-bottom: 18px;
+  box-shadow: 0 4px 15px #4b301b30;
 }
-.welcome { text-align: center; }
+
+.welcome {
+  text-align: center;
+}
+
 .section-kicker {
-  color: #8a6539;
-  font: 700 .75rem/1.4 Arial, sans-serif;
-  letter-spacing: .18em;
-  text-transform: uppercase;
   margin: 0 0 6px;
+  color: #8a6539;
+  font: 700 0.75rem/1.4 Arial, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
-h2 { color: #493222; line-height: 1.3; margin: 0 0 12px; font-size: clamp(1.35rem, 4vw, 1.8rem); }
-h3 { margin: 0 0 5px; font-size: 1.05rem; }
-p { margin-top: 0; }
-.content-card p:last-child, .welcome p:last-child { margin-bottom: 0; }
+
+h2 {
+  margin: 0 0 12px;
+  color: #493222;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  line-height: 1.3;
+}
+
+h3 {
+  margin: 0 0 5px;
+  font-size: 1.05rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.content-card p:last-child,
+.welcome p:last-child {
+  margin-bottom: 0;
+}
+
+/* KARTU ARTIKEL */
+
 .article-placeholder {
   display: flex;
   align-items: center;
@@ -98,54 +177,123 @@ p { margin-top: 0; }
   margin-top: 20px;
   padding: 15px;
   border: 1px solid #d8c19c;
-  border-left: 4px solid var(--gold-dark);
+  border-left: 4px solid var(--emas-tua);
   border-radius: 5px;
   background: #f7ecd8;
 }
-.article-placeholder p { margin: 0; font-size: .93rem; }
-.article-mark { color: #8a6539; font-size: 1.4rem; font-weight: 700; }
-.coming-soon {
-  margin-left: auto;
-  flex-shrink: 0;
-  color: #75552f;
-  font: 700 .72rem Arial, sans-serif;
+
+.article-placeholder p {
+  margin: 0;
+  font-size: 0.93rem;
 }
+
+.article-mark {
+  color: #8a6539;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.coming-soon {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: #75552f;
+  font: 700 0.72rem Arial, sans-serif;
+}
+
+/* FOOTER KAYU GELAP */
+
 .site-footer {
   padding: 24px 16px;
-  text-align: center;
+  border-top: 3px solid var(--emas-tua);
   color: #f5dfb8;
-  background: #342216 url("assets/header-kayu-gelap.jpg") center / cover;
-  border-top: 3px solid var(--gold-dark);
+  text-align: center;
   text-shadow: 0 1px 3px #000;
+
+  background-color: #342216;
+  background-image: url("header-kayu-gelap.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
-.site-footer p { margin: 0; }
-.site-footer p:first-child { font-weight: 700; letter-spacing: .16em; }
-.footer-note { margin-top: 5px !important; font-size: .85rem; }
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer p:first-child {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.footer-note {
+  margin-top: 5px !important;
+  font-size: 0.85rem;
+}
+
+/* TOMBOL KEMBALI KE ATAS */
+
 .back-to-top {
   position: fixed;
   right: 16px;
   bottom: 16px;
+  z-index: 10;
   width: 44px;
   height: 44px;
-  border: 1px solid #e5c58d;
+  border: 1px solid var(--emas);
   border-radius: 50%;
   color: #fff4dc;
-  background: #493222eF;
+  background: #493222ef;
   font-size: 1.5rem;
   cursor: pointer;
   box-shadow: 0 3px 10px #0003;
   opacity: 0;
   pointer-events: none;
   transform: translateY(8px);
-  transition: opacity .2s, transform .2s;
+  transition: opacity 0.2s, transform 0.2s;
 }
-.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* TAMPILAN HP */
+
 @media (max-width: 520px) {
-  .header-content { padding-top: 27px; }
-  .tagline { font-size: .95rem; }
-  .main-nav { gap: 2px; }
-  .main-nav a { padding: 8px 9px; font-size: .82rem; }
-  .article-placeholder { align-items: flex-start; gap: 10px; }
-  .coming-soon { font-size: .65rem; }
+  .header-content {
+    padding-top: 27px;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .main-nav {
+    gap: 2px;
+  }
+
+  .main-nav a {
+    padding: 8px 9px;
+    font-size: 0.82rem;
+  }
+
+  .article-placeholder {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .coming-soon {
+    font-size: 0.65rem;
+  }
+
+  body {
+    background-size: auto 600px;
+  }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
