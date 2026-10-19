@@ -8,25 +8,93 @@
     name="description"
     content="Kawruh Urip: pemaparan tentang urip, jati diri, kesadaran, dan kasunyatan."
   >
-
   <meta name="theme-color" content="#493222">
 
   <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
 
   <link rel="stylesheet" href="style.css?v=4">
+
+  <style>
+    .artikel-beranda {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .kartu-beranda {
+      overflow: hidden;
+      border: 1px solid #d2bd98;
+      border-radius: 10px;
+      background: #fffaf0;
+      color: #3e3023;
+    }
+
+    .kartu-beranda img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .isi-kartu-beranda {
+      padding: 15px;
+    }
+
+    .isi-kartu-beranda h3 {
+      margin: 0 0 10px;
+      color: #493222;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .isi-kartu-beranda p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .tautan-kartu-beranda {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border: 1px solid #987447;
+      border-radius: 6px;
+      background: #244b3c;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .tautan-kartu-beranda:hover {
+      background: #76532f;
+    }
+
+    .tautan-daftar-lengkap {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .tautan-daftar-lengkap a {
+      color: #493222;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      .artikel-beranda {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body id="beranda">
 
-  <!-- KEPALA HALAMAN -->
   <header class="site-header">
     <div class="header-shade" aria-hidden="true"></div>
 
     <div class="header-content">
-
-      <p class="eyebrow">
-        PAMAPARAN BAB URIP LAN KASUNYATAN
-      </p>
+      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
 
       <h1>KAWRUH URIP</h1>
 
@@ -34,134 +102,128 @@
         Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
       </p>
 
-      <!-- Navigasi dimuat dari navigasi.html -->
       <div id="navigasi-container"></div>
-
     </div>
   </header>
 
-
-  <!-- ISI UTAMA -->
   <main class="page-wrap">
 
-    <!-- SAMBUTAN -->
-    <section class="welcome paper">
-
-      <p class="section-kicker">SUGENG RAWUH</p>
-
-      <h2>Wilujeng Rawuh ing Kawruh Urip</h2>
+    <section class="content-card">
+      <h2>Artikel Kawruh Urip</h2>
 
       <p>
-        Kawruh Urip minangka papan kanggo nyimak lan mangerteni
-        babagan urip, jati diri, kesadaran, lan kasunyatan.
-        Pamaparan ing situs iki dikembangake kanthi bertahap
-        supaya saben bab bisa diwenehake kanthi runtut lan cetha.
+        Pamaparan babagan urip, jati diri, kesadaran,
+        lan kasunyatan.
       </p>
 
-      <p>
-        Lumantar pamaparan kasebut, para pamaos diajak luwih
-        mangerteni urip, ngenali dhiri, lan nyinau kasunyatan
-        kanthi weninging cipta, tulusing rasa, lan utamaning karsa.
+      <div id="artikel-beranda" class="artikel-beranda"></div>
+
+      <p id="pesan-artikel" hidden>
+        Artikel bakal ditampilake ing kene sawise ditambahake
+        menyang daftar artikel.
       </p>
 
+      <p class="tautan-daftar-lengkap">
+        <a href="daftar-isi.html">Deleng Kabeh Artikel →</a>
+      </p>
     </section>
 
-
-    <!-- IDENTITAS -->
     <section id="identitas" class="content-card">
-
       <h2>Identitas Kawruh Urip</h2>
 
       <p>
         Kawruh Urip minangka papan pamaparan babagan urip,
-        jati diri, kesadaran, lan kasunyatan.
+        jati diri, kesadaran, lan kasunyatan. Tulisan-tulisan
+        ing situs iki dikembangake kanthi bertahap lan runtut.
       </p>
-
-      <p>
-        Isi situs iki dikembangake kanthi bertahap liwat
-        tulisan-tulisan sing nyritakake pangerten babagan
-        urip lan cara manungsa mangerteni kasunyatan.
-      </p>
-
     </section>
 
-
-    <!-- PENGANTAR DAFTAR ISI -->
-    <section class="content-card">
-
-      <h2>Daftar Isi</h2>
-
-      <p>
-        Maneka warna artikel lan pamaparan Kawruh Urip
-        diklumpukake ing sawijining kaca khusus supaya
-        luwih gampang ditlusuri lan diwaca.
-      </p>
-
-      <p>
-        Daftar isi bakal ditambahi kanthi bertahap
-        selaras karo pangembangan tulisan ing situs iki.
-      </p>
-
-      <p>
-        <a href="daftar-isi.html">
-          Deleng Daftar Isi Kawruh Urip →
-        </a>
-      </p>
-
-    </section>
-
-
-    <!-- DOKUMENTASI -->
     <section id="dokumentasi" class="content-card">
-
       <h2>Dokumentasi</h2>
 
       <p>
-        Kaca dokumentasi disedhiyakake kanggo nglumpukake
-        bahan lan naskah sing gegayutan karo pangembangan
-        Kawruh Urip.
+        Dokumentasi bahan lan naskah Kawruh Urip bakal
+        ditambahake kanthi bertahap.
       </p>
 
       <p>
-        Dokumentasi bakal ditambahake kanthi bertahap
-        nalika bahan wis disiapake.
+        <a href="dokumentasi.html">Deleng Dokumentasi →</a>
       </p>
-
     </section>
 
   </main>
 
-
-  <!-- SIKIL HALAMAN -->
   <footer class="site-footer">
-
     <p class="footer-title">KAWRUH URIP</p>
 
     <p class="footer-note">
       Pemaparan babagan urip lan kasunyatan.
     </p>
 
-    <p class="copyright">
-      © Kawruh Urip
-    </p>
-
+    <p class="copyright">© Kawruh Urip</p>
   </footer>
 
-
-  <!-- TOMBOL KEMBALI KE ATAS -->
   <button
     id="backToTop"
     class="back-to-top"
     type="button"
     aria-label="Kembali ke atas"
-  >
-    ↑
-  </button>
+  >↑</button>
 
-
-  <!-- JAVASCRIPT -->
   <script src="navigasi.js"></script>
+  <script src="daftar-artikel.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    (function () {
+      const wadah = document.getElementById("artikel-beranda");
+      const pesan = document.getElementById("pesan-artikel");
+      const artikel = window.DAFTAR_ARTIKEL;
+
+      if (!Array.isArray(artikel) || artikel.length === 0) {
+        pesan.hidden = false;
+        return;
+      }
+
+      artikel.slice(0, 3).forEach(function (item) {
+        const kartu = document.createElement("article");
+        kartu.className = "kartu-beranda";
+
+        if (item.gambar) {
+          const gambar = document.createElement("img");
+          gambar.src = item.gambar;
+          gambar.alt = item.alt || item.judul || "Ilustrasi artikel";
+          gambar.loading = "lazy";
+          gambar.onerror = function () {
+            gambar.remove();
+          };
+          kartu.appendChild(gambar);
+        }
+
+        const isi = document.createElement("div");
+        isi.className = "isi-kartu-beranda";
+
+        const judul = document.createElement("h3");
+        judul.textContent = item.judul || "Artikel Kawruh Urip";
+        isi.appendChild(judul);
+
+        if (item.ringkasan) {
+          const ringkasan = document.createElement("p");
+          ringkasan.textContent = item.ringkasan;
+          isi.appendChild(ringkasan);
+        }
+
+        const tautan = document.createElement("a");
+        tautan.className = "tautan-kartu-beranda";
+        tautan.href = item.url;
+        tautan.textContent = "Waca Artikel →";
+        isi.appendChild(tautan);
+
+        kartu.appendChild(isi);
+        wadah.appendChild(kartu);
+      });
+    })();
+  </script>
 
 </body>
 </html>
