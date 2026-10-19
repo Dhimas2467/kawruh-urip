@@ -1,3 +1,4 @@
+
 /* =========================================
    KAWRUH URIP — STYLE UTAMA
    Tema kayu, krem, dan emas
@@ -6,10 +7,8 @@
 :root {
   --kayu-gelap: #382719;
   --kayu-sedang: #65472e;
-  --kayu-terang: #b18a5b;
   --emas: #b58b35;
   --emas-gelap: #8d692b;
-  --krem: #f4ead7;
   --krem-panel: #fffaf0;
   --teks: #3e3023;
   --garis: #d2bd98;
@@ -17,7 +16,9 @@
 }
 
 /* RESET */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -44,14 +45,12 @@ body {
   line-height: 1.75;
 }
 
-/* GAMBAR */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* TAUTAN */
 a {
   color: #765323;
   overflow-wrap: anywhere;
@@ -84,12 +83,17 @@ a:hover {
   box-shadow: 0 3px 9px rgba(35, 23, 13, 0.3);
 }
 
+.header-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .site-header h1 {
   margin: 0;
   color: #f6dfb0;
   font-size: clamp(25px, 5vw, 38px);
   line-height: 1.3;
-  font-weight: bold;
   overflow-wrap: anywhere;
 }
 
@@ -101,11 +105,32 @@ a:hover {
   line-height: 1.6;
 }
 
-/* =========================================
-   NAVIGASI — SATU BARIS DI DESKTOP DAN HP
-   ========================================= */
+.site-header .eyebrow {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
 
-.site-header .main-nav {
+/* NAVIGASI */
+#navigasi-container {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+#navigasi-container nav,
+#navigasi-container .navigasi-utama {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+#navigasi-container .navigasi-utama {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -115,19 +140,17 @@ a:hover {
   width: 100%;
   max-width: 100%;
   margin: 18px auto 0;
-  padding: 12px 8px;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  padding: 0;
 }
 
-.site-header .main-nav a {
+#navigasi-container .navigasi-utama a {
   display: inline-flex;
   flex: 0 1 auto;
   align-items: center;
   justify-content: center;
   min-width: 0;
   min-height: 32px;
+  margin: 0;
   padding: 7px 11px;
   border: 1px solid #b9955d;
   border-radius: 5px;
@@ -144,14 +167,14 @@ a:hover {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.site-header .main-nav a:hover,
-.site-header .main-nav a[aria-current="page"] {
+#navigasi-container .navigasi-utama a:hover,
+#navigasi-container .navigasi-utama a[aria-current="page"] {
   background: var(--emas);
   border-color: var(--emas);
   color: var(--putih);
 }
 
-.site-header .main-nav a.nav-home {
+#navigasi-container .navigasi-utama a.tombol-beranda {
   flex: 0 0 32px;
   width: 32px;
   min-width: 32px;
@@ -159,7 +182,7 @@ a:hover {
   padding: 0;
 }
 
-.site-header .main-nav a svg {
+#navigasi-container .navigasi-utama a svg {
   display: block;
   flex-shrink: 0;
   width: 16px;
@@ -186,7 +209,20 @@ section,
   scroll-margin-top: 16px;
 }
 
-/* JUDUL */
+.welcome {
+  text-align: center;
+}
+
+.section-kicker {
+  margin-bottom: 5px;
+  color: var(--emas-gelap);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+/* JUDUL DAN TEKS */
 h1,
 h2,
 h3,
@@ -225,7 +261,7 @@ li {
   margin-bottom: 6px;
 }
 
-/* KARTU DAFTAR ISI JIKA DIGUNAKAN */
+/* DAFTAR ARTIKEL */
 .daftar-isi,
 .daftar-artikel,
 .article-list {
@@ -252,6 +288,48 @@ li {
 .article-list a:hover {
   color: #fff;
   background: #8b6838;
+}
+
+/* KARTU ARTIKEL PEMBUKA */
+.article-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  background: #f4e6cc;
+  border: 1px solid #d2b582;
+  border-radius: 6px;
+}
+
+.article-placeholder h3 {
+  margin: 0 0 4px;
+}
+
+.article-placeholder p {
+  margin: 0;
+}
+
+.article-mark {
+  display: inline-flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #70502e;
+  color: #fffaf0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.coming-soon {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: #765323;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* GAMBAR IDENTITAS */
@@ -291,6 +369,37 @@ button:hover,
   background: #8b6838;
 }
 
+/* BACK TO TOP */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #d0ad70;
+  border-radius: 50%;
+  background: #493222;
+  color: #f6dfb0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background: var(--emas-gelap);
+  color: #fff;
+}
+
 /* FOOTER KAYU */
 .site-footer {
   margin-top: 30px;
@@ -298,10 +407,7 @@ button:hover,
   color: #f4e4c8;
   text-align: center;
   background:
-    linear-gradient(
-      rgba(45, 29, 17, 0.94),
-      rgba(67, 43, 25, 0.97)
-    ),
+    linear-gradient(rgba(45, 29, 17, 0.94), rgba(67, 43, 25, 0.97)),
     repeating-linear-gradient(
       0deg,
       #65452c 0,
@@ -316,14 +422,22 @@ button:hover,
   margin: 0 0 5px;
 }
 
+.site-footer .footer-title {
+  color: #f6dfb0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.site-footer .copyright {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
 .site-footer a {
   color: #f6dca9;
 }
 
-/* =========================================
-   TABLET DAN HP
-   ========================================= */
-
+/* TABLET DAN HP */
 @media (max-width: 560px) {
   body {
     font-size: 15px;
@@ -341,31 +455,33 @@ button:hover,
     font-size: 13px;
   }
 
-  .site-header .main-nav {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 5px;
-    width: 100%;
-    margin-top: 12px;
-    padding: 12px 5px;
+  .site-header .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
-  .site-header .main-nav a {
+  #navigasi-container .navigasi-utama {
+    gap: 5px;
+    margin-top: 12px;
+    padding: 0 1px;
+  }
+
+  #navigasi-container .navigasi-utama a {
     flex: 0 1 auto;
     min-width: 0;
     min-height: 30px;
-    padding: 7px 8px;
+    padding: 7px;
     font-size: 11px;
   }
 
-  .site-header .main-nav a.nav-home {
+  #navigasi-container .navigasi-utama a.tombol-beranda {
     flex: 0 0 30px;
     width: 30px;
     min-width: 30px;
     height: 30px;
   }
 
-  .site-header .main-nav a svg {
+  #navigasi-container .navigasi-utama a svg {
     width: 15px;
     height: 15px;
   }
@@ -388,28 +504,50 @@ button:hover,
   .article-list {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .article-placeholder {
+    gap: 9px;
+    padding: 11px;
+  }
+
+  .article-mark {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+
+  .coming-soon {
+    font-size: 10px;
+  }
+
+  #backToTop {
+    right: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
-/* HP DENGAN LAYAR SANGAT KECIL */
+/* HP SANGAT KECIL */
 @media (max-width: 360px) {
   .site-header {
     padding-right: 4px;
     padding-left: 4px;
   }
 
-  .site-header .main-nav {
+  #navigasi-container .navigasi-utama {
     gap: 4px;
-    padding-right: 4px;
-    padding-left: 4px;
   }
 
-  .site-header .main-nav a {
-    padding: 7px 5px;
+  #navigasi-container .navigasi-utama a {
+    padding-right: 5px;
+    padding-left: 5px;
     font-size: 10px;
   }
 
-  .site-header .main-nav a.nav-home {
-    flex: 0 0 28px;
+  #navigasi-container .navigasi-utama a.tombol-beranda {
+    flex-basis: 28px;
     width: 28px;
     min-width: 28px;
     height: 28px;
@@ -427,33 +565,15 @@ button:hover,
   }
 }
 
-/* NAVIGASI BARU — MENYATU DENGAN LATAR HEADER */
-.site-header #navigasi-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
+/* AKSESIBILITAS */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-.site-header .navigasi-utama {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  margin: 18px auto 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
-
-.site-header .navigasi-utama a {
-  flex-shrink: 1;
-  white-space: nowrap;
-}
-
