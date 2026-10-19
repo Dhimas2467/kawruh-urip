@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#493222">
+  <meta name="description" content="Dokumentasi naskah dan karya tulis Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
+  <title>Dokumentasi | Kawruh Urip</title>
+
+  <link rel="stylesheet" href="style.css?v=3">
+
+  <style>
+    .dokumentasi-wrap {
+      width: min(100% - 32px, 1000px);
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 48px;
+      min-height: 65vh;
+    }
+
+    .judul-dokumentasi {
+      margin: 0 0 22px;
+      padding-bottom: 12px;
+      color: #e0c48c;
+      font-size: clamp(1.45rem, 4vw, 2rem);
+      border-bottom: 1px solid rgba(199, 166, 106, 0.4);
+    }
+
+    .pengantar-dokumentasi {
+      margin-bottom: 28px;
+      padding: 22px 24px;
+      color: #eee4d2;
+      background: rgba(25, 18, 12, 0.91);
+      border: 1px solid rgba(199, 166, 106, 0.4);
+      border-radius: 5px;
+    }
+
+    .pengantar-dokumentasi p {
+      margin: 0;
+    }
+
+    .daftar-dokumentasi {
+      display: grid;
+      gap: 16px;
+    }
+
+    .daftar-dokumentasi a {
+      display: block;
+      padding: 18px 20px;
+      color: #e0c48c;
+      background: rgba(25, 18, 12, 0.91);
+      border: 1px solid rgba(199, 166, 106, 0.4);
+      border-radius: 5px;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .daftar-dokumentasi a:hover {
+      color: #fff0c9;
+      background: rgba(55, 38, 23, 0.95);
+      border-color: #c7a66a;
+    }
+
+    .keterangan-dokumentasi {
+      display: block;
+      margin-top: 4px;
+      color: #c5b69d;
+      font-size: 0.9rem;
+    }
+
+    .kembali-beranda {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 8px 15px;
+      color: #e0c48c;
+      border: 1px solid #c7a66a;
+      border-radius: 3px;
+    }
+
+    .kembali-beranda:hover {
+      color: #fff0c9;
+    }
+
+    @media (max-width: 620px) {
+      .dokumentasi-wrap {
+        width: min(100% - 22px, 1000px);
+        padding-top: 20px;
+      }
+
+      .pengantar-dokumentasi {
+        padding: 18px;
+      }
+
+      .daftar-dokumentasi a {
+        padding: 15px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .daftar-dokumentasi a {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-shade"></div>
+    <div class="header-content">
+      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+      <h1>KAWRUH URIP</h1>
+      <p class="tagline">Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.</p>
+    </div>
+  </header>
+
+  <div id="navigasi-container"></div>
+
+  <main class="dokumentasi-wrap">
+
+    <h2 class="judul-dokumentasi">Dokumentasi Kawruh Urip</h2>
+
+    <div class="pengantar-dokumentasi">
+      <p>
+        Halaman ini disediakan untuk dokumentasi naskah, karya tulis,
+        dan bahan pemaparan Kawruh Urip tentang kehidupan, jati diri,
+        kesadaran, serta kasunyatan. Dokumentasi akan ditambahkan
+        secara bertahap sesuai dengan ketersediaan naskah.
+      </p>
+    </div>
+
+    <div class="daftar-dokumentasi">
+
+      <div class="pengantar-dokumentasi">
+        <p>
+          Dokumentasi naskah Kawruh Urip sedang dipersiapkan.
+          Halaman ini akan diperbarui ketika bahan dokumentasi
+          sudah tersedia.
+        </p>
+      </div>
+
+    </div>
+
+    <a class="kembali-beranda" href="index.html#beranda">
+      ← Kembali ke Beranda
+    </a>
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-title">KAWRUH URIP</p>
+    <p class="footer-note">Pemaparan babagan urip lan kasunyatan.</p>
+    <p class="copyright">© Kawruh Urip</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button"
+    aria-label="Kembali ke atas">↑</button>
+
+  <script src="navigasi.js"></script>
+  <script src="script.js?v=2"></script>
+
+</body>
+</html>
