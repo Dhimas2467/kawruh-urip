@@ -1,119 +1,604 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Kawruh Urip: pemaparan tentang urip, jati diri, kesadaran, dan kasunyatan."
-  >
-  <meta name="theme-color" content="#382719">
+<title>Kawruh Urip | Kawruh dan Laku Kehidupan</title>
 
-  <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
+<meta name="description" content="Kawruh Urip: pemahaman tentang hakikat kehidupan, kesadaran diri, budi pekerti, dan laku nyata dalam kehidupan manusia.">
+<meta name="theme-color" content="#3b281d">
 
-  <link rel="stylesheet" href="style.css?v=5">
+<style>
+:root {
+  --cokelat: #3b281d;
+  --kartu: #f5ead8;
+  --teks: #40362c;
+  --emas: #b58b35;
+  --sambut: #eee0c9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
+  color: var(--teks);
+  background: #d8bd8b url("latar-kayu-terang.jpg")
+    center top / 100% auto repeat-y;
+}
+
+/* KEPALA HALAMAN */
+.site-header {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 16px 18px;
+  text-align: center;
+  color: white;
+  background: #3b281d url("header-kayu-gelap.jpg")
+    center center / cover no-repeat;
+  border-bottom: 3px solid var(--emas);
+}
+
+.header-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(30, 19, 12, 0.15),
+    rgba(30, 19, 12, 0.3)
+  );
+  pointer-events: none;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #e5c486;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+header h1 {
+  margin: 6px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(25px, 5vw, 36px);
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-size: 16px;
+}
+
+/* NAVIGASI */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 8px;
+  background: transparent;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 7px 11px;
+  border: 1px solid var(--cokelat);
+  border-radius: 7px;
+  background: var(--cokelat);
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a.terpilih {
+  background: var(--emas);
+  border-color: var(--emas);
+  color: white;
+}
+
+nav a.tombol-beranda {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+nav a.tombol-beranda svg {
+  display: block;
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: white;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ISI HALAMAN */
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 20px 30px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  color: var(--cokelat);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(23px, 4.5vw, 31px);
+  line-height: 1.35;
+}
+
+p {
+  margin: 8px 0 14px;
+}
+
+.pemisah {
+  height: 1px;
+  margin: 20px 0;
+  border: 0;
+  background: #cbb99e;
+}
+
+.sambutan {
+  background: var(--sambut);
+  color: #4a3021;
+  padding: 16px 20px;
+  border-left: 4px solid var(--emas);
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+
+.sambutan h2 {
+  font-size: clamp(21px, 4vw, 27px);
+  margin: 0 0 5px;
+  color: #4a3021;
+}
+
+.sambutan p {
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* KARTU ARTIKEL */
+.kartu-artikel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--kartu);
+}
+
+.kartu-artikel + .kartu-artikel {
+  margin-top: 18px;
+}
+
+/* PAGINATION ARTIKEL */
+.navigasi-artikel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px 0;
+}
+
+.navigasi-artikel button {
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 13px;
+  background: var(--cokelat);
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navigasi-artikel button:disabled {
+  background: #c9c1b5;
+  color: #686158;
+  cursor: not-allowed;
+}
+
+#nomor-halaman-artikel {
+  font-size: 13px;
+  color: var(--teks);
+  text-align: center;
+}
+
+/* GAMBAR DAN TAUTAN ARTIKEL */
+.gambar-artikel {
+  flex: 0 0 130px;
+  width: 130px;
+  height: 155px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.judul-artikel {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--cokelat);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.tautan {
+  color: var(--cokelat);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tautan:hover,
+.judul-artikel:hover {
+  color: var(--emas);
+  text-decoration: underline;
+}
+
+/* TAUTAN BERANDA */
+.tautan-blog {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 15px 25px;
+  text-align: center;
+  border-top: 1px solid #cbb99e;
+}
+
+.tautan-blog a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--cokelat);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tautan-blog a:hover {
+  background: var(--emas);
+}
+
+/* TOMBOL KEMBALI KE ATAS */
+#backToTop {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--cokelat);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .25s, transform .25s, visibility .25s;
+}
+
+#backToTop.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#backToTop:hover {
+  background: var(--emas);
+}
+
+/* TAMPILAN PONSEL */
+@media (max-width: 560px) {
+  .navigasi-artikel {
+    gap: 6px;
+  }
+
+  .navigasi-artikel button {
+    padding: 9px 8px;
+    font-size: 11px;
+  }
+
+  #nomor-halaman-artikel {
+    font-size: 11px;
+  }
+
+  .site-header {
+    padding: 18px 12px 14px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  header p {
+    font-size: 15px;
+  }
+
+  nav {
+    gap: 5px;
+    padding: 12px 5px;
+  }
+
+  nav a {
+    padding: 7px 8px;
+    font-size: 11px;
+  }
+
+  nav a.tombol-beranda {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  main {
+    padding: 17px 17px 25px;
+  }
+
+  .sambutan {
+    padding: 13px 15px;
+    margin-bottom: 18px;
+  }
+
+  .sambutan p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .kartu-artikel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .gambar-artikel {
+    width: 100%;
+    height: 145px;
+    flex-basis: auto;
+  }
+
+  .judul-artikel {
+    font-size: 20px;
+  }
+
+  #backToTop {
+    right: 14px;
+    bottom: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  nav {
+    gap: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  nav a {
+    padding: 7px 6px;
+    font-size: 10px;
+  }
+
+  nav a.tombol-beranda {
+    flex-basis: 28px;
+    width: 28px;
+    height: 28px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- KEPALA HALAMAN -->
-  <header class="site-header">
-    <div class="header-shade" aria-hidden="true"></div>
+<!-- KEPALA HALAMAN -->
+<header class="site-header">
+  <div class="header-shade" aria-hidden="true"></div>
 
-    <div class="header-content">
-      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
-      <h1>KAWRUH URIP</h1>
-      <div id="navigasi-container"></div>
+  <div class="header-content">
+    <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+    <h1>KAWRUH URIP</h1>
+
+    <nav aria-label="Menu utama">
+      <a href="index.html"
+         class="tombol-beranda terpilih"
+         aria-label="Beranda"
+         title="Beranda">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5"></path>
+          <path d="M5.5 9.5V21h13V9.5"></path>
+          <path d="M9.5 21v-7h5v7"></path>
+        </svg>
+      </a>
+
+      <a href="identitas.html">Identitas</a>
+      <a href="daftar-isi.html">Daftar Isi</a>
+      <a href="landasan.html">Landasan</a>
+      <a href="dokumentasi.html">Dokumentasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="beranda">
+    <hr class="pemisah">
+
+    <h2>Artikel</h2>
+
+    <div id="daftar-artikel" aria-live="polite"></div>
+
+    <div id="navigasi-artikel"
+         class="navigasi-artikel"
+         aria-label="Navigasi halaman artikel">
+
+      <button id="artikel-sebelumnya" type="button" disabled>
+        ← Artikel Sebelumnya
+      </button>
+
+      <span id="nomor-halaman-artikel">Halaman 1</span>
+
+      <button id="artikel-berikutnya" type="button">
+        Artikel Berikutnya →
+      </button>
     </div>
-  </header>
+  </section>
+</main>
 
-  <!-- ISI BERANDA -->
-  <main class="page-wrap">
+<div class="tautan-blog">
+  <a href="index.html">↑ Kembali ke Beranda</a>
+</div>
 
-    <section class="welcome paper">
-      <p class="section-kicker">SUGENG RAWUH</p>
+<button id="backToTop"
+        type="button"
+        aria-label="Kembali ke atas"
+        title="Kembali ke atas">
+  ↑
+</button>
 
-      <h2>Wilujeng Rawuh ing Kawruh Urip</h2>
+<div id="footer-container"></div>
 
-      <p>
-        Kawruh Urip minangka papan kanggo nyimak lan mangerteni
-        babagan urip, jati diri, kesadaran, lan kasunyatan.
-        Isi lan pamaparan ing situs iki bakal dikembangake
-        kanthi bertahap.
-      </p>
-    </section>
+<script src="daftar-artikel.js"></script>
 
-    <section id="identitas" class="content-card">
-      <h2>Identitas</h2>
+<script>
+var artikelPerHalaman = 3;
+var halamanArtikel = 0;
 
-      <p>
-        Kawruh Urip minangka papan pamaparan babagan urip,
-        jati diri, kesadaran, lan kasunyatan.
-        Bagian iki bakal dikembangake kanggo njlentrehake
-        identitas lan arah pamaparan Kawruh Urip.
-      </p>
-    </section>
+var semuaArtikel = Array.isArray(window.DAFTAR_ARTIKEL)
+  ? window.DAFTAR_ARTIKEL
+  : [];
 
-    <section id="daftar-isi" class="content-card">
-      <h2>Daftar Isi</h2>
+function buatKartuArtikel(artikel) {
+  var kartu = document.createElement('article');
+  kartu.className = 'kartu-artikel';
 
-      <p>
-        Artikel lan pamaparan Kawruh Urip bakal ditambahake
-        kanthi bertahap.
-      </p>
+  if (artikel.gambar) {
+    var gambar = document.createElement('img');
+    gambar.src = artikel.gambar;
+    gambar.alt = artikel.alt || artikel.judul;
+    gambar.className = 'gambar-artikel';
+    gambar.loading = 'lazy';
+    kartu.appendChild(gambar);
+  }
 
-      <div class="article-placeholder">
-        <span class="article-mark">01</span>
+  var isi = document.createElement('div');
 
-        <div>
-          <h3>Pamaparan Kawruh Urip</h3>
+  var judul = document.createElement('a');
+  judul.href = artikel.url;
+  judul.className = 'judul-artikel';
+  judul.textContent = artikel.judul;
 
-          <p>
-            Pambuka kanggo mangerteni arah pamaparan
-            babagan urip lan kasunyatan.
-          </p>
-        </div>
+  var ringkasan = document.createElement('p');
+  ringkasan.textContent = artikel.ringkasan || '';
 
-        <span class="coming-soon">Segera</span>
-      </div>
-    </section>
+  var tautan = document.createElement('a');
+  tautan.href = artikel.url;
+  tautan.className = 'tautan';
+  tautan.textContent = 'Baca selengkapnya →';
 
-    <section id="dokumentasi" class="content-card">
-      <h2>Dokumentasi</h2>
+  isi.append(judul, ringkasan, tautan);
+  kartu.appendChild(isi);
 
-      <p>
-        Dokumentasi bakal diisi kanthi bertahap
-        nalika bahan lan naskah wis disiapake.
-      </p>
-    </section>
+  return kartu;
+}
 
-  </main>
+function tampilkanArtikel() {
+  var wadah = document.getElementById('daftar-artikel');
+  wadah.replaceChildren();
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p class="footer-title">KAWRUH URIP</p>
+  var mulai = halamanArtikel * artikelPerHalaman;
 
-    <p class="footer-note">
-      Pemaparan babagan urip lan kasunyatan.
-    </p>
+  semuaArtikel
+    .slice(mulai, mulai + artikelPerHalaman)
+    .forEach(function(artikel) {
+      wadah.appendChild(buatKartuArtikel(artikel));
+    });
 
-    <p class="copyright">
-      © Kawruh Urip
-    </p>
-  </footer>
+  if (semuaArtikel.length === 0) {
+    var pesan = document.createElement('p');
+    pesan.textContent = 'Artikel belum tersedia.';
+    wadah.appendChild(pesan);
+  }
 
-  <!-- TOMBOL KEMBALI KE ATAS -->
-  <button
-    id="backToTop"
-    class="back-to-top"
-    type="button"
-    aria-label="Kembali ke atas"
-  >↑</button>
+  var totalHalaman = Math.max(
+    1,
+    Math.ceil(semuaArtikel.length / artikelPerHalaman)
+  );
 
-  <!-- JAVASCRIPT -->
-  <script src="navigasi.js"></script>
-  <script src="script.js"></script>
+  document.getElementById('nomor-halaman-artikel').textContent =
+    'Halaman ' + (halamanArtikel + 1) + ' dari ' + totalHalaman;
+
+  document.getElementById('artikel-sebelumnya').disabled =
+    halamanArtikel === 0;
+
+  document.getElementById('artikel-berikutnya').disabled =
+    halamanArtikel >= totalHalaman - 1;
+}
+
+document.getElementById('artikel-sebelumnya')
+  .addEventListener('click', function() {
+    if (halamanArtikel > 0) {
+      halamanArtikel--;
+      tampilkanArtikel();
+    }
+  });
+
+document.getElementById('artikel-berikutnya')
+  .addEventListener('click', function() {
+    if ((halamanArtikel + 1) * artikelPerHalaman < semuaArtikel.length) {
+      halamanArtikel++;
+      tampilkanArtikel();
+    }
+  });
+
+var backToTop = document.getElementById('backToTop');
+
+function updateBackToTop() {
+  backToTop.classList.toggle('visible', window.scrollY > 260);
+}
+
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+
+backToTop.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+tampilkanArtikel();
+updateBackToTop();
+</script>
+
+<script src="footer.js"></script>
 
 </body>
 </html>
