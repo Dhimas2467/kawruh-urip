@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Landasan | Kawruh Urip</title>
+
+  <meta
+    name="description"
+    content="Halaman landasan Kawruh Urip, berisi tautan menuju tulisan-tulisan khusus tentang urip, jati diri, kesadaran, dan kasunyatan."
+  >
+  <meta name="theme-color" content="#493222">
+
+  <link rel="stylesheet" href="style.css?v=5">
+
+  <style>
+    .landasan-panel {
+      padding: 24px;
+      line-height: 1.8;
+    }
+
+    .landasan-panel h2 {
+      margin: 0 0 12px;
+      color: #493222;
+    }
+
+    .landasan-panel > p {
+      margin: 0 0 22px;
+      text-align: justify;
+    }
+
+    .landasan-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .landasan-menu a {
+      display: block;
+      padding: 14px 18px;
+      border: 1px solid #b58b35;
+      border-radius: 8px;
+      background: #493222;
+      color: #fff1d2;
+      font-weight: bold;
+      text-decoration: none;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      transition: background-color 0.2s ease;
+    }
+
+    .landasan-menu a:hover,
+    .landasan-menu a:focus-visible {
+      background: #65472e;
+      color: #ffffff;
+      outline: 2px solid #b58b35;
+      outline-offset: 2px;
+    }
+
+    .landasan-kembali {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .landasan-kembali a {
+      color: #493222;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .landasan-kembali a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 560px) {
+      .landasan-panel {
+        padding: 18px;
+      }
+
+      .landasan-menu a {
+        padding: 12px 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- KEPALA HALAMAN -->
+  <header class="site-header">
+    <div class="header-shade" aria-hidden="true"></div>
+
+    <div class="header-content">
+      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+      <h1>KAWRUH URIP</h1>
+      <div id="navigasi-container"></div>
+    </div>
+  </header>
+
+  <!-- ISI LANDASAN -->
+  <main class="page-wrap">
+    <section class="content-card landasan-panel">
+
+      <h2>Landasan Kawruh Urip</h2>
+
+      <p>
+        Halaman ini disediakan untuk menghimpun tautan
+        menuju tulisan-tulisan khusus yang menjadi landasan
+        pemaparan Kawruh Urip. Daftar tulisan akan
+        ditambahkan secara bertahap.
+      </p>
+
+      <!-- DAFTAR TAUTAN ARTIKEL -->
+      <nav class="landasan-menu" aria-label="Daftar artikel landasan">
+
+        <!--
+        Cara menambahkan artikel:
+        1. Ganti alamat pada href dengan nama berkas HTML yang benar.
+        2. Ganti teks di antara tag <a> dengan judul artikel.
+        3. Salin satu blok <a> untuk menambah tautan berikutnya.
+
+        Contoh:
+        <a href="nama-artikel.html">Judul Artikel</a>
+        -->
+
+        <!-- TAMBAH TAUTAN ARTIKEL DI SINI -->
+
+      </nav>
+
+      <div class="landasan-kembali">
+        <a href="index.html">← Kembali ke Beranda</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+    title="Kembali ke atas"
+  >↑</button>
+
+  <!-- JAVASCRIPT -->
+  <script src="navigasi.js"></script>
+  <script src="footer.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
