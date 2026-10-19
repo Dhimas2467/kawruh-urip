@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,7 +8,7 @@
   <meta name="description" content="Dokumentasi naskah dan karya tulis Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
   <title>Dokumentasi | Kawruh Urip</title>
 
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 
   <style>
     .dokumentasi-wrap {
@@ -16,27 +17,29 @@
       padding-top: 30px;
       padding-bottom: 48px;
       min-height: 65vh;
+      color: #302319;
     }
 
     .judul-dokumentasi {
       margin: 0 0 22px;
       padding-bottom: 12px;
-      color: #e0c48c;
+      color: #302319;
       font-size: clamp(1.45rem, 4vw, 2rem);
-      border-bottom: 1px solid rgba(199, 166, 106, 0.4);
+      border-bottom: 1px solid #b69a6a;
     }
 
     .pengantar-dokumentasi {
       margin-bottom: 28px;
       padding: 22px 24px;
-      color: #eee4d2;
-      background: rgba(25, 18, 12, 0.91);
-      border: 1px solid rgba(199, 166, 106, 0.4);
+      color: #302319;
+      background: #f2e7d2;
+      border: 1px solid #c7a66a;
       border-radius: 5px;
     }
 
     .pengantar-dokumentasi p {
       margin: 0;
+      color: #302319;
     }
 
     .daftar-dokumentasi {
@@ -44,27 +47,31 @@
       gap: 16px;
     }
 
+    .daftar-dokumentasi .pengantar-dokumentasi {
+      margin-bottom: 0;
+    }
+
     .daftar-dokumentasi a {
       display: block;
       padding: 18px 20px;
-      color: #e0c48c;
-      background: rgba(25, 18, 12, 0.91);
-      border: 1px solid rgba(199, 166, 106, 0.4);
+      color: #302319;
+      background: #f2e7d2;
+      border: 1px solid #c7a66a;
       border-radius: 5px;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
       transition: background 0.2s, border-color 0.2s;
     }
 
     .daftar-dokumentasi a:hover {
-      color: #fff0c9;
-      background: rgba(55, 38, 23, 0.95);
-      border-color: #c7a66a;
+      color: #21170f;
+      background: #e5d2b2;
+      border-color: #8d6b39;
     }
 
     .keterangan-dokumentasi {
       display: block;
       margin-top: 4px;
-      color: #c5b69d;
+      color: #594632;
       font-size: 0.9rem;
     }
 
@@ -72,13 +79,15 @@
       display: inline-block;
       margin-top: 28px;
       padding: 8px 15px;
-      color: #e0c48c;
+      color: #302319;
+      background: #f2e7d2;
       border: 1px solid #c7a66a;
       border-radius: 3px;
     }
 
     .kembali-beranda:hover {
-      color: #fff0c9;
+      color: #21170f;
+      background: #e5d2b2;
     }
 
     @media (max-width: 620px) {
@@ -101,44 +110,10 @@
         transition: none;
       }
     }
-
-/* Perbaikan kontras warna tulisan dokumentasi */
-.dokumentasi-wrap {
-  color: #fff8eb;
-}
-
-.judul-dokumentasi {
-  color: #ffdc91;
-}
-
-.pengantar-dokumentasi {
-  color: #fff8eb;
-}
-
-.pengantar-dokumentasi p {
-  color: #fff8eb;
-}
-
-.daftar-dokumentasi a {
-  color: #ffdc91;
-}
-
-.keterangan-dokumentasi {
-  color: #f0e4d0;
-}
-
-.kembali-beranda {
-  color: #ffdc91;
-}
-
-.daftar-dokumentasi a:hover,
-.kembali-beranda:hover {
-  color: #ffffff;
-}
   </style>
 </head>
 
-<body>
+<body id="beranda">
 
   <header class="site-header">
     <div class="header-shade"></div>
@@ -165,7 +140,6 @@
     </div>
 
     <div class="daftar-dokumentasi">
-
       <div class="pengantar-dokumentasi">
         <p>
           Dokumentasi naskah Kawruh Urip sedang dipersiapkan.
@@ -173,7 +147,6 @@
           sudah tersedia.
         </p>
       </div>
-
     </div>
 
     <a class="kembali-beranda" href="index.html#beranda">
