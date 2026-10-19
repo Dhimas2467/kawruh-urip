@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kawruh Sejati: Hakikat Pengetahuan, Kesadaran, dan Pemahaman terhadap Kenyataan | Kawruh Urip</title>
+
+  <meta name="description" content="Pemaparan tentang hakikat Kawruh Sejati, kesadaran, pemahaman terhadap kenyataan, dan penerapannya dalam kehidupan manusia.">
+
+  <meta name="author" content="Dhimas Purnomo">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#382719">
+
+  <link rel="canonical" href="https://dhimas2467.github.io/kawruh-urip/kawruh-sejati.html">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .isi-artikel {
+      line-height: 1.85;
+      overflow-wrap: anywhere;
+    }
+
+    .isi-artikel h1 {
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
+
+    .isi-artikel h2 {
+      margin-top: 32px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--garis);
+    }
+
+    .isi-artikel h3 {
+      margin-top: 24px;
+    }
+
+    .isi-artikel p {
+      margin: 14px 0;
+      text-align: justify;
+    }
+
+    .isi-artikel li {
+      margin-bottom: 8px;
+    }
+
+    .identitas-artikel {
+      color: var(--kayu-sedang);
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+
+    .gambar-artikel {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: 24px auto;
+      border-radius: 8px;
+    }
+
+    .daftar-istilah,
+    .faq-artikel,
+    .tautan-terkait {
+      margin-top: 28px;
+      padding: 18px;
+      background: var(--krem-panel);
+      border: 1px solid var(--garis);
+      border-radius: 8px;
+    }
+
+    .daftar-istilah li,
+    .faq-artikel li {
+      margin-bottom: 14px;
+    }
+
+    .navigasi-artikel-bawah {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--garis);
+    }
+
+    .navigasi-artikel-bawah a,
+    .tautan-terkait a {
+      color: var(--emas-gelap);
+      font-weight: bold;
+    }
+
+    #backToTop {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: var(--kayu-gelap);
+      color: white;
+      font-size: 23px;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease;
+      z-index: 1000;
+    }
+
+    #backToTop.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (max-width: 560px) {
+      .isi-artikel p {
+        text-align: left;
+      }
+
+      .daftar-istilah,
+      .faq-artikel,
+      .tautan-terkait {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header" id="beranda">
+    <div class="header-content">
+      <h1>KAWRUH URIP</h1>
+      <p>Pamaparan kawruh babagan urip, pangerten dhiri, lan kasunyataning panguripan.</p>
+    </div>
+  </header>
+
+  <div id="navigasi-container"></div>
+
+  <main class="site-main">
+
+    <article class="content-panel isi-artikel">
+
+      <header>
+        <h1>Kawruh Sejati: Hakikat Pengetahuan, Kesadaran, dan Pemahaman terhadap Kenyataan</h1>
+
+        <div class="identitas-artikel">
+          <span>Penulis: Dhimas Purnomo</span>
+        </div>
+      </header>
+
+      <p>
+        Setiap manusia menjalani kehidupan dengan menggunakan pengetahuan,
+        pemahaman, dan kesadarannya untuk menentukan sikap serta tindakan.
+        Namun, apa yang diketahui seseorang belum tentu menggambarkan
+        kenyataan secara utuh. Pengetahuan dapat dipengaruhi oleh pengalaman,
+        ingatan, anggapan, kepentingan, dan keterbatasan pemahaman manusia.
+      </p>
+
+      <p>
+        Oleh karena itu, penting untuk membedakan antara sesuatu yang
+        dianggap benar dengan kenyataan yang sesungguhnya. Pembedaan ini
+        menjadi salah satu pokok pemaparan mengenai Kawruh Sejati.
+      </p>
+
+      <p>
+        Dalam pemaparan ini, Kawruh Sejati ditempatkan sebagai pepadhang
+        bagi manusia untuk memahami kehidupan, mengenali keterbatasan
+        pengetahuannya, menjernihkan cipta, menulusi rasa, dan mengarahkan
+        karsa menuju tindakan yang lebih utama.
+      </p>
+
+      <h2>1. Pengertian Kawruh Sejati</h2>
+
+      <p>
+        Kawruh Sejati dapat dipahami sebagai pengetahuan sejati yang
+        mengarahkan manusia kepada pemahaman mengenai kenyataan dan
+        kehidupan secara lebih jernih. Kawruh Sejati bukan sekadar
+        kumpulan informasi atau pendapat yang diterima tanpa pemahaman,
+        melainkan pepadhang untuk membedakan kenyataan dari anggapan
+        manusia tentang kenyataan.
+      </p>
+
+      <p>
+        Seseorang dapat memiliki banyak pengetahuan, tetapi belum tentu
+        mampu menggunakan pengetahuan itu secara tepat. Pengetahuan
+        baru mempunyai arti dalam kehidupan apabila dipahami dengan
+        jernih dan diwujudkan dalam sikap serta tindakan yang sesuai.
+      </p>
+
+      <h2>2. Pengetahuan dan Kenyataan</h2>
+
+      <p>
+        Pengetahuan manusia terbentuk melalui pengamatan, pengalaman,
+        ingatan, pemikiran, dan pemahaman. Semua itu membantu manusia
+        mengenali keadaan di sekitarnya. Akan tetapi, kemampuan manusia
+        untuk mengetahui sesuatu mempunyai batas.
+      </p>
+
+      <p>
+        Apa yang belum diketahui bukan berarti tidak ada. Demikian pula,
+        sesuatu yang diyakini belum tentu sesuai dengan kenyataan.
+        Karena itu, manusia perlu memeriksa kembali pemahaman dan
+        anggapannya, tanpa menjadikan keyakinan pribadi sebagai satu-satunya
+        ukuran kebenaran.
+      </p>
+
+      <h2>3. Hakikat Kenyataan</h2>
+
+      <p>
+        Kenyataan tidak bergantung sepenuhnya pada pengetahuan atau
+        pengakuan manusia. Manusia dapat memahami suatu keadaan dengan
+        benar, memahami sebagian, atau keliru memahaminya. Perbedaan
+        tersebut tidak dengan sendirinya mengubah kenyataan yang sedang
+        dihadapi.
+      </p>
+
+      <p>
+        Dengan memahami perbedaan antara kenyataan dan pemahaman,
+        manusia dapat lebih berhati-hati dalam menarik kesimpulan.
+        Ia tidak mudah menganggap pendapatnya sebagai kebenaran mutlak
+        dan bersedia memperbaiki pemahaman apabila menemukan kekeliruan.
+      </p>
+
+      <h2>4. Keterbatasan Pengetahuan Manusia</h2>
+
+      <p>
+        Pengetahuan manusia selalu berhubungan dengan kemampuan untuk
+        mengamati, mengingat, mempertimbangkan, dan memahami. Kemampuan
+        tersebut tidak selalu bekerja secara sempurna. Ingatan dapat
+        berubah, pengamatan dapat tidak lengkap, dan pertimbangan dapat
+        dipengaruhi oleh keinginan pribadi.
+      </p>
+
+      <p>
+        Menyadari keterbatasan bukan berarti menolak pengetahuan.
+        Sebaliknya, kesadaran terhadap batas pengetahuan membantu manusia
+        bersikap rendah hati, cermat, terbuka terhadap koreksi, dan
+        tidak tergesa-gesa menetapkan kesimpulan.
+      </p>
+
+      <h2>5. Kawruh Sejati dan Kesadaran</h2>
+
+      <p>
+        Kesadaran memungkinkan manusia mengenali apa yang sedang
+        berlangsung dalam dirinya dan memperhatikan keadaan di sekitarnya.
+        Melalui kesadaran, manusia dapat mengamati gerak cipta, mengenali
+        keadaan rasa, serta mempertimbangkan arah karsa sebelum bertindak.
+      </p>
+
+      <p>
+        Kesadaran yang jernih membantu manusia melihat perbedaan antara
+        apa yang benar-benar diketahui, apa yang baru diduga, dan apa
+        yang hanya diinginkan. Pembedaan ini penting agar keinginan
+        pribadi tidak dianggap sebagai kenyataan.
+      </p>
+
+      <h2>6. Cipta, Rasa, dan Karsa</h2>
+
+      <p>
+        Dalam kehidupan manusia, cipta, rasa, dan karsa mempunyai
+        peranan yang saling berkaitan. Cipta berhubungan dengan kegiatan
+        mengamati, mengingat, membayangkan, berpikir, mempertimbangkan,
+        membedakan, dan memahami.
+      </p>
+
+      <p>
+        Rasa berhubungan dengan kemampuan merasakan keadaan diri,
+        menghayati pengalaman, menyadari penderitaan orang lain,
+        mengasihi, berbelas kasih, dan bertenggang rasa.
+      </p>
+
+      <p>
+        Karsa berhubungan dengan kehendak, penetapan tujuan, keteguhan
+        tekad, pemilihan tindakan, upaya untuk mewujudkan tujuan, dan
+        ketekunan dalam menjalankannya.
+      </p>
+
+      <p>
+        Kejernihan cipta, ketulusan rasa, dan keutamaan karsa perlu
+        dikembangkan secara selaras. Pengetahuan yang tidak disertai
+        ketulusan dapat disalahgunakan, sedangkan kehendak yang tidak
+        dipertimbangkan dengan jernih dapat membawa tindakan yang
+        merugikan.
+      </p>
+
+      <h2>7. Membedakan Kenyataan dan Anggapan</h2>
+
+      <p>
+        Anggapan merupakan penilaian atau pemahaman seseorang terhadap
+        sesuatu. Anggapan dapat mendekati kenyataan, tetapi dapat pula
+        menyimpang darinya. Oleh sebab itu, manusia perlu membedakan
+        fakta yang telah diketahui, penafsiran terhadap fakta, dan
+        dugaan yang belum mempunyai dasar memadai.
+      </p>
+
+      <p>
+        Kebiasaan membedakan ketiganya membantu manusia menghindari
+        kesimpulan yang terburu-buru. Sikap ini juga mendorong manusia
+        untuk memeriksa alasan di balik pendapatnya dan bersedia
+        memperbaiki pemahaman apabila diperlukan.
+      </p>
+
+      <h2>8. Kejernihan Cipta</h2>
+
+      <p>
+        Kejernihan cipta tumbuh ketika manusia berusaha melihat sesuatu
+        tanpa dikuasai prasangka, kepentingan sesaat, atau keinginan
+        untuk selalu membenarkan dirinya sendiri. Kejernihan bukan
+        berarti manusia tidak pernah keliru, melainkan kesediaan untuk
+        mengenali dan memperbaiki kekeliruan.
+      </p>
+
+      <p>
+        Dalam kehidupan sehari-hari, kejernihan cipta dapat dilatih
+        dengan memperhatikan keadaan secara saksama, memeriksa informasi,
+        mempertimbangkan akibat suatu keputusan, serta membedakan hal
+        yang penting dari hal yang sia-sia.
+      </p>
+
+      <h2>9. Ketulusan Rasa</h2>
+
+      <p>
+        Ketulusan rasa tercermin dalam kesediaan memahami keadaan diri
+        dan orang lain secara jujur. Manusia tidak hanya memperhatikan
+        kepentingannya sendiri, tetapi juga mempertimbangkan dampak
+        perkataan dan tindakannya terhadap sesama.
+      </p>
+
+      <p>
+        Ketulusan rasa bukan sekadar perasaan yang muncul sesaat.
+        Ketulusan perlu tercermin dalam sikap yang nyata, seperti
+        menghormati orang lain, tidak sengaja menambah penderitaan,
+        serta bersedia membantu sesuai kemampuan dan keadaan.
+      </p>
+
+      <h2>10. Karsa Utama</h2>
+
+      <p>
+        Karsa Utama adalah kehendak yang diarahkan kepada tindakan
+        yang benar-benar bernilai dalam kehidupan. Kehendak tersebut
+        tidak hanya mengikuti keinginan sesaat, tetapi mempertimbangkan
+        kejernihan pemahaman, ketulusan rasa, dan akibat dari tindakan.
+      </p>
+
+      <p>
+        Karsa yang utama terwujud melalui pilihan dan laku nyata.
+        Tekad yang baik perlu disertai usaha, ketekunan, tanggung jawab,
+        serta kesediaan memperbaiki tindakan ketika hasilnya tidak
+        sesuai dengan tujuan yang benar.
+      </p>
+
+      <h2>11. Pengetahuan yang Diwujudkan dalam Laku</h2>
+
+      <p>
+        Pengetahuan yang hanya disimpan dalam pikiran belum tentu
+        membawa perubahan dalam kehidupan. Pemahaman perlu diwujudkan
+        melalui cara manusia berbicara, mengambil keputusan,
+        memperlakukan sesama, dan menyelesaikan persoalan.
+      </p>
+
+      <p>
+        Laku nyata menjadi ukuran penting bagi manfaat pengetahuan.
+        Seseorang dapat berbicara mengenai kebaikan, tetapi nilai
+        pemahamannya terlihat lebih jelas melalui tindakan yang
+        dijalankan secara konsisten.
+      </p>
+
+      <h2>12. Pengenalan Diri</h2>
+
+      <p>
+        Pengenalan diri bukan hanya kegiatan mencari jawaban tentang
+        siapa dirinya. Pengenalan diri juga mencakup kesediaan melihat
+        kebiasaan, dorongan, kelemahan, kemampuan, dan alasan yang
+        mendasari tindakan.
+      </p>
+
+      <p>
+        Dengan mengenali gerak cipta, keadaan rasa, dan arah karsa,
+        manusia dapat memahami mengapa ia mengambil keputusan tertentu.
+        Pemahaman tersebut menjadi landasan untuk memperbaiki diri
+        secara bertahap melalui laku yang nyata.
+      </p>
+
+      <h2>13. Menghindari Hal yang Sia-sia</h2>
+
+      <p>
+        Tidak semua pikiran, keinginan, dan tindakan membawa manfaat.
+        Sebagian justru menghabiskan waktu, memperbesar persoalan,
+        memperkeruh hubungan, atau menjauhkan manusia dari tujuan
+        yang bernilai.
+      </p>
+
+      <p>
+        Kejernihan pemahaman membantu manusia mengenali hal yang
+        sungguh diperlukan dan membedakannya dari hal yang sia-sia.
+        Dengan demikian, tenaga, perhatian, dan waktu dapat diarahkan
+        kepada kegiatan yang lebih bermanfaat.
+      </p>
+
+      <h2>14. Tanggung Jawab dalam Kehidupan</h2>
+
+      <p>
+        Pemahaman yang baik semestinya membantu manusia bertindak
+        secara bertanggung jawab. Setiap keputusan dapat membawa
+        akibat bagi diri sendiri, orang lain, dan lingkungan.
+        Karena itu, sebelum bertindak, manusia perlu mempertimbangkan
+        tujuan, cara, dan kemungkinan akibat dari pilihannya.
+      </p>
+
+      <p>
+        Tanggung jawab juga berarti bersedia mengakui kesalahan,
+        memperbaiki akibat yang ditimbulkan, dan tidak semata-mata
+        menyalahkan keadaan atau orang lain.
+      </p>
+
+      <h2>15. Kawruh Sejati dalam Kehidupan Sehari-hari</h2>
+
+      <p>
+        Penerapan Kawruh Sejati dapat dimulai dari perkara sederhana:
+        memeriksa kebenaran informasi sebelum menyebarkannya,
+        mendengarkan pendapat orang lain dengan saksama, menahan
+        diri sebelum bereaksi, dan mempertimbangkan manfaat suatu
+        tindakan.
+      </p>
+
+      <p>
+        Dalam menghadapi perbedaan pendapat, manusia dapat berusaha
+        memahami persoalan tanpa terburu-buru merendahkan pihak lain.
+        Dalam menghadapi kesalahan, manusia dapat menjadikannya
+        kesempatan untuk belajar dan memperbaiki diri.
+      </p>
+
+      <h2>16. Perkembangan Pemahaman Manusia</h2>
+
+      <p>
+        Pemahaman tidak selalu berkembang dalam satu langkah.
+        Pengalaman, pengamatan, pertimbangan, dan kesediaan memperbaiki
+        diri dapat membantu manusia melihat suatu persoalan dengan
+        lebih luas dan tepat.
+      </p>
+
+      <p>
+        Perkembangan tersebut bukan sekadar bertambahnya informasi.
+        Perkembangan pemahaman juga terlihat dalam berkurangnya
+        prasangka, meningkatnya ketelitian, tumbuhnya kepedulian,
+        dan semakin bertanggung jawabnya tindakan.
+      </p>
+
+      <h2>17. Makna Kawruh Sejati bagi Kehidupan</h2>
+
+      <p>
+        Kawruh Sejati memberi arah bagi manusia untuk tidak berhenti
+        pada apa yang sekadar diketahui atau diyakini. Manusia perlu
+        berusaha memahami kenyataan dengan lebih jernih dan
+        menerapkan pemahamannya dalam kehidupan.
+      </p>
+
+      <p>
+        Dalam penerapannya, kejernihan cipta, ketulusan rasa, dan
+        Karsa Utama saling mendukung. Ketiganya membantu manusia
+        menilai keadaan dengan lebih tepat, memperlakukan sesama
+        secara manusiawi, serta memilih tindakan yang bermanfaat.
+      </p>
+
+      <p>
+        Dengan demikian, nilai Kawruh Sejati tidak hanya terletak
+        pada pemahaman yang diucapkan, tetapi juga pada perubahan
+        nyata dalam cara manusia menjalani kehidupannya.
+      </p>
+
+      <section class="daftar-istilah">
+        <h2>Daftar Istilah</h2>
+        <ul>
+          <li><strong>Kawruh Sejati:</strong> Pepadhang untuk memahami kenyataan dan mengarahkan laku kehidupan.</li>
+          <li><strong>Kasunyatan:</strong> Kenyataan yang tidak sepenuhnya bergantung pada pemahaman manusia.</li>
+          <li><strong>Kesadaran:</strong> Kemampuan menyadari keadaan diri dan memperhatikan apa yang berlangsung.</li>
+          <li><strong>Cipta:</strong> Kegiatan mengamati, mengingat, berpikir, mempertimbangkan, membedakan, dan memahami.</li>
+          <li><strong>Rasa:</strong> Kemampuan merasakan, menghayati, dan memahami keadaan diri maupun sesama.</li>
+          <li><strong>Karsa Utama:</strong> Kehendak yang diarahkan kepada tindakan bernilai dan diwujudkan melalui laku nyata.</li>
+          <li><strong>Laku:</strong> Sikap dan tindakan nyata dalam menjalani kehidupan.</li>
+        </ul>
+      </section>
+
+      <section class="faq-artikel">
+        <h2>Pertanyaan yang Sering Diajukan</h2>
+        <ol>
+          <li>
+            <strong>Apa yang dimaksud dengan Kawruh Sejati?</strong>
+            <p>Kawruh Sejati merupakan pepadhang untuk membantu manusia memahami kenyataan dan mengarahkan kehidupannya secara lebih jernih.</p>
+          </li>
+          <li>
+            <strong>Apakah pengetahuan manusia selalu benar?</strong>
+            <p>Tidak. Pengetahuan manusia memiliki batas dan dapat dipengaruhi oleh pengamatan yang tidak lengkap, ingatan, anggapan, serta kepentingan pribadi.</p>
+          </li>
+          <li>
+            <strong>Apa hubungan Kawruh Sejati dengan kesadaran?</strong>
+            <p>Kesadaran membantu manusia mengenali keadaan diri, mengamati proses pemahaman, dan membedakan apa yang diketahui dari apa yang baru diduga.</p>
+          </li>
+          <li>
+            <strong>Apa hubungan cipta, rasa, dan karsa?</strong>
+            <p>Cipta membantu memahami, rasa membantu menghayati dan mempertimbangkan keadaan, sedangkan karsa mengarahkan kehendak menuju tindakan.</p>
+          </li>
+          <li>
+            <strong>Bagaimana menerapkan Kawruh Sejati dalam kehidupan?</strong>
+            <p>Dimulai dengan memeriksa informasi, mempertimbangkan akibat tindakan, bersikap tulus kepada sesama, dan bersedia memperbaiki kesalahan.</p>
+          </li>
+          <li>
+            <strong>Apa ukuran manfaat Kawruh Sejati?</strong>
+            <p>Manfaatnya terlihat dalam kejernihan pemahaman, ketulusan sikap, tanggung jawab, dan tindakan nyata yang membawa kebaikan.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="tautan-terkait">
+        <h2>Bacaan Terkait</h2>
+        <ul>
+          <li><a href="daftar-isi.html">Daftar Isi Kawruh Urip</a></li>
+          <li><a href="jalan-perbaikan-diri.html">Jalan Perbaikan Diri</a></li>
+        </ul>
+      </section>
+
+      <div class="navigasi-artikel-bawah">
+        <a href="daftar-isi.html">← Kembali ke Daftar Isi</a>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>KAWRUH URIP</strong></p>
+    <p>Pemaparan kawruh babagan urip, pangerten dhiri, lan kasunyataning panguripan.</p>
+    <p>© <span id="tahun"></span> Dhimas Purnomo</p>
+  </footer>
+
+  <button id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+  <script src="navigasi.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    document.getElementById("tahun").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
