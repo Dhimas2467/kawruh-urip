@@ -1,11 +1,12 @@
+
 <style>
 .menu-utama {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 13px 8px;
+  gap: 22px;
+  padding: 14px 8px;
   background: transparent;
   font-family: Arial, sans-serif;
 }
@@ -14,37 +15,39 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 0;
-  padding: 7px 11px;
-  border: 1px solid #b58b35;
-  border-radius: 7px;
+  padding: 5px 0;
+  border: none;
+  border-radius: 0;
   background: transparent;
+  box-shadow: none;
   color: #fffaf0;
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.2s, color 0.2s;
 }
 
 .menu-utama a:hover,
 .menu-utama a.terpilih {
-  background: #b58b35;
-  border-color: #b58b35;
-  color: #ffffff;
+  color: #f0cc78;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: #b58b35;
+  text-underline-offset: 6px;
 }
 
 .menu-utama a.tombol-beranda {
-  flex: 0 0 32px;
-  width: 32px;
-  height: 32px;
-  padding: 0;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  padding: 5px 0;
 }
 
 .menu-utama a.tombol-beranda svg {
   display: block;
-  width: 17px;
-  height: 17px;
+  width: 19px;
+  height: 19px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -54,50 +57,27 @@
 
 @media (max-width: 560px) {
   .menu-utama {
-    gap: 5px;
-    padding: 12px 5px;
+    gap: 15px;
+    padding: 12px 4px;
   }
 
   .menu-utama a {
-    padding: 7px 8px;
     font-size: 11px;
-  }
-
-  .menu-utama a.tombol-beranda {
-    flex-basis: 30px;
-    width: 30px;
-    height: 30px;
   }
 }
 
 @media (max-width: 360px) {
   .menu-utama {
-    gap: 4px;
-    padding-right: 4px;
-    padding-left: 4px;
+    gap: 11px;
   }
 
   .menu-utama a {
-    padding: 7px 6px;
     font-size: 10px;
-  }
-
-  .menu-utama a.tombol-beranda {
-    flex-basis: 28px;
-    width: 28px;
-    height: 28px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .menu-utama a {
-    transition: none;
   }
 }
 </style>
 
 <nav class="menu-utama" aria-label="Menu utama">
-
   <a
     href="index.html#beranda"
     class="tombol-beranda"
@@ -112,11 +92,7 @@
   </a>
 
   <a href="identitas.html">Identitas</a>
-
   <a href="daftar-isi.html">Daftar Isi</a>
-
   <a href="landasan.html">Landasan</a>
-
   <a href="dokumentasi.html">Dokumentasi</a>
-
 </nav>
