@@ -3,168 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="theme-color" content="#493222">
-  <meta name="description" content="Dokumentasi naskah dan karya tulis Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
+  <meta
+    name="description"
+    content="Dokumentasi naskah dan karya tulis Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan."
+  >
+
   <title>Dokumentasi | Kawruh Urip</title>
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 
   <style>
     .dokumentasi-wrap {
-      width: min(100% - 32px, 1000px);
-      margin: 0 auto;
-      padding-top: 30px;
-      padding-bottom: 48px;
-      min-height: 65vh;
-      color: #302319;
+      width: min(100% - 28px, 1000px);
+      margin: 24px auto;
+      padding-bottom: 32px;
+      line-height: 1.8;
+    }
+
+    .dokumentasi-panel {
+      padding: 24px;
     }
 
     .judul-dokumentasi {
-      margin: 0 0 22px;
+      margin: 0 0 18px;
       padding-bottom: 12px;
-      color: #302319;
+      color: #493222;
       font-size: clamp(1.45rem, 4vw, 2rem);
       border-bottom: 1px solid #b69a6a;
     }
 
     .pengantar-dokumentasi {
-      margin-bottom: 28px;
-      padding: 22px 24px;
-      color: #302319;
-      background: #f2e7d2;
-      border: 1px solid #c7a66a;
-      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 20px;
+      color: #493222;
+      background: #fffaf0;
+      border: 1px solid #d2bd98;
+      border-radius: 8px;
     }
 
     .pengantar-dokumentasi p {
       margin: 0;
-      color: #302319;
+      text-align: justify;
     }
 
-    .daftar-dokumentasi {
-      display: grid;
-      gap: 16px;
-    }
-
-    .daftar-dokumentasi .pengantar-dokumentasi {
-      margin-bottom: 0;
-    }
-
-    .daftar-dokumentasi a {
-      display: block;
-      padding: 18px 20px;
-      color: #302319;
+    .status-dokumentasi {
+      padding: 20px;
+      color: #493222;
       background: #f2e7d2;
       border: 1px solid #c7a66a;
-      border-radius: 5px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
-      transition: background 0.2s, border-color 0.2s;
+      border-radius: 8px;
     }
 
-    .daftar-dokumentasi a:hover {
-      color: #21170f;
-      background: #e5d2b2;
-      border-color: #8d6b39;
+    .status-dokumentasi h3 {
+      margin-top: 0;
+      color: #65472e;
     }
 
-    .keterangan-dokumentasi {
-      display: block;
-      margin-top: 4px;
-      color: #594632;
-      font-size: 0.9rem;
+    .status-dokumentasi p {
+      margin-bottom: 0;
+      text-align: justify;
     }
 
     .kembali-beranda {
       display: inline-block;
-      margin-top: 28px;
-      padding: 8px 15px;
-      color: #302319;
-      background: #f2e7d2;
-      border: 1px solid #c7a66a;
-      border-radius: 3px;
+      margin-top: 24px;
+      padding: 9px 15px;
+      color: #fffaf0;
+      background: #493222;
+      border: 1px solid #493222;
+      border-radius: 5px;
+      text-decoration: none;
     }
 
     .kembali-beranda:hover {
-      color: #21170f;
-      background: #e5d2b2;
+      color: #ffffff;
+      background: #76532f;
     }
 
-    @media (max-width: 620px) {
-      .dokumentasi-wrap {
-        width: min(100% - 22px, 1000px);
-        padding-top: 20px;
-      }
-
-      .pengantar-dokumentasi {
+    @media (max-width: 560px) {
+      .dokumentasi-panel {
         padding: 18px;
       }
 
-      .daftar-dokumentasi a {
-        padding: 15px 16px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .daftar-dokumentasi a {
-        transition: none;
+      .pengantar-dokumentasi,
+      .status-dokumentasi {
+        padding: 16px;
       }
     }
   </style>
 </head>
 
-<body id="beranda">
+<body>
 
+  <!-- KEPALA HALAMAN -->
   <header class="site-header">
-    <div class="header-shade"></div>
+    <div class="header-shade" aria-hidden="true"></div>
+
     <div class="header-content">
       <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+
       <h1>KAWRUH URIP</h1>
-      <p class="tagline">Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.</p>
+
+      <p class="tagline">
+        Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
+      </p>
+
+      <div id="navigasi-container"></div>
     </div>
   </header>
 
-  <div id="navigasi-container"></div>
+  <!-- ISI DOKUMENTASI -->
+  <main class="page-wrap dokumentasi-wrap">
 
-  <main class="dokumentasi-wrap">
+    <section class="content-card dokumentasi-panel">
 
-    <h2 class="judul-dokumentasi">Dokumentasi Kawruh Urip</h2>
+      <h2 class="judul-dokumentasi">
+        Dokumentasi Kawruh Urip
+      </h2>
 
-    <div class="pengantar-dokumentasi">
-      <p>
-        Halaman ini disediakan untuk dokumentasi naskah, karya tulis,
-        dan bahan pemaparan Kawruh Urip tentang kehidupan, jati diri,
-        kesadaran, serta kasunyatan. Dokumentasi akan ditambahkan
-        secara bertahap sesuai dengan ketersediaan naskah.
-      </p>
-    </div>
-
-    <div class="daftar-dokumentasi">
       <div class="pengantar-dokumentasi">
         <p>
-          Dokumentasi naskah Kawruh Urip sedang dipersiapkan.
-          Halaman ini akan diperbarui ketika bahan dokumentasi
-          sudah tersedia.
+          Halaman ini disediakan untuk dokumentasi naskah,
+          karya tulis, dan bahan pemaparan Kawruh Urip tentang
+          kehidupan, jati diri, kesadaran, serta kasunyatan.
+          Dokumentasi akan ditambahkan secara bertahap sesuai
+          dengan ketersediaan naskah.
         </p>
       </div>
-    </div>
 
-    <a class="kembali-beranda" href="index.html#beranda">
-      ← Kembali ke Beranda
-    </a>
+      <div class="status-dokumentasi">
+        <h3>Persiapan Dokumentasi</h3>
+
+        <p>
+          Dokumentasi naskah Kawruh Urip sedang dipersiapkan.
+          Halaman ini akan diperbarui apabila bahan dokumentasi
+          telah tersedia untuk dibaca oleh para pamaos.
+        </p>
+      </div>
+
+      <a class="kembali-beranda" href="index.html#beranda">
+        ← Kembali ke Beranda
+      </a>
+
+    </section>
 
   </main>
 
-  <footer class="site-footer">
-    <p class="footer-title">KAWRUH URIP</p>
-    <p class="footer-note">Pemaparan babagan urip lan kasunyatan.</p>
-    <p class="copyright">© Kawruh Urip</p>
-  </footer>
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
 
-  <button id="backToTop" class="back-to-top" type="button"
-    aria-label="Kembali ke atas">↑</button>
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+  >↑</button>
 
+  <!-- JAVASCRIPT -->
   <script src="navigasi.js"></script>
-  <script src="script.js?v=2"></script>
+  <script src="footer.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
