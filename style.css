@@ -1,7 +1,7 @@
-
-/* =========================================
-   KAWRUH URIP — STYLE UTAMA
-   ========================================= */
+/* ==========================================
+   KAWRUH URIP
+   STYLE.CSS
+   ========================================== */
 
 :root {
   --kayu-gelap: #493222;
@@ -14,10 +14,7 @@
   --emas: #c49a52;
 }
 
-/* =========================================
-   LATAR HALAMAN
-   ========================================= */
-
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -33,37 +30,23 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 17px;
   line-height: 1.8;
-
   background-color: var(--kayu-terang);
   background-image: url("latar-kayu-terang.jpg");
   background-repeat: repeat;
-  background-position: top left;
-  background-size: auto;
+  background-position: left top;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* =========================================
-   KEPALA HALAMAN
-   ========================================= */
-
+/* KEPALA HALAMAN */
 .site-header {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
   padding: 38px 20px 30px;
+  overflow: hidden;
   text-align: center;
   color: #fff8e9;
-
   background-color: var(--kayu-gelap);
   background-image: url("header-kayu-gelap.jpg");
   background-repeat: repeat;
   background-position: center top;
-  background-size: auto;
-
   border-bottom: 4px solid var(--emas);
   box-shadow: 0 4px 12px rgba(45, 29, 17, 0.25);
 }
@@ -74,7 +57,6 @@ img {
 
 .header-content {
   position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -103,85 +85,61 @@ img {
   font-size: 16px;
 }
 
-/* =========================================
-   NAVIGASI
-   ========================================= */
-
+/* NAVIGASI UTAMA */
 #navigasi-container {
+  display: block;
   width: 100%;
+  margin: 20px auto 0;
 }
 
-.site-nav,
-.main-nav,
-nav {
-  max-width: 100%;
-}
-
-.site-nav,
-.main-nav {
+#navigasi-container .navigasi-utama {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 8px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
-.site-nav a,
-.main-nav a,
-#navigasi-container nav a {
-  display: inline-block;
-  padding: 8px 15px;
-  border: 1px solid rgba(234, 212, 168, 0.55);
-  border-radius: 5px;
-  color: #fff8e9;
-  font-size: 14px;
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.site-nav a:hover,
-.main-nav a:hover,
-#navigasi-container nav a:hover {
-  background-color: var(--emas);
-  color: #2f2116;
-}
-
-/* Navigasi jika navigasi.js menghasilkan daftar */
-#navigasi-container ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+#navigasi-container .navigasi-utama li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-#navigasi-container li {
+#navigasi-container .navigasi-utama a,
+#navigasi-container a.tombol-beranda {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
   margin: 0;
-  padding: 0;
-}
-
-#navigasi-container a {
-  display: inline-block;
   padding: 8px 15px;
-  border: 1px solid rgba(234, 212, 168, 0.55);
+  border: 1px solid rgba(234, 212, 168, 0.65);
   border-radius: 5px;
+  background: var(--hijau);
   color: #fff8e9;
+  font-family: inherit;
   font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
-#navigasi-container a:hover {
-  background-color: var(--emas);
+#navigasi-container .navigasi-utama a:hover,
+#navigasi-container a.tombol-beranda:hover {
+  background: var(--emas);
   color: #2f2116;
+  border-color: var(--emas);
 }
 
-/* =========================================
-   AREA ISI
-   ========================================= */
-
+/* AREA ISI */
 .page-wrap {
   width: min(1100px, calc(100% - 36px));
   margin: 32px auto;
@@ -219,10 +177,7 @@ nav {
   line-height: 1.85;
 }
 
-/* =========================================
-   KARTU ARTIKEL BERANDA
-   ========================================= */
-
+/* KARTU ARTIKEL BERANDA */
 .artikel-beranda {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -298,14 +253,9 @@ nav {
 .tautan-daftar-lengkap a {
   color: var(--kayu-gelap);
   font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
-/* =========================================
-   DAFTAR ISI ARTIKEL
-   ========================================= */
-
+/* DAFTAR ISI */
 .daftar-isi,
 .article-list {
   margin: 0;
@@ -314,7 +264,7 @@ nav {
 
 .daftar-isi li,
 .article-list li {
-  margin: 0 0 12px;
+  margin-bottom: 12px;
   padding-left: 4px;
 }
 
@@ -331,10 +281,7 @@ nav {
   text-decoration: underline;
 }
 
-/* =========================================
-   TAUTAN UMUM DAN TOMBOL
-   ========================================= */
-
+/* TAUTAN DAN TOMBOL */
 a {
   overflow-wrap: anywhere;
 }
@@ -360,10 +307,7 @@ button {
   background: var(--kayu-sedang);
 }
 
-/* =========================================
-   GAMBAR IDENTITAS
-   ========================================= */
-
+/* GAMBAR IDENTITAS */
 .gambar-identitas {
   display: block;
   width: min(100%, 420px);
@@ -374,10 +318,7 @@ button {
   object-fit: cover;
 }
 
-/* =========================================
-   KUTIPAN
-   ========================================= */
-
+/* KUTIPAN */
 blockquote {
   margin: 24px 0;
   padding: 14px 20px;
@@ -387,22 +328,51 @@ blockquote {
   font-style: italic;
 }
 
-/* =========================================
-   SIKIL HALAMAN
-   ========================================= */
+/* TOMBOL BERBAGI */
+.tombol-share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin: 24px auto;
+  text-align: center;
+}
 
+.tombol-share a,
+.tombol-share button {
+  display: inline-flex;
+  flex: 0 0 34px;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tombol-share img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* SIKIL HALAMAN */
 .site-footer {
   margin-top: 40px;
   padding: 26px 20px;
   border-top: 4px solid var(--emas);
   text-align: center;
   color: #fff8e9;
-
   background-color: var(--kayu-gelap);
   background-image: url("header-kayu-gelap.jpg");
   background-repeat: repeat;
   background-position: center top;
-  background-size: auto;
 }
 
 .footer-title {
@@ -419,10 +389,7 @@ blockquote {
   font-size: 13px;
 }
 
-/* =========================================
-   TOMBOL KEMBALI KE ATAS
-   ========================================= */
-
+/* KEMBALI KE ATAS */
 .back-to-top {
   position: fixed;
   right: 20px;
@@ -451,24 +418,18 @@ blockquote {
   display: block;
 }
 
-/* =========================================
-   TAMPILAN TABLET
-   ========================================= */
-
+/* TABLET */
 @media (max-width: 900px) {
   .artikel-beranda {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .page-wrap {
-    width: min(100% - 28px, 760px);
+    width: calc(100% - 28px);
   }
 }
 
-/* =========================================
-   TAMPILAN PONSEL
-   ========================================= */
-
+/* PONSEL */
 @media (max-width: 700px) {
   body {
     font-size: 16px;
@@ -487,15 +448,15 @@ blockquote {
     font-size: 14px;
   }
 
-  #navigasi-container ul {
-    gap: 6px;
+  #navigasi-container .navigasi-utama {
+    gap: 7px;
   }
 
-  #navigasi-container a,
-  .site-nav a,
-  .main-nav a {
+  #navigasi-container .navigasi-utama a,
+  #navigasi-container a.tombol-beranda {
+    min-height: 36px;
     padding: 7px 10px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .page-wrap {
@@ -530,10 +491,7 @@ blockquote {
   }
 }
 
-/* =========================================
-   AKSESIBILITAS
-   ========================================= */
-
+/* AKSESIBILITAS */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
