@@ -114,10 +114,8 @@
     </div>
   </header>
 
-
-  <!-- BERANDA LANGSUNG MENAMPILKAN ARTIKEL -->
+  <!-- BERANDA -->
   <main class="page-wrap">
-
     <section class="content-card" aria-label="Artikel terbaru Kawruh Urip">
 
       <h2>Artikel Kawruh Urip</h2>
@@ -129,8 +127,8 @@
       ></div>
 
       <p id="pesan-artikel" class="pesan-artikel" hidden>
-        Artikel durung ditambahake. Daftar artikel bakal
-        ditampilake sawise data artikel disiapake.
+        Artikel durung bisa ditampilake. Priksa berkas
+        daftar-artikel.js lan data artikel ing jerone.
       </p>
 
       <p class="tautan-daftar-lengkap">
@@ -138,9 +136,7 @@
       </p>
 
     </section>
-
   </main>
-
 
   <!-- SIKIL HALAMAN -->
   <footer class="site-footer">
@@ -153,7 +149,6 @@
     <p class="copyright">© Kawruh Urip</p>
   </footer>
 
-
   <!-- TOMBOL KEMBALI KE ATAS -->
   <button
     id="backToTop"
@@ -161,7 +156,6 @@
     type="button"
     aria-label="Kembali ke atas"
   >↑</button>
-
 
   <!-- JAVASCRIPT -->
   <script src="navigasi.js"></script>
@@ -174,58 +168,65 @@
       const pesan = document.getElementById("pesan-artikel");
       const artikel = window.DAFTAR_ARTIKEL;
 
-      if (!Array.isArray(artikel) || artikel.length === 0) {
+      function tampilkanPesan() {
         pesan.hidden = false;
+      }
+
+      if (!Array.isArray(artikel) || artikel.length === 0) {
+        tampilkanPesan();
         return;
       }
 
-      artikel
-        .filter(function (item) {
-          return item && item.judul && item.url;
-        })
-        .slice(0, 3)
-        .forEach(function (item) {
-          const kartu = document.createElement("article");
-          kartu.className = "kartu-beranda";
+      const daftarValid = artikel.filter(function (item) {
+        return item &&
+          typeof item.judul === "string" &&
+          item.judul.trim() !== "" &&
+          typeof item.url === "string" &&
+          item.url.trim() !== "";
+      });
 
-          if (item.gambar) {
-            const gambar = document.createElement("img");
-            gambar.src = item.gambar;
-            gambar.alt = item.alt || item.judul;
-            gambar.loading = "lazy";
+      daftarValid.forEach(function (item) {
+        const kartu = document.createElement("article");
+        kartu.className = "kartu-beranda";
 
-            gambar.onerror = function () {
-              gambar.remove();
-            };
+        if (item.gambar) {
+          const gambar = document.createElement("img");
+          gambar.src = item.gambar;
+          gambar.alt = item.alt || item.judul;
+          gambar.loading = "lazy";
 
-            kartu.appendChild(gambar);
-          }
+          gambar.onerror = function () {
+            gambar.remove();
+          };
 
-          const isi = document.createElement("div");
-          isi.className = "isi-kartu-beranda";
+          kartu.appendChild(gambar);
+        }
 
-          const judul = document.createElement("h2");
-          judul.textContent = item.judul;
-          isi.appendChild(judul);
+        const isi = document.createElement("div");
+        isi.className = "isi-kartu-beranda";
 
-          if (item.ringkasan) {
-            const ringkasan = document.createElement("p");
-            ringkasan.textContent = item.ringkasan;
-            isi.appendChild(ringkasan);
-          }
+        const judul = document.createElement("h2");
+        judul.textContent = item.judul;
+        isi.appendChild(judul);
 
-          const tautan = document.createElement("a");
-          tautan.className = "tautan-kartu-beranda";
-          tautan.href = item.url;
-          tautan.textContent = "Waca Artikel →";
-          isi.appendChild(tautan);
+        if (item.ringkasan) {
+          const ringkasan = document.createElement("p");
+          ringkasan.textContent = item.ringkasan;
+          isi.appendChild(ringkasan);
+        }
 
-          kartu.appendChild(isi);
-          wadah.appendChild(kartu);
-        });
+        const tautan = document.createElement("a");
+        tautan.className = "tautan-kartu-beranda";
+        tautan.href = item.url;
+        tautan.textContent = "Waca Artikel →";
+        isi.appendChild(tautan);
+
+        kartu.appendChild(isi);
+        wadah.appendChild(kartu);
+      });
 
       if (wadah.children.length === 0) {
-        pesan.hidden = false;
+        tampilkanPesan();
       }
     })();
   </script>
