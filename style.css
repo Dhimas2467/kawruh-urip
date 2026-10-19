@@ -45,15 +45,13 @@ body {
   background-size: auto, 700px auto;
 }
 
-/* ========================================
-   HEADER KAYU GELAP
-   ======================================== */
+/* HEADER KAYU GELAP */
 
 .site-header {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 42px 16px 30px;
+  padding: 42px 16px 28px;
   color: #fff4dc;
   text-align: center;
 
@@ -108,23 +106,22 @@ body {
   font-size: 1rem;
 }
 
-/* ========================================
-   NAVIGASI
-   Tombol kecil dan terpisah
-   ======================================== */
+/* NAVIGASI: TOMBOL TERPISAH */
 
 .main-nav {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 5px;
+  gap: 6px;
+
   width: 100%;
   max-width: 100%;
   margin: 18px auto 0;
   padding: 0;
+
   background: transparent;
-  border: none;
+  border: 0;
   box-shadow: none;
 }
 
@@ -135,16 +132,16 @@ body {
   align-items: center;
 
   min-width: 0;
-  min-height: 26px;
-  padding: 4px 7px;
+  min-height: 28px;
+  padding: 5px 9px;
 
   color: #5a4029;
   background: #eedab7;
   border: 1px solid #b9955d;
-  border-radius: 4px;
+  border-radius: 5px;
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
@@ -155,10 +152,12 @@ body {
 }
 
 .main-nav a[aria-current="page"] {
+  flex: 0 0 28px;
   width: 28px;
   min-width: 28px;
-  min-height: 26px;
-  padding: 4px;
+  min-height: 28px;
+  padding: 5px;
+
   background: #e6cfa6;
   border-color: #a9874d;
 }
@@ -178,9 +177,7 @@ body {
   outline: none;
 }
 
-/* ========================================
-   AREA UTAMA
-   ======================================== */
+/* AREA UTAMA */
 
 .page-wrap {
   width: min(100% - 32px, 1000px);
@@ -313,9 +310,7 @@ body {
   font-weight: bold;
 }
 
-/* ========================================
-   FOOTER KAYU GELAP
-   ======================================== */
+/* FOOTER KAYU GELAP */
 
 .site-footer {
   padding: 30px 20px;
@@ -357,9 +352,7 @@ body {
   font-size: 0.78rem;
 }
 
-/* ========================================
-   TOMBOL KEMBALI KE ATAS
-   ======================================== */
+/* TOMBOL KEMBALI KE ATAS */
 
 .back-to-top {
   position: fixed;
@@ -390,9 +383,7 @@ body {
   background: #f1dba8;
 }
 
-/* ========================================
-   TAMPILAN HP
-   ======================================== */
+/* TAMPILAN HP */
 
 @media (max-width: 600px) {
   body {
@@ -401,40 +392,46 @@ body {
   }
 
   .site-header {
-    padding: 30px 10px 24px;
+    padding: 28px 8px 22px;
   }
 
   .eyebrow {
-    font-size: 0.65rem;
-    letter-spacing: 1.5px;
+    font-size: 0.62rem;
+    letter-spacing: 1px;
   }
 
   .site-header h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
     letter-spacing: 2px;
   }
 
   .tagline {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
+  /* Keempat tombol dipertahankan dalam satu baris */
   .main-nav {
     flex-wrap: nowrap;
-    gap: 3px;
-    margin-top: 14px;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 12px;
   }
 
   .main-nav a {
+    flex: 0 1 auto;
     min-width: 0;
-    min-height: 23px;
-    padding: 4px 5px;
+    min-height: 22px;
+    padding: 3px 5px;
     font-size: 9px;
+    line-height: 1.2;
   }
 
   .main-nav a[aria-current="page"] {
-    width: 24px;
-    min-width: 24px;
-    min-height: 23px;
-    padding: 4px;
+    flex: 0 0 23px;
+    width: 23px;
+    min-width: 23px;
+    min-height: 22px;
+    padding: 3px;
   }
 
   .main-nav a svg {
@@ -484,7 +481,7 @@ body {
   }
 }
 
-/* PENGATURAN AKSESIBILITAS */
+/* AKSESIBILITAS */
 
 @media (prefers-reduced-motion: reduce) {
   html {
