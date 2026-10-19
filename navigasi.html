@@ -1,11 +1,12 @@
+
 <style>
 .menu-utama {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 22px;
-  padding: 14px 8px;
+  gap: 8px;
+  padding: 12px 6px;
   background: transparent;
   font-family: Arial, sans-serif;
 }
@@ -14,41 +15,37 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0;
+  padding: 8px 12px;
   border: none;
   border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  color: #fffaf0;
+  background: #17120e;
+  color: #ffffff;
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
   white-space: nowrap;
+  box-shadow: none;
 }
 
 .menu-utama a:hover,
 .menu-utama a.terpilih {
-  color: #f0cc78;
-  background: transparent;
-  border: none;
-  text-decoration: underline;
-  text-decoration-color: #b58b35;
-  text-underline-offset: 6px;
+  background: #000000;
+  color: #ffffff;
 }
 
 .menu-utama a.tombol-beranda {
-  flex: 0 0 auto;
-  width: auto;
-  height: auto;
-  padding: 5px 0;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 34px;
+  padding: 0;
 }
 
 .menu-utama a.tombol-beranda svg {
   display: block;
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
   fill: none;
-  stroke: currentColor;
+  stroke: #ffffff;
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -56,22 +53,36 @@
 
 @media (max-width: 560px) {
   .menu-utama {
-    gap: 15px;
-    padding: 12px 4px;
+    gap: 5px;
+    padding: 10px 3px;
   }
 
   .menu-utama a {
+    padding: 8px 9px;
     font-size: 11px;
+  }
+
+  .menu-utama a.tombol-beranda {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
   }
 }
 
 @media (max-width: 360px) {
   .menu-utama {
-    gap: 11px;
+    gap: 3px;
   }
 
   .menu-utama a {
+    padding: 7px 6px;
     font-size: 10px;
+  }
+
+  .menu-utama a.tombol-beranda {
+    flex-basis: 29px;
+    width: 29px;
+    height: 30px;
   }
 }
 </style>
