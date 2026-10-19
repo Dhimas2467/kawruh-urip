@@ -10,90 +10,6 @@
   <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    .main-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 4px;
-      margin: 12px auto 0;
-      padding: 0;
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      max-width: 100%;
-    }
-
-    .main-nav a {
-      display: inline-flex;
-      flex: 0 1 auto;
-      justify-content: center;
-      align-items: center;
-      min-width: 0;
-      min-height: 24px;
-      padding: 4px 6px;
-      color: #5a4029;
-      background: rgba(238, 218, 183, 0.95);
-      border: 1px solid #b9955d;
-      border-radius: 4px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 1.2;
-      text-decoration: none;
-      white-space: nowrap;
-      box-shadow: 0 1px 2px rgba(74, 48, 27, 0.12);
-    }
-
-    .main-nav a[aria-current="page"] {
-      width: 26px;
-      min-width: 26px;
-      min-height: 24px;
-      padding: 4px;
-      background: #e6cfa6;
-    }
-
-    .main-nav a:hover,
-    .main-nav a:focus-visible {
-      color: #493222;
-      background: #f7efdf;
-      outline: none;
-    }
-
-    .main-nav a svg {
-      display: block;
-      width: 13px;
-      height: 13px;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 400px) {
-      .main-nav {
-        gap: 3px;
-        margin-top: 10px;
-      }
-
-      .main-nav a {
-        min-height: 22px;
-        padding: 3px 5px;
-        font-size: 9px;
-      }
-
-      .main-nav a[aria-current="page"] {
-        width: 24px;
-        min-width: 24px;
-        min-height: 22px;
-        padding: 3px;
-      }
-
-      .main-nav a svg {
-        width: 12px;
-        height: 12px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -113,6 +29,7 @@
       <nav class="main-nav" aria-label="Navigasi utama">
 
         <a href="index.html"
+           class="nav-home"
            aria-current="page"
            aria-label="Beranda"
            title="Beranda">
@@ -131,7 +48,9 @@
         </a>
 
         <a href="#identitas">Identitas</a>
+
         <a href="#daftar-isi">Daftar Isi</a>
+
         <a href="#dokumentasi">Dokumentasi</a>
 
       </nav>
