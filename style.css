@@ -133,7 +133,7 @@ button {
   margin: 0;
   padding: 8px 13px;
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   background: #17120e;
   color: #ffffff;
   font-family: Arial, sans-serif;
