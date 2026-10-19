@@ -1,542 +1,643 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Kawruh Urip | Kawruh dan Laku Kehidupan</title>
+  <meta name="theme-color" content="#382719">
+  <meta
+    name="description"
+    content="Kawruh Urip: pemahaman tentang hakikat kehidupan, kesadaran diri, budi pekerti, dan laku nyata dalam kehidupan manusia."
+  >
 
-<meta name="description" content="Kawruh Urip: pemahaman tentang hakikat kehidupan, kesadaran diri, budi pekerti, dan laku nyata dalam kehidupan manusia.">
+  <title>Kawruh Urip | Kawruh dan Laku Kehidupan</title>
 
-<meta name="theme-color" content="#3b281d">
+  <link rel="stylesheet" href="style.css?v=5">
 
-<style>
-:root{
-  --cokelat:#3b281d;
-  --kartu:#f5ead8;
-  --teks:#40362c;
-  --emas:#b58b35;
-  --sambut:#eee0c9;
-}
+  <style>
+    :root {
+      --cokelat: #3b281d;
+      --kartu: #f5ead8;
+      --teks: #40362c;
+      --emas: #b58b35;
+    }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+    * {
+      box-sizing: border-box;
+    }
 
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.8;
-  color:var(--teks);
-  background:#d8bd8b url("latar-kayu-terang.jpg")
-    center top / 100% auto repeat-y;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-header{
-  padding:22px 16px;
-  text-align:center;
-  color:white;
-  background:#3b281d url("header-kayu-gelap.jpg")
-    center center / cover no-repeat;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+      color: var(--teks);
+      background: #d8bd8b url("latar-kayu-terang.jpg")
+        center top / 100% auto repeat-y;
+    }
 
-header h1{
-  margin:6px 0 0;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(25px,5vw,36px);
-  line-height:1.3;
-  letter-spacing:1px;
-}
+    /* KEPALA HALAMAN */
+    .site-header {
+      position: relative;
+      padding: 22px 16px 0;
+      text-align: center;
+      color: white;
+      background: #3b281d url("header-kayu-gelap.jpg")
+        center center / cover no-repeat;
+    }
 
-header p{
-  margin:4px 0 0;
-  font-size:16px;
-}
+    .header-shade {
+      position: absolute;
+      inset: 0;
+      background: rgba(35, 22, 14, 0.35);
+    }
 
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  padding:13px 8px;
-  background:#e8d6ba;
-}
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
 
-nav a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:0;
-  padding:7px 11px;
-  border:1px solid var(--cokelat);
-  border-radius:7px;
-  background:var(--cokelat);
-  color:white;
-  font-size:13px;
-  font-weight:bold;
-  text-decoration:none;
-  white-space:nowrap;
-}
+    .eyebrow {
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
 
-nav a:hover,
-nav a.terpilih{
-  background:var(--emas);
-  border-color:var(--emas);
-  color:white;
-}
+    .site-header h1 {
+      margin: 6px 0 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 5vw, 36px);
+      line-height: 1.3;
+      letter-spacing: 1px;
+    }
 
-nav a.tombol-beranda{
-  flex:0 0 32px;
-  width:32px;
-  height:32px;
-  padding:0;
-}
+    /* NAVIGASI */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 8px;
+    }
 
-nav a.tombol-beranda svg{
-  display:block;
-  width:17px;
-  height:17px;
-  fill:none;
-  stroke:white;
-  stroke-width:1.8;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-}
+    nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      padding: 7px 11px;
+      border: 1px solid #b58b35;
+      border-radius: 7px;
+      background: #f5ead8;
+      color: #3b281d;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-main{
-  width:100%;
-  max-width:900px;
-  margin:0 auto;
-  padding:20px 20px 30px;
-}
+    nav a:hover,
+    nav a.terpilih {
+      background: var(--emas);
+      border-color: var(--emas);
+      color: white;
+    }
 
-h2{
-  margin:0 0 14px;
-  color:var(--cokelat);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(23px,4.5vw,31px);
-  line-height:1.35;
-}
+    nav a.tombol-beranda {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+    }
 
-p{margin:8px 0 14px}
+    nav a.tombol-beranda svg {
+      display: block;
+      width: 17px;
+      height: 17px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-.pemisah{
-  height:1px;
-  margin:20px 0;
-  border:0;
-  background:#cbb99e;
-}
+    /* ISI HALAMAN */
+    main {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 20px 30px;
+    }
 
-.sambutan{
-  background:var(--sambut);
-  color:#4a3021;
-  padding:16px 20px;
-  border-left:4px solid var(--emas);
-  border-radius:10px;
-  margin-bottom:22px;
-}
+    h2 {
+      margin: 0 0 14px;
+      color: var(--cokelat);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(23px, 4.5vw, 31px);
+      line-height: 1.35;
+    }
 
-.sambutan h2{
-  font-size:clamp(21px,4vw,27px);
-  margin:0 0 5px;
-  color:#4a3021;
-}
+    p {
+      margin: 8px 0 14px;
+    }
 
-.sambutan p{
-  font-size:15px;
-  line-height:1.65;
-  margin:0;
-}
+    .pemisah {
+      height: 1px;
+      margin: 4px 0 22px;
+      border: 0;
+      background: #cbb99e;
+    }
 
-.kartu-artikel{
-  display:flex;
-  align-items:center;
-  gap:20px;
-  padding:20px;
-  border-radius:12px;
-  background:var(--kartu);
-}
+    /* KARTU ARTIKEL */
+    .kartu-artikel {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      border: 1px solid rgba(112, 78, 43, 0.15);
+      border-radius: 12px;
+      background: var(--kartu);
+      box-shadow: 0 3px 10px rgba(61, 40, 22, 0.08);
+    }
 
-.kartu-artikel+.kartu-artikel{
-  margin-top:18px;
-}
+    .kartu-artikel + .kartu-artikel {
+      margin-top: 18px;
+    }
 
-.navigasi-artikel{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  margin-top:22px;
-  padding:14px 0;
-}
+    .gambar-artikel {
+      flex: 0 0 130px;
+      width: 130px;
+      height: 155px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
 
-.navigasi-artikel button{
-  border:0;
-  border-radius:7px;
-  padding:10px 13px;
-  background:var(--cokelat);
-  color:white;
-  font-size:13px;
-  font-weight:bold;
-  cursor:pointer;
-}
+    .isi-artikel {
+      flex: 1;
+      min-width: 0;
+    }
 
-.navigasi-artikel button:disabled{
-  background:#c9c1b5;
-  color:#686158;
-  cursor:not-allowed;
-}
+    .judul-artikel {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--cokelat);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1.4;
+      text-decoration: none;
+    }
 
-#nomor-halaman-artikel{
-  font-size:13px;
-  color:var(--teks);
-  text-align:center;
-}
+    .ringkasan-artikel {
+      margin: 0 0 12px;
+      line-height: 1.75;
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
-.gambar-artikel{
-  flex:0 0 130px;
-  width:130px;
-  height:155px;
-  object-fit:contain;
-  border-radius:8px;
-}
+    .tautan {
+      color: var(--cokelat);
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-.judul-artikel{
-  display:inline-block;
-  margin-bottom:8px;
-  color:var(--cokelat);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:21px;
-  font-weight:bold;
-  line-height:1.4;
-  text-decoration:none;
-}
+    .tautan:hover,
+    .judul-artikel:hover {
+      color: var(--emas);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
-.tautan{
-  color:var(--cokelat);
-  font-weight:bold;
-  text-decoration:none;
-}
+    .pesan-kosong {
+      padding: 18px;
+      border: 1px solid #d2bd98;
+      border-radius: 8px;
+      background: #fffaf0;
+      color: var(--cokelat);
+    }
 
-.tautan:hover,
-.judul-artikel:hover{
-  color:var(--emas);
-  text-decoration:underline;
-}
+    /* NAVIGASI ANTARARTIKEL */
+    .navigasi-artikel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 14px 0;
+    }
 
-.tautan-blog{
-  max-width:900px;
-  margin:0 auto;
-  padding:18px 15px 25px;
-  text-align:center;
-  border-top:1px solid #cbb99e;
-}
+    .navigasi-artikel button {
+      border: 0;
+      border-radius: 7px;
+      padding: 10px 13px;
+      background: var(--cokelat);
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.tautan-blog a{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:8px;
-  background:var(--cokelat);
-  color:white;
-  font-weight:bold;
-  text-decoration:none;
-}
+    .navigasi-artikel button:hover:not(:disabled) {
+      background: var(--emas);
+    }
 
-.tautan-blog a:hover{
-  background:var(--emas);
-}
+    .navigasi-artikel button:disabled {
+      background: #c9c1b5;
+      color: #686158;
+      cursor: not-allowed;
+    }
 
-#backToTop{
-  position:fixed;
-  right:18px;
-  bottom:20px;
-  z-index:1000;
-  width:44px;
-  height:44px;
-  border:0;
-  border-radius:50%;
-  background:var(--cokelat);
-  color:white;
-  font-size:22px;
-  font-weight:bold;
-  box-shadow:0 3px 10px rgba(0,0,0,.25);
-  cursor:pointer;
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(8px);
-  transition:opacity .25s,transform .25s,visibility .25s;
-}
+    #nomor-halaman-artikel {
+      color: var(--teks);
+      font-size: 13px;
+      text-align: center;
+    }
 
-#backToTop.visible{
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
-}
+    /* KEMBALI KE BERANDA */
+    .tautan-blog {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 18px 15px 25px;
+      text-align: center;
+      border-top: 1px solid #cbb99e;
+    }
 
-#backToTop:hover{background:var(--emas)}
+    .tautan-blog a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: var(--cokelat);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-@media(max-width:560px){
-  .navigasi-artikel{gap:6px}
+    .tautan-blog a:hover {
+      background: var(--emas);
+    }
 
-  .navigasi-artikel button{
-    padding:9px 8px;
-    font-size:11px;
-  }
+    /* TOMBOL KEMBALI KE ATAS */
+    #backToTop {
+      position: fixed;
+      right: 18px;
+      bottom: 20px;
+      z-index: 1000;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--cokelat);
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition:
+        opacity 0.25s,
+        transform 0.25s,
+        visibility 0.25s;
+    }
 
-  #nomor-halaman-artikel{font-size:11px}
+    #backToTop.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
-  header{padding:18px 12px}
-  header p{font-size:15px}
+    #backToTop:hover {
+      background: var(--emas);
+    }
 
-  nav{
-    gap:5px;
-    padding:12px 5px;
-  }
+    /* TAMPILAN TELEPON */
+    @media (max-width: 560px) {
+      .site-header {
+        padding: 18px 12px 0;
+      }
 
-  nav a{
-    padding:7px 8px;
-    font-size:11px;
-  }
+      .eyebrow {
+        font-size: 11px;
+      }
 
-  nav a.tombol-beranda{
-    flex-basis:30px;
-    width:30px;
-    height:30px;
-  }
+      nav {
+        gap: 5px;
+        padding: 12px 5px;
+      }
 
-  main{padding:17px 17px 25px}
+      nav a {
+        padding: 7px 8px;
+        font-size: 11px;
+      }
 
-  .sambutan{
-    padding:13px 15px;
-    margin-bottom:18px;
-  }
+      nav a.tombol-beranda {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+      }
 
-  .sambutan p{
-    font-size:14px;
-    line-height:1.6;
-  }
+      main {
+        padding: 20px 17px 25px;
+      }
 
-  .kartu-artikel{
-    flex-direction:column;
-    align-items:stretch;
-    gap:12px;
-    padding:16px;
-  }
+      .kartu-artikel {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 16px;
+      }
 
-  .gambar-artikel{
-    width:100%;
-    height:145px;
-    flex-basis:auto;
-  }
+      .gambar-artikel {
+        width: 100%;
+        height: 145px;
+        flex-basis: auto;
+      }
 
-  .judul-artikel{font-size:20px}
+      .judul-artikel {
+        font-size: 20px;
+      }
 
-  #backToTop{
-    right:14px;
-    bottom:16px;
-  }
-}
+      .ringkasan-artikel {
+        text-align: justify;
+        text-justify: inter-word;
+      }
 
-@media(max-width:360px){
-  nav{
-    gap:4px;
-    padding-left:4px;
-    padding-right:4px;
-  }
+      .navigasi-artikel {
+        gap: 6px;
+      }
 
-  nav a{
-    padding:7px 6px;
-    font-size:10px;
-  }
+      .navigasi-artikel button {
+        padding: 9px 8px;
+        font-size: 11px;
+      }
 
-  nav a.tombol-beranda{
-    flex-basis:28px;
-    width:28px;
-    height:28px;
-  }
-}
-</style>
+      #nomor-halaman-artikel {
+        font-size: 11px;
+      }
+
+      #backToTop {
+        right: 14px;
+        bottom: 16px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      nav {
+        gap: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      nav a {
+        padding: 7px 6px;
+        font-size: 10px;
+      }
+
+      nav a.tombol-beranda {
+        flex-basis: 28px;
+        width: 28px;
+        height: 28px;
+      }
+
+      .navigasi-artikel button {
+        padding: 8px 6px;
+        font-size: 10px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>KAWRUH URIP</h1>
-  <p>Kawruh dan Laku Kehidupan</p>
-</header>
+  <!-- KEPALA HALAMAN -->
+  <header class="site-header">
+    <div class="header-shade" aria-hidden="true"></div>
 
-<nav aria-label="Menu utama">
+    <div class="header-content">
+      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+      <h1>KAWRUH URIP</h1>
 
-  <a href="index.html"
-     class="tombol-beranda terpilih"
-     aria-label="Beranda"
-     title="Beranda">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M3 10.5 12 3l9 7.5"></path>
-      <path d="M5.5 9.5V21h13V9.5"></path>
-      <path d="M9.5 21v-7h5v7"></path>
-    </svg>
-  </a>
+      <nav aria-label="Menu utama">
+        <a
+          href="index.html"
+          class="tombol-beranda terpilih"
+          aria-label="Beranda"
+          title="Beranda"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5"></path>
+            <path d="M5.5 9.5V21h13V9.5"></path>
+            <path d="M9.5 21v-7h5v7"></path>
+          </svg>
+        </a>
 
-  <a href="identitas.html">Identitas</a>
-  <a href="daftar-isi.html">Daftar Isi</a>
-  <a href="landasan.html">Landasan</a>
-  <a href="dokumentasi.html">Dokumentasi</a>
-
-</nav>
-
-<main>
-
-  <section id="beranda">
-    <hr class="pemisah">
-
-    <h2>Artikel</h2>
-
-    <div id="daftar-artikel" aria-live="polite"></div>
-
-    <div id="navigasi-artikel"
-         class="navigasi-artikel"
-         aria-label="Navigasi halaman artikel">
-
-      <button id="artikel-sebelumnya" type="button" disabled>
-        ← Artikel Sebelumnya
-      </button>
-
-      <span id="nomor-halaman-artikel">Halaman 1</span>
-
-      <button id="artikel-berikutnya" type="button">
-        Artikel Berikutnya →
-      </button>
-
+        <a href="identitas.html">Identitas</a>
+        <a href="daftar-isi.html">Daftar Isi</a>
+        <a href="landasan.html">Landasan</a>
+        <a href="dokumentasi.html">Dokumentasi</a>
+      </nav>
     </div>
+  </header>
 
-  </section>
+  <!-- ISI BERANDA -->
+  <main>
+    <section id="beranda" aria-labelledby="judul-artikel-halaman">
+      <hr class="pemisah">
 
-</main>
+      <h2 id="judul-artikel-halaman">Artikel</h2>
 
-<div class="tautan-blog">
-  <a href="index.html">↑ Kembali ke Beranda</a>
-</div>
+      <div id="daftar-artikel" aria-live="polite"></div>
 
-<button id="backToTop"
-        type="button"
-        aria-label="Kembali ke atas"
-        title="Kembali ke atas">
-  ↑
-</button>
+      <p id="pesan-kosong" class="pesan-kosong" hidden>
+        Artikel belum tersedia.
+      </p>
 
-<div id="footer-container"></div>
+      <div
+        id="navigasi-artikel"
+        class="navigasi-artikel"
+        aria-label="Navigasi halaman artikel"
+      >
+        <button id="artikel-sebelumnya" type="button" disabled>
+          ← Artikel Sebelumnya
+        </button>
 
-<script src="daftar-artikel.js"></script>
+        <span id="nomor-halaman-artikel">Halaman 1 dari 1</span>
 
-<script>
-var artikelPerHalaman = 3;
-var halamanArtikel = 0;
+        <button id="artikel-berikutnya" type="button" disabled>
+          Artikel Berikutnya →
+        </button>
+      </div>
+    </section>
+  </main>
 
-var semuaArtikel = Array.isArray(window.DAFTAR_ARTIKEL)
-  ? window.DAFTAR_ARTIKEL
-  : [];
+  <!-- KEMBALI KE BERANDA -->
+  <div class="tautan-blog">
+    <a href="index.html">↑ Kembali ke Beranda</a>
+  </div>
 
-function buatKartuArtikel(artikel){
-  var kartu = document.createElement('article');
-  kartu.className = 'kartu-artikel';
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
 
-  if(artikel.gambar){
-    var gambar = document.createElement('img');
-    gambar.src = artikel.gambar;
-    gambar.alt = artikel.alt || artikel.judul;
-    gambar.className = 'gambar-artikel';
-    gambar.loading = 'lazy';
-    kartu.appendChild(gambar);
-  }
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+    title="Kembali ke atas"
+  >↑</button>
 
-  var isi = document.createElement('div');
+  <!-- JAVASCRIPT -->
+  <script src="daftar-artikel.js"></script>
+  <script src="footer.js"></script>
 
-  var judul = document.createElement('a');
-  judul.href = artikel.url;
-  judul.className = 'judul-artikel';
-  judul.textContent = artikel.judul;
+  <script>
+    (function () {
+      var artikelPerHalaman = 3;
+      var halamanArtikel = 0;
 
-  var ringkasan = document.createElement('p');
-  ringkasan.textContent = artikel.ringkasan || '';
+      var semuaArtikel = Array.isArray(window.DAFTAR_ARTIKEL)
+        ? window.DAFTAR_ARTIKEL.filter(function (artikel) {
+            return artikel &&
+              typeof artikel.judul === "string" &&
+              artikel.judul.trim() &&
+              typeof artikel.url === "string" &&
+              artikel.url.trim();
+          })
+        : [];
 
-  var tautan = document.createElement('a');
-  tautan.href = artikel.url;
-  tautan.className = 'tautan';
-  tautan.textContent = 'Baca selengkapnya →';
+      var wadah = document.getElementById("daftar-artikel");
+      var pesanKosong = document.getElementById("pesan-kosong");
+      var tombolSebelumnya =
+        document.getElementById("artikel-sebelumnya");
+      var tombolBerikutnya =
+        document.getElementById("artikel-berikutnya");
+      var nomorHalaman =
+        document.getElementById("nomor-halaman-artikel");
+      var navigasiArtikel =
+        document.getElementById("navigasi-artikel");
 
-  isi.append(judul, ringkasan, tautan);
-  kartu.appendChild(isi);
+      function buatKartuArtikel(artikel) {
+        var kartu = document.createElement("article");
+        kartu.className = "kartu-artikel";
 
-  return kartu;
-}
+        if (artikel.gambar) {
+          var gambar = document.createElement("img");
+          gambar.src = artikel.gambar;
+          gambar.alt = artikel.alt || artikel.judul;
+          gambar.className = "gambar-artikel";
+          gambar.loading = "lazy";
+          kartu.appendChild(gambar);
+        }
 
-function tampilkanArtikel(){
-  var wadah = document.getElementById('daftar-artikel');
-  wadah.replaceChildren();
+        var isi = document.createElement("div");
+        isi.className = "isi-artikel";
 
-  var mulai = halamanArtikel * artikelPerHalaman;
+        var judul = document.createElement("a");
+        judul.href = artikel.url;
+        judul.className = "judul-artikel";
+        judul.textContent = artikel.judul;
 
-  semuaArtikel
-    .slice(mulai, mulai + artikelPerHalaman)
-    .forEach(function(artikel){
-      wadah.appendChild(buatKartuArtikel(artikel));
-    });
+        var ringkasan = document.createElement("p");
+        ringkasan.className = "ringkasan-artikel";
+        ringkasan.textContent = artikel.ringkasan || "";
 
-  if(semuaArtikel.length === 0){
-    var pesan = document.createElement('p');
-    pesan.textContent = 'Artikel belum tersedia.';
-    wadah.appendChild(pesan);
-  }
+        var tautan = document.createElement("a");
+        tautan.href = artikel.url;
+        tautan.className = "tautan";
+        tautan.textContent = "Baca selengkapnya →";
 
-  var totalHalaman = Math.max(
-    1,
-    Math.ceil(semuaArtikel.length / artikelPerHalaman)
-  );
+        isi.append(judul, ringkasan, tautan);
+        kartu.appendChild(isi);
 
-  document.getElementById('nomor-halaman-artikel').textContent =
-    'Halaman ' + (halamanArtikel + 1) + ' dari ' + totalHalaman;
+        return kartu;
+      }
 
-  document.getElementById('artikel-sebelumnya').disabled =
-    halamanArtikel === 0;
+      function tampilkanArtikel() {
+        wadah.replaceChildren();
 
-  document.getElementById('artikel-berikutnya').disabled =
-    halamanArtikel >= totalHalaman - 1;
-}
+        if (semuaArtikel.length === 0) {
+          pesanKosong.hidden = false;
+          navigasiArtikel.hidden = true;
+          return;
+        }
 
-document.getElementById('artikel-sebelumnya')
-  .addEventListener('click', function(){
-    if(halamanArtikel > 0){
-      halamanArtikel--;
+        pesanKosong.hidden = true;
+        navigasiArtikel.hidden = false;
+
+        var totalHalaman = Math.ceil(
+          semuaArtikel.length / artikelPerHalaman
+        );
+
+        if (halamanArtikel >= totalHalaman) {
+          halamanArtikel = totalHalaman - 1;
+        }
+
+        var mulai = halamanArtikel * artikelPerHalaman;
+        var artikelHalaman = semuaArtikel.slice(
+          mulai,
+          mulai + artikelPerHalaman
+        );
+
+        artikelHalaman.forEach(function (artikel) {
+          wadah.appendChild(buatKartuArtikel(artikel));
+        });
+
+        nomorHalaman.textContent =
+          "Halaman " + (halamanArtikel + 1) + " dari " + totalHalaman;
+
+        tombolSebelumnya.disabled = halamanArtikel === 0;
+        tombolBerikutnya.disabled =
+          halamanArtikel >= totalHalaman - 1;
+      }
+
+      tombolSebelumnya.addEventListener("click", function () {
+        if (halamanArtikel > 0) {
+          halamanArtikel--;
+          tampilkanArtikel();
+        }
+      });
+
+      tombolBerikutnya.addEventListener("click", function () {
+        var totalHalaman = Math.ceil(
+          semuaArtikel.length / artikelPerHalaman
+        );
+
+        if (halamanArtikel < totalHalaman - 1) {
+          halamanArtikel++;
+          tampilkanArtikel();
+        }
+      });
+
+      var backToTop = document.getElementById("backToTop");
+
+      function updateBackToTop() {
+        backToTop.classList.toggle(
+          "visible",
+          window.scrollY > 260
+        );
+      }
+
+      window.addEventListener("scroll", updateBackToTop, {
+        passive: true
+      });
+
+      backToTop.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+
       tampilkanArtikel();
-    }
-  });
-
-document.getElementById('artikel-berikutnya')
-  .addEventListener('click', function(){
-    if((halamanArtikel + 1) * artikelPerHalaman < semuaArtikel.length){
-      halamanArtikel++;
-      tampilkanArtikel();
-    }
-  });
-
-var backToTop = document.getElementById('backToTop');
-
-function updateBackToTop(){
-  backToTop.classList.toggle('visible', window.scrollY > 260);
-}
-
-window.addEventListener('scroll', updateBackToTop, {passive:true});
-
-backToTop.addEventListener('click', function(){
-  window.scrollTo({top:0, behavior:'smooth'});
-});
-
-tampilkanArtikel();
-updateBackToTop();
-</script>
-
-<script src="footer.js"></script>
+      updateBackToTop();
+    })();
+  </script>
 
 </body>
 </html>
