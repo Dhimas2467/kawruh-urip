@@ -1,12 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#382719">
-  <meta name="description" content="Daftar artikel Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
+  <meta name="description" content="Daftar judul artikel Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
   <title>Daftar Isi | Kawruh Urip</title>
+
   <link rel="stylesheet" href="style.css?v=4">
 
   <style>
@@ -15,78 +15,46 @@
       margin: 24px auto;
     }
 
-    .kartu-artikel {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
+    .daftar-artikel-dinamis {
+      margin-top: 20px;
+      padding: 20px 24px;
       background: #fffaf0;
       border: 1px solid #d2bd98;
       border-radius: 8px;
       box-shadow: 0 3px 10px rgba(61, 40, 22, 0.12);
     }
 
-    .kartu-artikel img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      background: #f4e6cc;
+    .daftar-artikel-dinamis ul {
+      margin: 0;
+      padding-left: 24px;
     }
 
-    .isi-kartu {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      padding: 16px;
+    .daftar-artikel-dinamis li {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      color: #493222;
     }
 
-    .isi-kartu h3 {
-      margin: 0 0 8px;
-      color: #000;
-      font-size: 20px;
+    .daftar-artikel-dinamis li:last-child {
+      margin-bottom: 0;
     }
 
-    .isi-kartu p {
-      margin: 0 0 14px;
-      color: #000;
-    }
-
-    .tautan-artikel {
-      display: inline-block;
-      align-self: flex-start;
-      margin-top: auto;
-      padding: 8px 13px;
-      color: #000;
-      background: #f4e6cc;
-      border: 1px solid #b58b35;
-      border-radius: 5px;
+    .daftar-artikel-dinamis a {
+      color: #493222;
       text-decoration: none;
     }
 
-    .tautan-artikel:hover {
-      color: #000;
-      background: #e8d3ad;
+    .daftar-artikel-dinamis a:hover {
+      color: #76532f;
+      text-decoration: underline;
     }
 
     .pesan-kosong {
       padding: 18px;
-      color: #000;
+      color: #493222;
       background: #fffaf0;
       border: 1px solid #d2bd98;
       border-radius: 8px;
-    }
-
-    @media (min-width: 600px) {
-      .daftar-halaman .daftar-artikel-dinamis {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-    }
-
-    @media (min-width: 850px) {
-      .daftar-halaman .daftar-artikel-dinamis {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
     }
   </style>
 </head>
@@ -94,29 +62,35 @@
 <body id="beranda">
 
   <header class="site-header">
-    <div class="header-shade"></div>
+    <div class="header-shade" aria-hidden="true"></div>
+
     <div class="header-content">
       <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
       <h1>KAWRUH URIP</h1>
-      <p class="tagline">Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.</p>
+      <p class="tagline">
+        Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
+      </p>
+      <div id="navigasi-container"></div>
     </div>
   </header>
-
-  <div id="navigasi-container"></div>
 
   <main class="daftar-halaman">
     <section>
       <h2>Daftar Isi Kawruh Urip</h2>
+
       <p>
-        Kumpulan artikel dan pemaparan Kawruh Urip tentang kehidupan,
-        jati diri, kesadaran, dan kasunyatan.
+        Kumpulan judul artikel dan pemaparan Kawruh Urip tentang
+        kehidupan, jati diri, kesadaran, dan kasunyatan.
       </p>
     </section>
 
-    <div id="daftar-artikel" class="daftar-artikel-dinamis"></div>
+    <div
+      id="daftar-artikel"
+      class="daftar-artikel-dinamis"
+    ></div>
 
     <p id="pesan-kosong" class="pesan-kosong" hidden>
-      Artikel akan ditambahkan secara bertahap.
+      Artikel durung ditambahake.
     </p>
   </main>
 
@@ -126,8 +100,12 @@
     <p class="copyright">© Kawruh Urip</p>
   </footer>
 
-  <button id="backToTop" class="back-to-top" type="button"
-    aria-label="Kembali ke atas">↑</button>
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+  >↑</button>
 
   <script src="navigasi.js"></script>
   <script src="daftar-artikel.js"></script>
@@ -144,43 +122,36 @@
         return;
       }
 
+      const daftar = document.createElement("ul");
+
       artikel.forEach(function (item) {
-        const kartu = document.createElement("article");
-        kartu.className = "kartu-artikel";
-
-        if (item.gambar) {
-          const gambar = document.createElement("img");
-          gambar.src = item.gambar;
-          gambar.alt = item.alt || item.judul || "Ilustrasi artikel";
-          gambar.loading = "lazy";
-          gambar.onerror = function () {
-            gambar.remove();
-          };
-          kartu.appendChild(gambar);
+        if (
+          !item ||
+          typeof item.judul !== "string" ||
+          !item.judul.trim() ||
+          typeof item.url !== "string" ||
+          !item.url.trim()
+        ) {
+          return;
         }
 
-        const isi = document.createElement("div");
-        isi.className = "isi-kartu";
-
-        const judul = document.createElement("h3");
-        judul.textContent = item.judul || "Artikel";
-        isi.appendChild(judul);
-
-        if (item.ringkasan) {
-          const ringkasan = document.createElement("p");
-          ringkasan.textContent = item.ringkasan;
-          isi.appendChild(ringkasan);
-        }
-
+        const baris = document.createElement("li");
         const tautan = document.createElement("a");
-        tautan.className = "tautan-artikel";
-        tautan.href = item.url || "#";
-        tautan.textContent = "Baca artikel";
-        isi.appendChild(tautan);
 
-        kartu.appendChild(isi);
-        wadah.appendChild(kartu);
+        tautan.href = item.url;
+        tautan.textContent = item.judul;
+
+        baris.appendChild(tautan);
+        daftar.appendChild(baris);
       });
+
+      if (daftar.children.length === 0) {
+        pesan.hidden = false;
+        wadah.remove();
+        return;
+      }
+
+      wadah.appendChild(daftar);
     })();
   </script>
 
