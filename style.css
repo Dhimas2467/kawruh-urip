@@ -579,3 +579,9 @@ blockquote {
     animation-iteration-count: 1 !important;
   }
 }
+
+.article-content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
