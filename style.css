@@ -109,47 +109,48 @@ body {
   font-size: 1.05rem;
 }
 
-/* ========================================
-   NAVIGASI BERBENTUK TOMBOL
-   ======================================== */
+
+/* NAVIGASI UTAMA: TOMBOL TERPISAH */
 
 .main-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 28px;
+  gap: 14px;
+  margin: 30px auto 0;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 .main-nav a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 42px;
-  padding: 9px 18px;
 
-  color: #fff0d0;
-  background: rgba(48, 30, 17, 0.82);
-  border: 1px solid var(--emas);
-  border-radius: 8px;
+  min-width: 115px;
+  min-height: 44px;
+  padding: 10px 18px;
+
+  color: #493222;
+  background: #f7efdf;
+  border: 2px solid #c6a15b;
+  border-radius: 9px;
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: bold;
-  line-height: 1.4;
   text-decoration: none;
+  white-space: nowrap;
 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .main-nav a[aria-current="page"] {
   color: #342216;
-  background: var(--emas-terang);
+  background: #e0c17e;
   border-color: #f2dba6;
 }
 
@@ -160,6 +161,19 @@ body {
   border-color: #fff0c9;
   transform: translateY(-2px);
   outline: none;
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a {
+    min-width: 105px;
+    min-height: 42px;
+    padding: 9px 13px;
+    font-size: 13px;
+  }
 }
 
 /* ========================================
