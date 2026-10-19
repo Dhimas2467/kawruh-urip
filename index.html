@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="id">
 <head>
@@ -12,7 +13,7 @@
 
   <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 
   <style>
     .artikel-beranda {
@@ -23,6 +24,7 @@
     }
 
     .kartu-beranda {
+      min-width: 0;
       overflow: hidden;
       border: 1px solid #d2bd98;
       border-radius: 10px;
@@ -41,7 +43,7 @@
       padding: 15px;
     }
 
-    .isi-kartu-beranda h3 {
+    .isi-kartu-beranda h2 {
       margin: 0 0 10px;
       color: #493222;
       font-size: 18px;
@@ -68,6 +70,12 @@
 
     .tautan-kartu-beranda:hover {
       background: #76532f;
+      border-color: #c49a52;
+    }
+
+    .pesan-artikel {
+      padding: 16px 0;
+      line-height: 1.7;
     }
 
     .tautan-daftar-lengkap {
@@ -90,6 +98,7 @@
 
 <body id="beranda">
 
+  <!-- KEPALA HALAMAN -->
   <header class="site-header">
     <div class="header-shade" aria-hidden="true"></div>
 
@@ -106,53 +115,35 @@
     </div>
   </header>
 
+
+  <!-- BERANDA LANGSUNG MENAMPILKAN ARTIKEL -->
   <main class="page-wrap">
 
-    <section class="content-card">
+    <section class="content-card" aria-label="Artikel terbaru Kawruh Urip">
+
       <h2>Artikel Kawruh Urip</h2>
 
-      <p>
-        Pamaparan babagan urip, jati diri, kesadaran,
-        lan kasunyatan.
-      </p>
+      <div
+        id="artikel-beranda"
+        class="artikel-beranda"
+        aria-live="polite"
+      ></div>
 
-      <div id="artikel-beranda" class="artikel-beranda"></div>
-
-      <p id="pesan-artikel" hidden>
-        Artikel bakal ditampilake ing kene sawise ditambahake
-        menyang daftar artikel.
+      <p id="pesan-artikel" class="pesan-artikel" hidden>
+        Artikel durung ditambahake. Daftar artikel bakal
+        ditampilake sawise data artikel disiapake.
       </p>
 
       <p class="tautan-daftar-lengkap">
         <a href="daftar-isi.html">Deleng Kabeh Artikel →</a>
       </p>
-    </section>
 
-    <section id="identitas" class="content-card">
-      <h2>Identitas Kawruh Urip</h2>
-
-      <p>
-        Kawruh Urip minangka papan pamaparan babagan urip,
-        jati diri, kesadaran, lan kasunyatan. Tulisan-tulisan
-        ing situs iki dikembangake kanthi bertahap lan runtut.
-      </p>
-    </section>
-
-    <section id="dokumentasi" class="content-card">
-      <h2>Dokumentasi</h2>
-
-      <p>
-        Dokumentasi bahan lan naskah Kawruh Urip bakal
-        ditambahake kanthi bertahap.
-      </p>
-
-      <p>
-        <a href="dokumentasi.html">Deleng Dokumentasi →</a>
-      </p>
     </section>
 
   </main>
 
+
+  <!-- SIKIL HALAMAN -->
   <footer class="site-footer">
     <p class="footer-title">KAWRUH URIP</p>
 
@@ -163,6 +154,8 @@
     <p class="copyright">© Kawruh Urip</p>
   </footer>
 
+
+  <!-- TOMBOL KEMBALI KE ATAS -->
   <button
     id="backToTop"
     class="back-to-top"
@@ -170,6 +163,8 @@
     aria-label="Kembali ke atas"
   >↑</button>
 
+
+  <!-- JAVASCRIPT -->
   <script src="navigasi.js"></script>
   <script src="daftar-artikel.js"></script>
   <script src="script.js"></script>
@@ -185,43 +180,54 @@
         return;
       }
 
-      artikel.slice(0, 3).forEach(function (item) {
-        const kartu = document.createElement("article");
-        kartu.className = "kartu-beranda";
+      artikel
+        .filter(function (item) {
+          return item && item.judul && item.url;
+        })
+        .slice(0, 3)
+        .forEach(function (item) {
+          const kartu = document.createElement("article");
+          kartu.className = "kartu-beranda";
 
-        if (item.gambar) {
-          const gambar = document.createElement("img");
-          gambar.src = item.gambar;
-          gambar.alt = item.alt || item.judul || "Ilustrasi artikel";
-          gambar.loading = "lazy";
-          gambar.onerror = function () {
-            gambar.remove();
-          };
-          kartu.appendChild(gambar);
-        }
+          if (item.gambar) {
+            const gambar = document.createElement("img");
+            gambar.src = item.gambar;
+            gambar.alt = item.alt || item.judul;
+            gambar.loading = "lazy";
 
-        const isi = document.createElement("div");
-        isi.className = "isi-kartu-beranda";
+            gambar.onerror = function () {
+              gambar.remove();
+            };
 
-        const judul = document.createElement("h3");
-        judul.textContent = item.judul || "Artikel Kawruh Urip";
-        isi.appendChild(judul);
+            kartu.appendChild(gambar);
+          }
 
-        if (item.ringkasan) {
-          const ringkasan = document.createElement("p");
-          ringkasan.textContent = item.ringkasan;
-          isi.appendChild(ringkasan);
-        }
+          const isi = document.createElement("div");
+          isi.className = "isi-kartu-beranda";
 
-        const tautan = document.createElement("a");
-        tautan.className = "tautan-kartu-beranda";
-        tautan.href = item.url;
-        tautan.textContent = "Waca Artikel →";
-        isi.appendChild(tautan);
+          const judul = document.createElement("h2");
+          judul.textContent = item.judul;
+          isi.appendChild(judul);
 
-        kartu.appendChild(isi);
-        wadah.appendChild(kartu);
-      });
+          if (item.ringkasan) {
+            const ringkasan = document.createElement("p");
+            ringkasan.textContent = item.ringkasan;
+            isi.appendChild(ringkasan);
+          }
+
+          const tautan = document.createElement("a");
+          tautan.className = "tautan-kartu-beranda";
+          tautan.href = item.url;
+          tautan.textContent = "Waca Artikel →";
+          isi.appendChild(tautan);
+
+          kartu.appendChild(isi);
+          wadah.appendChild(kartu);
+        });
+
+      if (wadah.children.length === 0) {
+        pesan.hidden = false;
+      }
     })();
   </script>
 
