@@ -11,229 +11,25 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Pengaturan navigasi khusus -->
   <style>
     .main-nav {
-    .main-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 5px;
-  margin: 14px auto 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.main-nav a {
-  display: inline-flex;
-  flex: 0 1 auto;
-  justify-content: center;
-  align-items: center;
-  min-width: 0;
-  min-height: 25px;
-  padding: 4px 7px;
-  color: #5a4029;
-  background: rgba(238, 218, 183, 0.92);
-  border: 1px solid #b9955d;
-  border-radius: 4px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(74, 48, 27, 0.12);
-}
-
-.main-nav a[aria-current="page"] {
-  width: 27px;
-  min-width: 27px;
-  min-height: 25px;
-  padding: 4px;
-  background: #e6cfa6;
-}
-
-.main-nav a:hover,
-.main-nav a:focus-visible {
-  color: #493222;
-  background: #f7efdf;
-  outline: none;
-}
-
-.main-nav a svg {
-  display: block;
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 400px) {
-  .main-nav {
-    gap: 3px;
-  }
-
-  .main-nav a {
-    padding: 4px 5px;
-    font-size: 9px;
-  }
-
-  .main-nav a[aria-current="page"] {
-    width: 25px;
-    min-width: 25px;
-  }
-}
-
-    @media (max-width: 600px) {
-      .main-nav {
-        gap: 10px !important;
-        margin-top: 22px !important;
-      }
-
-      .main-nav a {
-        min-width: 104px;
-        min-height: 42px;
-        padding: 9px 12px !important;
-        font-size: 13px;
-      }
-
-      .main-nav a[aria-current="page"] {
-        min-width: 46px;
-        width: 46px;
-        padding: 9px !important;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 4px;
+      margin: 12px auto 0;
+      padding: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      max-width: 100%;
     }
-  </style>
-</head>
 
-<body>
-
-  <header class="site-header">
-    <div class="header-shade"></div>
-
-    <div class="header-content">
-      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
-
-      <h1>KAWRUH URIP</h1>
-
-      <p class="tagline">
-        Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
-      </p>
-
-      <nav class="main-nav" aria-label="Navigasi utama">
-
-        <a href="index.html"
-           aria-current="page"
-           aria-label="Beranda"
-           title="Beranda">
-          <svg xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="2"
-               stroke-linecap="round"
-               stroke-linejoin="round"
-               aria-hidden="true">
-            <path d="m3 10 9-7 9 7"></path>
-            <path d="M5 9v12h14V9"></path>
-            <path d="M9 21v-7h6v7"></path>
-          </svg>
-        </a>
-
-        <a href="#identitas">Identitas</a>
-
-        <a href="#daftar-isi">Daftar Isi</a>
-
-        <a href="#dokumentasi">Dokumentasi</a>
-
-      </nav>
-    </div>
-  </header>
-
-  <main class="page-wrap">
-
-    <section class="welcome paper">
-      <p class="section-kicker">SUGENG RAWUH</p>
-
-      <h2>Wilujeng Rawuh ing Kawruh Urip</h2>
-
-      <p>
-        Kawruh Urip minangka papan kanggo nyimak lan mangerteni
-        babagan urip, jati diri, kesadaran, lan kasunyatan.
-        Isi lan pamaparan ing situs iki bakal dikembangake
-        kanthi bertahap.
-      </p>
-    </section>
-
-    <section id="identitas" class="content-card">
-      <h2>Identitas</h2>
-
-      <p>
-        Kawruh Urip minangka papan pamaparan babagan urip,
-        jati diri, kesadaran, lan kasunyatan.
-        Bagian iki bakal dikembangake kanggo njlentrehake
-        identitas lan arah pamaparan Kawruh Urip.
-      </p>
-    </section>
-
-    <section id="daftar-isi" class="content-card">
-      <h2>Daftar Isi</h2>
-
-      <p>
-        Artikel lan pamaparan Kawruh Urip bakal ditambahake
-        kanthi bertahap.
-      </p>
-
-      <div class="article-placeholder">
-        <span class="article-mark">01</span>
-
-        <div>
-          <h3>Pamaparan Kawruh Urip</h3>
-
-          <p>
-            Pambuka kanggo mangerteni arah pamaparan
-            babagan urip lan kasunyatan.
-          </p>
-        </div>
-
-        <span class="coming-soon">Segera</span>
-      </div>
-    </section>
-
-    <section id="dokumentasi" class="content-card">
-      <h2>Dokumentasi</h2>
-
-      <p>
-        Dokumentasi bakal diisi kanthi bertahap
-        nalika bahan lan naskah wis disiapake.
-      </p>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p class="footer-title">KAWRUH URIP</p>
-
-    <p class="footer-note">
-      Pemaparan babagan urip lan kasunyatan.
-    </p>
-
-    <p class="copyright">
-      © Kawruh Urip
-    </p>
-  </footer>
-
-  <button
-    id="backToTop"
-    class="back-to-top"
-    type="button"
-    aria-label="Kembali ke atas">
-    ↑
-  </button>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
+    .main-nav a {
+      display: inline-flex;
+      flex: 0 1 auto;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+      min-height: 24px;
