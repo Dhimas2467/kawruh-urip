@@ -1,0 +1,1 @@
+window.DAFTAR_ARTIKEL = [];
