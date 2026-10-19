@@ -1,0 +1,151 @@
+/* KAWRUH URIP — kayu gelap pada header, kayu terang pada latar halaman */
+:root {
+  --gold: #e5c58d;
+  --gold-dark: #8d673b;
+  --ink: #352619;
+  --paper: #fff8eb;
+  --paper-border: #c6a879;
+  --green: #294333;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #c9a477 url("assets/latar-kayu-terang.jpg") center top / cover fixed;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+.site-header {
+  position: relative;
+  isolation: isolate;
+  color: #fff4dc;
+  text-align: center;
+  background: #493222 url("assets/header-kayu-gelap.jpg") center 43% / cover;
+  border-bottom: 4px solid var(--gold-dark);
+  box-shadow: 0 5px 18px #24170d55;
+}
+.header-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #24160bc2, #35201299 65%, #24160bc9);
+}
+.header-content { padding: 34px 18px 0; }
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font: 600 .72rem/1.5 Arial, sans-serif;
+  letter-spacing: .19em;
+}
+h1 {
+  margin: 0;
+  color: #f1d49a;
+  font-size: clamp(2rem, 7vw, 3.7rem);
+  font-weight: 700;
+  letter-spacing: .11em;
+  line-height: 1.2;
+  text-shadow: 0 2px 3px #160d07, 0 0 15px #0006;
+}
+.tagline { margin: 12px auto 25px; max-width: 650px; color: #fff4df; }
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 8px;
+  margin: 0 auto;
+  padding: 11px 8px;
+  border-top: 1px solid #e5c58d70;
+  background: #2a1b12a8;
+  font: 600 .9rem/1.4 Arial, sans-serif;
+}
+.main-nav a {
+  color: #f7e5c2;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.main-nav a:hover, .main-nav a:focus-visible {
+  color: #fff;
+  background: #8b663b99;
+  outline: none;
+}
+.page-wrap { width: min(920px, calc(100% - 28px)); margin: 25px auto 40px; }
+.paper, .content-card {
+  border: 1px solid var(--paper-border);
+  border-radius: 8px;
+  background: #fff8ebed;
+  box-shadow: 0 4px 15px #4b301b24;
+  padding: clamp(20px, 4vw, 34px);
+  margin-bottom: 18px;
+}
+.welcome { text-align: center; }
+.section-kicker {
+  color: #8a6539;
+  font: 700 .75rem/1.4 Arial, sans-serif;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+h2 { color: #493222; line-height: 1.3; margin: 0 0 12px; font-size: clamp(1.35rem, 4vw, 1.8rem); }
+h3 { margin: 0 0 5px; font-size: 1.05rem; }
+p { margin-top: 0; }
+.content-card p:last-child, .welcome p:last-child { margin-bottom: 0; }
+.article-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #d8c19c;
+  border-left: 4px solid var(--gold-dark);
+  border-radius: 5px;
+  background: #f7ecd8;
+}
+.article-placeholder p { margin: 0; font-size: .93rem; }
+.article-mark { color: #8a6539; font-size: 1.4rem; font-weight: 700; }
+.coming-soon {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #75552f;
+  font: 700 .72rem Arial, sans-serif;
+}
+.site-footer {
+  padding: 24px 16px;
+  text-align: center;
+  color: #f5dfb8;
+  background: #342216 url("assets/header-kayu-gelap.jpg") center / cover;
+  border-top: 3px solid var(--gold-dark);
+  text-shadow: 0 1px 3px #000;
+}
+.site-footer p { margin: 0; }
+.site-footer p:first-child { font-weight: 700; letter-spacing: .16em; }
+.footer-note { margin-top: 5px !important; font-size: .85rem; }
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5c58d;
+  border-radius: 50%;
+  color: #fff4dc;
+  background: #493222eF;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #0003;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .2s, transform .2s;
+}
+.back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+@media (max-width: 520px) {
+  .header-content { padding-top: 27px; }
+  .tagline { font-size: .95rem; }
+  .main-nav { gap: 2px; }
+  .main-nav a { padding: 8px 9px; font-size: .82rem; }
+  .article-placeholder { align-items: flex-start; gap: 10px; }
+  .coming-soon { font-size: .65rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
