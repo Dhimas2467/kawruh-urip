@@ -1,6 +1,5 @@
 /* ==========================================
-   KAWRUH URIP
-   STYLE.CSS
+   KAWRUH URIP — STYLE.CSS
    ========================================== */
 
 :root {
@@ -9,8 +8,6 @@
   --kayu-terang: #c6a477;
   --krem: #fffaf0;
   --teks: #3e3023;
-  --hijau: #244b3c;
-  --garis: #d2bd98;
   --emas: #c49a52;
 }
 
@@ -36,10 +33,18 @@ body {
   background-position: left top;
 }
 
+a {
+  overflow-wrap: anywhere;
+}
+
+button {
+  font: inherit;
+}
+
 /* KEPALA HALAMAN */
 .site-header {
   position: relative;
-  padding: 38px 20px 30px;
+  padding: 38px 20px 25px;
   overflow: hidden;
   text-align: center;
   color: #fff8e9;
@@ -80,18 +85,21 @@ body {
 }
 
 .tagline {
-  margin: 12px 0 22px;
+  margin: 12px 0 16px;
   color: #fff4df;
   font-size: 16px;
 }
 
-/* NAVIGASI UTAMA */
+/* NAVIGASI — TOMBOL HITAM DI ATAS LATAR KAYU */
 #navigasi-container {
   display: block;
   width: 100%;
-  margin: 20px auto 0;
+  margin: 12px auto 0;
+  padding: 0;
+  background: transparent;
 }
 
+#navigasi-container .menu-utama,
 #navigasi-container .navigasi-utama {
   display: flex;
   flex-direction: row;
@@ -101,42 +109,69 @@ body {
   gap: 8px;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 8px 0;
   list-style: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
+#navigasi-container .menu-utama li,
 #navigasi-container .navigasi-utama li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+#navigasi-container .menu-utama a,
 #navigasi-container .navigasi-utama a,
 #navigasi-container a.tombol-beranda {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
+  min-height: 36px;
   margin: 0;
-  padding: 8px 15px;
-  border: 1px solid rgba(234, 212, 168, 0.65);
-  border-radius: 5px;
-  background: var(--hijau);
-  color: #fff8e9;
-  font-family: inherit;
-  font-size: 14px;
+  padding: 8px 13px;
+  border: none;
+  border-radius: 0;
+  background: #17120e;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
   text-decoration: none;
-  box-sizing: border-box;
+  white-space: nowrap;
+  box-shadow: none;
+  cursor: pointer;
 }
 
+#navigasi-container .menu-utama a:hover,
+#navigasi-container .menu-utama a.terpilih,
 #navigasi-container .navigasi-utama a:hover,
+#navigasi-container .navigasi-utama a.terpilih,
 #navigasi-container a.tombol-beranda:hover {
-  background: var(--emas);
-  color: #2f2116;
-  border-color: var(--emas);
+  background: #000000;
+  color: #ffffff;
+}
+
+#navigasi-container .menu-utama a.tombol-beranda {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+#navigasi-container .menu-utama a.tombol-beranda svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* AREA ISI */
@@ -149,7 +184,7 @@ body {
 .content-panel,
 .article-content {
   padding: 26px;
-  border: 1px solid var(--garis);
+  border: 1px solid #d2bd98;
   border-radius: 10px;
   background: var(--krem);
   color: var(--teks);
@@ -177,6 +212,27 @@ body {
   line-height: 1.85;
 }
 
+/* PANEL IDENTITAS */
+.identitas-panel {
+  padding: 24px;
+  line-height: 1.9;
+}
+
+.identitas-panel h2 {
+  margin-top: 0;
+  color: var(--kayu-gelap);
+}
+
+.identitas-panel h3 {
+  margin-top: 26px;
+  color: #65472e;
+}
+
+.identitas-panel p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
 /* KARTU ARTIKEL BERANDA */
 .artikel-beranda {
   display: grid;
@@ -188,7 +244,7 @@ body {
 .kartu-beranda {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--garis);
+  border: 1px solid #d2bd98;
   border-radius: 10px;
   background: var(--krem);
   color: var(--teks);
@@ -224,15 +280,15 @@ body {
   padding: 8px 12px;
   border: 1px solid #987447;
   border-radius: 6px;
-  background: var(--hijau);
-  color: #fff;
+  background: #17120e;
+  color: #ffffff;
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
 }
 
 .tautan-kartu-beranda:hover {
-  background: var(--kayu-sedang);
+  background: #000000;
   border-color: var(--emas);
 }
 
@@ -277,34 +333,26 @@ body {
 
 .daftar-isi a:hover,
 .article-list a:hover {
-  color: var(--hijau);
+  color: #76532f;
   text-decoration: underline;
 }
 
-/* TAUTAN DAN TOMBOL */
-a {
-  overflow-wrap: anywhere;
-}
-
-button {
-  font: inherit;
-}
-
+/* TOMBOL UMUM */
 .button,
 .btn {
   display: inline-block;
   padding: 10px 16px;
-  border: 1px solid var(--kayu-sedang);
+  border: 1px solid #76532f;
   border-radius: 6px;
-  background: var(--hijau);
-  color: #fff;
+  background: #17120e;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }
 
 .button:hover,
 .btn:hover {
-  background: var(--kayu-sedang);
+  background: #000000;
 }
 
 /* GAMBAR IDENTITAS */
@@ -312,7 +360,7 @@ button {
   display: block;
   width: min(100%, 420px);
   margin: 20px auto;
-  border: 3px solid var(--garis);
+  border: 3px solid #d2bd98;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   object-fit: cover;
@@ -362,7 +410,7 @@ blockquote {
   object-fit: contain;
 }
 
-/* SIKIL HALAMAN */
+/* FOOTER */
 .site-footer {
   margin-top: 40px;
   padding: 26px 20px;
@@ -401,8 +449,8 @@ blockquote {
   padding: 0;
   border: 1px solid var(--emas);
   border-radius: 50%;
-  background: var(--hijau);
-  color: #fff;
+  background: #17120e;
+  color: #ffffff;
   font-size: 25px;
   line-height: 1;
   cursor: pointer;
@@ -410,7 +458,7 @@ blockquote {
 }
 
 .back-to-top:hover {
-  background: var(--kayu-sedang);
+  background: #000000;
 }
 
 .back-to-top.show,
@@ -448,15 +496,25 @@ blockquote {
     font-size: 14px;
   }
 
+  #navigasi-container .menu-utama,
   #navigasi-container .navigasi-utama {
-    gap: 7px;
+    gap: 5px;
+    padding: 6px 0;
   }
 
+  #navigasi-container .menu-utama a,
   #navigasi-container .navigasi-utama a,
   #navigasi-container a.tombol-beranda {
-    min-height: 36px;
-    padding: 7px 10px;
-    font-size: 12px;
+    min-height: 34px;
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+
+  #navigasi-container .menu-utama a.tombol-beranda {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
   }
 
   .page-wrap {
@@ -466,7 +524,8 @@ blockquote {
 
   .content-card,
   .content-panel,
-  .article-content {
+  .article-content,
+  .identitas-panel {
     padding: 18px;
   }
 
@@ -488,6 +547,21 @@ blockquote {
   .back-to-top {
     right: 14px;
     bottom: 14px;
+  }
+}
+
+/* PONSEL KECIL */
+@media (max-width: 360px) {
+  #navigasi-container .menu-utama,
+  #navigasi-container .navigasi-utama {
+    gap: 3px;
+  }
+
+  #navigasi-container .menu-utama a,
+  #navigasi-container .navigasi-utama a,
+  #navigasi-container a.tombol-beranda {
+    padding: 7px 6px;
+    font-size: 10px;
   }
 }
 
