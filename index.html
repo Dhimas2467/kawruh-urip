@@ -8,10 +8,11 @@
   <meta name="theme-color" content="#493222">
 
   <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
-  <link rel="stylesheet" href="style.css?v=2">
+
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 
-<body>
+<body id="beranda">
 
   <header class="site-header">
     <div class="header-shade"></div>
@@ -25,34 +26,8 @@
         Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
       </p>
 
-      <nav class="main-nav" aria-label="Navigasi utama">
-
-        <a href="index.html"
-           class="nav-home"
-           aria-current="page"
-           aria-label="Beranda"
-           title="Beranda">
-          <svg xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="2"
-               stroke-linecap="round"
-               stroke-linejoin="round"
-               aria-hidden="true">
-            <path d="m3 10 9-7 9 7"></path>
-            <path d="M5 9v12h14V9"></path>
-            <path d="M9 21v-7h6v7"></path>
-          </svg>
-        </a>
-
-        <a href="#identitas">Identitas</a>
-
-        <a href="#daftar-isi">Daftar Isi</a>
-
-        <a href="#dokumentasi">Dokumentasi</a>
-
-      </nav>
+      <!-- Navigasi dimuat saka navigasi.html -->
+      <div id="navigasi-container"></div>
     </div>
   </header>
 
@@ -137,6 +112,10 @@
     ↑
   </button>
 
+  <!-- Navigasi terpisah -->
+  <script src="navigasi.js"></script>
+
+  <!-- Fungsi website lainnya -->
   <script src="script.js"></script>
 
 </body>
