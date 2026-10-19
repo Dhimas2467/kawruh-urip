@@ -1,6 +1,6 @@
 /* ========================================
    KAWRUH URIP
-   Tema kayu, krem, dan emas
+   Tema kayu terang, krem, dan emas
    ======================================== */
 
 :root {
@@ -14,7 +14,7 @@
   --bayangan: 0 5px 18px rgba(45, 28, 14, 0.18);
 }
 
-/* Pengaturan dasar */
+/* DASAR */
 
 * {
   box-sizing: border-box;
@@ -40,21 +40,20 @@ body {
       rgba(255, 246, 226, 0.18)
     ),
     url("latar-kayu-terang.jpg");
-
   background-repeat: repeat;
   background-position: center top;
   background-size: auto, 700px auto;
 }
 
 /* ========================================
-   HEADER
+   HEADER KAYU GELAP
    ======================================== */
 
 .site-header {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 48px 20px 36px;
+  padding: 42px 16px 30px;
   color: #fff4dc;
   text-align: center;
 
@@ -83,19 +82,19 @@ body {
 }
 
 .eyebrow {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   color: var(--emas-terang);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.6;
 }
 
 .site-header h1 {
   margin: 0;
   color: #fff3d6;
-  font-size: clamp(2.2rem, 7vw, 4rem);
+  font-size: clamp(2rem, 7vw, 4rem);
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 1.2;
@@ -104,76 +103,79 @@ body {
 
 .tagline {
   max-width: 650px;
-  margin: 16px auto 0;
+  margin: 12px auto 0;
   color: #f8e8c8;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
-
-/* NAVIGASI UTAMA: TOMBOL TERPISAH */
+/* ========================================
+   NAVIGASI
+   Tombol kecil dan terpisah
+   ======================================== */
 
 .main-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin: 30px auto 0;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  max-width: 100%;
+  margin: 18px auto 0;
   padding: 0;
   background: transparent;
   border: none;
+  box-shadow: none;
 }
 
 .main-nav a {
   display: inline-flex;
+  flex: 0 1 auto;
   justify-content: center;
   align-items: center;
 
-  min-width: 115px;
-  min-height: 44px;
-  padding: 10px 18px;
+  min-width: 0;
+  min-height: 26px;
+  padding: 4px 7px;
 
-  color: #493222;
-  background: #f7efdf;
-  border: 2px solid #c6a15b;
-  border-radius: 9px;
+  color: #5a4029;
+  background: #eedab7;
+  border: 1px solid #b9955d;
+  border-radius: 4px;
 
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
 
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
-  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease;
 }
 
 .main-nav a[aria-current="page"] {
-  color: #342216;
-  background: #e0c17e;
-  border-color: #f2dba6;
+  width: 28px;
+  min-width: 28px;
+  min-height: 26px;
+  padding: 4px;
+  background: #e6cfa6;
+  border-color: #a9874d;
+}
+
+.main-nav a svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  color: #342216;
-  background: #f1dba8;
-  border-color: #fff0c9;
-  transform: translateY(-2px);
+  color: #493222;
+  background: #f7efdf;
+  border-color: #94703d;
   outline: none;
-}
-
-@media (max-width: 600px) {
-  .main-nav {
-    gap: 10px;
-  }
-
-  .main-nav a {
-    min-width: 105px;
-    min-height: 42px;
-    padding: 9px 13px;
-    font-size: 13px;
-  }
 }
 
 /* ========================================
@@ -182,14 +184,14 @@ body {
 
 .page-wrap {
   width: min(100% - 32px, 1000px);
-  margin: 34px auto 46px;
+  margin: 30px auto 42px;
 }
 
 .page-wrap section {
   scroll-margin-top: 20px;
 }
 
-/* Panel sambutan */
+/* PANEL SAMBUTAN */
 
 .paper {
   padding: 30px;
@@ -229,7 +231,7 @@ body {
   margin-bottom: 0;
 }
 
-/* Panel isi */
+/* PANEL ISI */
 
 .content-card {
   margin-top: 24px;
@@ -257,7 +259,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* Kartu artikel */
+/* KARTU ARTIKEL */
 
 .article-placeholder {
   display: flex;
@@ -312,7 +314,7 @@ body {
 }
 
 /* ========================================
-   FOOTER
+   FOOTER KAYU GELAP
    ======================================== */
 
 .site-footer {
@@ -399,12 +401,12 @@ body {
   }
 
   .site-header {
-    padding: 34px 15px 28px;
+    padding: 30px 10px 24px;
   }
 
   .eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 1.8px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
   }
 
   .site-header h1 {
@@ -412,18 +414,32 @@ body {
   }
 
   .tagline {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .main-nav {
-    gap: 8px;
-    margin-top: 22px;
+    flex-wrap: nowrap;
+    gap: 3px;
+    margin-top: 14px;
   }
 
   .main-nav a {
-    min-height: 40px;
-    padding: 9px 12px;
-    font-size: 0.82rem;
+    min-width: 0;
+    min-height: 23px;
+    padding: 4px 5px;
+    font-size: 9px;
+  }
+
+  .main-nav a[aria-current="page"] {
+    width: 24px;
+    min-width: 24px;
+    min-height: 23px;
+    padding: 4px;
+  }
+
+  .main-nav a svg {
+    width: 12px;
+    height: 12px;
   }
 
   .page-wrap {
@@ -468,7 +484,7 @@ body {
   }
 }
 
-/* Menghormati pengaturan gerak perangkat */
+/* PENGATURAN AKSESIBILITAS */
 
 @media (prefers-reduced-motion: reduce) {
   html {
