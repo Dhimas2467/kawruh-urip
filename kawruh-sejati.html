@@ -22,10 +22,10 @@
     }
 
     .isi-artikel h1 {
-  font-size: clamp(1.3rem, 4vw, 1.6rem);
-  line-height: 1.4;
-  margin-bottom: 18px;
-}
+      font-size: clamp(1.3rem, 4vw, 1.6rem);
+      line-height: 1.4;
+      margin-bottom: 18px;
+    }
 
     .isi-artikel h2 {
       margin-top: 32px;
@@ -37,9 +37,11 @@
       margin-top: 24px;
     }
 
+    /* Semua paragraf rata kiri-kanan, termasuk pada layar HP */
     .isi-artikel p {
       margin: 14px 0;
-      text-align: justify;
+      text-align: justify !important;
+      text-justify: inter-word;
     }
 
     .isi-artikel li {
@@ -102,7 +104,7 @@
       cursor: pointer;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
       z-index: 1000;
     }
 
@@ -112,10 +114,6 @@
     }
 
     @media (max-width: 560px) {
-      .isi-artikel p {
-        text-align: left;
-      }
-
       .daftar-istilah,
       .faq-artikel,
       .tautan-terkait {
@@ -137,341 +135,136 @@
   <div id="navigasi-container"></div>
 
   <main class="site-main">
-
     <article class="content-panel isi-artikel">
 
       <header>
         <h1>Kawruh Sejati: Hakikat Pengetahuan, Kesadaran, dan Pemahaman terhadap Kenyataan</h1>
+
         <img
-    src="kawruh-sejati.jpg"
-    alt="Ilustrasi Kawruh Sejati"
-    class="gambar-artikel"
-    loading="eager"
-  >
+          src="kawruh-sejati.jpg"
+          alt="Ilustrasi Kawruh Sejati"
+          class="gambar-artikel"
+          loading="eager"
+        >
+
         <div class="identitas-artikel">
           <span>Penulis: Dhimas Purnomo</span>
         </div>
       </header>
 
-      <p>
-        Setiap manusia menjalani kehidupan dengan menggunakan pengetahuan,
-        pemahaman, dan kesadarannya untuk menentukan sikap serta tindakan.
-        Namun, apa yang diketahui seseorang belum tentu menggambarkan
-        kenyataan secara utuh. Pengetahuan dapat dipengaruhi oleh pengalaman,
-        ingatan, anggapan, kepentingan, dan keterbatasan pemahaman manusia.
-      </p>
+      <p>Setiap manusia menjalani kehidupan dengan menggunakan pengetahuan, pemahaman, dan kesadarannya untuk menentukan sikap serta tindakan. Namun, apa yang diketahui seseorang belum tentu menggambarkan kenyataan secara utuh. Pengetahuan dapat dipengaruhi oleh pengalaman, ingatan, anggapan, kepentingan, dan keterbatasan pemahaman manusia.</p>
 
-      <p>
-        Oleh karena itu, penting untuk membedakan antara sesuatu yang
-        dianggap benar dengan kenyataan yang sesungguhnya. Pembedaan ini
-        menjadi salah satu pokok pemaparan mengenai Kawruh Sejati.
-      </p>
+      <p>Oleh karena itu, penting untuk membedakan antara sesuatu yang dianggap benar dengan kenyataan yang sesungguhnya. Pembedaan ini menjadi salah satu pokok pemaparan mengenai Kawruh Sejati.</p>
 
-      <p>
-        Dalam pemaparan ini, Kawruh Sejati ditempatkan sebagai pepadhang
-        bagi manusia untuk memahami kehidupan, mengenali keterbatasan
-        pengetahuannya, menjernihkan cipta, menulusi rasa, dan mengarahkan
-        karsa menuju tindakan yang lebih utama.
-      </p>
+      <p>Dalam pemaparan ini, Kawruh Sejati ditempatkan sebagai pepadhang bagi manusia untuk memahami kehidupan, mengenali keterbatasan pengetahuannya, menjernihkan cipta, menulusi rasa, dan mengarahkan karsa menuju tindakan yang lebih utama.</p>
 
       <h2>1. Pengertian Kawruh Sejati</h2>
 
-      <p>
-        Kawruh Sejati dapat dipahami sebagai pengetahuan sejati yang
-        mengarahkan manusia kepada pemahaman mengenai kenyataan dan
-        kehidupan secara lebih jernih. Kawruh Sejati bukan sekadar
-        kumpulan informasi atau pendapat yang diterima tanpa pemahaman,
-        melainkan pepadhang untuk membedakan kenyataan dari anggapan
-        manusia tentang kenyataan.
-      </p>
+      <p>Kawruh Sejati dapat dipahami sebagai pengetahuan sejati yang mengarahkan manusia kepada pemahaman mengenai kenyataan dan kehidupan secara lebih jernih. Kawruh Sejati bukan sekadar kumpulan informasi atau pendapat yang diterima tanpa pemahaman, melainkan pepadhang untuk membedakan kenyataan dari anggapan manusia tentang kenyataan.</p>
 
-      <p>
-        Seseorang dapat memiliki banyak pengetahuan, tetapi belum tentu
-        mampu menggunakan pengetahuan itu secara tepat. Pengetahuan
-        baru mempunyai arti dalam kehidupan apabila dipahami dengan
-        jernih dan diwujudkan dalam sikap serta tindakan yang sesuai.
-      </p>
+      <p>Seseorang dapat memiliki banyak pengetahuan, tetapi belum tentu mampu menggunakan pengetahuan itu secara tepat. Pengetahuan baru mempunyai arti dalam kehidupan apabila dipahami dengan jernih dan diwujudkan dalam sikap serta tindakan yang sesuai.</p>
 
       <h2>2. Pengetahuan dan Kenyataan</h2>
 
-      <p>
-        Pengetahuan manusia terbentuk melalui pengamatan, pengalaman,
-        ingatan, pemikiran, dan pemahaman. Semua itu membantu manusia
-        mengenali keadaan di sekitarnya. Akan tetapi, kemampuan manusia
-        untuk mengetahui sesuatu mempunyai batas.
-      </p>
+      <p>Pengetahuan manusia terbentuk melalui pengamatan, pengalaman, ingatan, pemikiran, dan pemahaman. Semua itu membantu manusia mengenali keadaan di sekitarnya. Akan tetapi, kemampuan manusia untuk mengetahui sesuatu mempunyai batas.</p>
 
-      <p>
-        Apa yang belum diketahui bukan berarti tidak ada. Demikian pula,
-        sesuatu yang diyakini belum tentu sesuai dengan kenyataan.
-        Karena itu, manusia perlu memeriksa kembali pemahaman dan
-        anggapannya, tanpa menjadikan keyakinan pribadi sebagai satu-satunya
-        ukuran kebenaran.
-      </p>
+      <p>Apa yang belum diketahui bukan berarti tidak ada. Demikian pula, sesuatu yang diyakini belum tentu sesuai dengan kenyataan. Karena itu, manusia perlu memeriksa kembali pemahaman dan anggapannya, tanpa menjadikan keyakinan pribadi sebagai satu-satunya ukuran kebenaran.</p>
 
       <h2>3. Hakikat Kenyataan</h2>
 
-      <p>
-        Kenyataan tidak bergantung sepenuhnya pada pengetahuan atau
-        pengakuan manusia. Manusia dapat memahami suatu keadaan dengan
-        benar, memahami sebagian, atau keliru memahaminya. Perbedaan
-        tersebut tidak dengan sendirinya mengubah kenyataan yang sedang
-        dihadapi.
-      </p>
+      <p>Kenyataan tidak bergantung sepenuhnya pada pengetahuan atau pengakuan manusia. Manusia dapat memahami suatu keadaan dengan benar, memahami sebagian, atau keliru memahaminya. Perbedaan tersebut tidak dengan sendirinya mengubah kenyataan yang sedang dihadapi.</p>
 
-      <p>
-        Dengan memahami perbedaan antara kenyataan dan pemahaman,
-        manusia dapat lebih berhati-hati dalam menarik kesimpulan.
-        Ia tidak mudah menganggap pendapatnya sebagai kebenaran mutlak
-        dan bersedia memperbaiki pemahaman apabila menemukan kekeliruan.
-      </p>
+      <p>Dengan memahami perbedaan antara kenyataan dan pemahaman, manusia dapat lebih berhati-hati dalam menarik kesimpulan. Ia tidak mudah menganggap pendapatnya sebagai kebenaran mutlak dan bersedia memperbaiki pemahaman apabila menemukan kekeliruan.</p>
 
       <h2>4. Keterbatasan Pengetahuan Manusia</h2>
 
-      <p>
-        Pengetahuan manusia selalu berhubungan dengan kemampuan untuk
-        mengamati, mengingat, mempertimbangkan, dan memahami. Kemampuan
-        tersebut tidak selalu bekerja secara sempurna. Ingatan dapat
-        berubah, pengamatan dapat tidak lengkap, dan pertimbangan dapat
-        dipengaruhi oleh keinginan pribadi.
-      </p>
+      <p>Pengetahuan manusia selalu berhubungan dengan kemampuan untuk mengamati, mengingat, mempertimbangkan, dan memahami. Kemampuan tersebut tidak selalu bekerja secara sempurna. Ingatan dapat berubah, pengamatan dapat tidak lengkap, dan pertimbangan dapat dipengaruhi oleh keinginan pribadi.</p>
 
-      <p>
-        Menyadari keterbatasan bukan berarti menolak pengetahuan.
-        Sebaliknya, kesadaran terhadap batas pengetahuan membantu manusia
-        bersikap rendah hati, cermat, terbuka terhadap koreksi, dan
-        tidak tergesa-gesa menetapkan kesimpulan.
-      </p>
+      <p>Menyadari keterbatasan bukan berarti menolak pengetahuan. Sebaliknya, kesadaran terhadap batas pengetahuan membantu manusia bersikap rendah hati, cermat, terbuka terhadap koreksi, dan tidak tergesa-gesa menetapkan kesimpulan.</p>
 
       <h2>5. Kawruh Sejati dan Kesadaran</h2>
 
-      <p>
-        Kesadaran memungkinkan manusia mengenali apa yang sedang
-        berlangsung dalam dirinya dan memperhatikan keadaan di sekitarnya.
-        Melalui kesadaran, manusia dapat mengamati gerak cipta, mengenali
-        keadaan rasa, serta mempertimbangkan arah karsa sebelum bertindak.
-      </p>
+      <p>Kesadaran memungkinkan manusia mengenali apa yang sedang berlangsung dalam dirinya dan memperhatikan keadaan di sekitarnya. Melalui kesadaran, manusia dapat mengamati gerak cipta, mengenali keadaan rasa, serta mempertimbangkan arah karsa sebelum bertindak.</p>
 
-      <p>
-        Kesadaran yang jernih membantu manusia melihat perbedaan antara
-        apa yang benar-benar diketahui, apa yang baru diduga, dan apa
-        yang hanya diinginkan. Pembedaan ini penting agar keinginan
-        pribadi tidak dianggap sebagai kenyataan.
-      </p>
+      <p>Kesadaran yang jernih membantu manusia melihat perbedaan antara apa yang benar-benar diketahui, apa yang baru diduga, dan apa yang hanya diinginkan. Pembedaan ini penting agar keinginan pribadi tidak dianggap sebagai kenyataan.</p>
 
       <h2>6. Cipta, Rasa, dan Karsa</h2>
 
-      <p>
-        Dalam kehidupan manusia, cipta, rasa, dan karsa mempunyai
-        peranan yang saling berkaitan. Cipta berhubungan dengan kegiatan
-        mengamati, mengingat, membayangkan, berpikir, mempertimbangkan,
-        membedakan, dan memahami.
-      </p>
+      <p>Dalam kehidupan manusia, cipta, rasa, dan karsa mempunyai peranan yang saling berkaitan. Cipta berhubungan dengan kegiatan mengamati, mengingat, membayangkan, berpikir, mempertimbangkan, membedakan, dan memahami.</p>
 
-      <p>
-        Rasa berhubungan dengan kemampuan merasakan keadaan diri,
-        menghayati pengalaman, menyadari penderitaan orang lain,
-        mengasihi, berbelas kasih, dan bertenggang rasa.
-      </p>
+      <p>Rasa berhubungan dengan kemampuan merasakan keadaan diri, menghayati pengalaman, menyadari penderitaan orang lain, mengasihi, berbelas kasih, dan bertenggang rasa.</p>
 
-      <p>
-        Karsa berhubungan dengan kehendak, penetapan tujuan, keteguhan
-        tekad, pemilihan tindakan, upaya untuk mewujudkan tujuan, dan
-        ketekunan dalam menjalankannya.
-      </p>
+      <p>Karsa berhubungan dengan kehendak, penetapan tujuan, keteguhan tekad, pemilihan tindakan, upaya untuk mewujudkan tujuan, dan ketekunan dalam menjalankannya.</p>
 
-      <p>
-        Kejernihan cipta, ketulusan rasa, dan keutamaan karsa perlu
-        dikembangkan secara selaras. Pengetahuan yang tidak disertai
-        ketulusan dapat disalahgunakan, sedangkan kehendak yang tidak
-        dipertimbangkan dengan jernih dapat membawa tindakan yang
-        merugikan.
-      </p>
+      <p>Kejernihan cipta, ketulusan rasa, dan keutamaan karsa perlu dikembangkan secara selaras. Pengetahuan yang tidak disertai ketulusan dapat disalahgunakan, sedangkan kehendak yang tidak dipertimbangkan dengan jernih dapat membawa tindakan yang merugikan.</p>
 
       <h2>7. Membedakan Kenyataan dan Anggapan</h2>
 
-      <p>
-        Anggapan merupakan penilaian atau pemahaman seseorang terhadap
-        sesuatu. Anggapan dapat mendekati kenyataan, tetapi dapat pula
-        menyimpang darinya. Oleh sebab itu, manusia perlu membedakan
-        fakta yang telah diketahui, penafsiran terhadap fakta, dan
-        dugaan yang belum mempunyai dasar memadai.
-      </p>
+      <p>Anggapan merupakan penilaian atau pemahaman seseorang terhadap sesuatu. Anggapan dapat mendekati kenyataan, tetapi dapat pula menyimpang darinya. Oleh sebab itu, manusia perlu membedakan fakta yang telah diketahui, penafsiran terhadap fakta, dan dugaan yang belum mempunyai dasar memadai.</p>
 
-      <p>
-        Kebiasaan membedakan ketiganya membantu manusia menghindari
-        kesimpulan yang terburu-buru. Sikap ini juga mendorong manusia
-        untuk memeriksa alasan di balik pendapatnya dan bersedia
-        memperbaiki pemahaman apabila diperlukan.
-      </p>
+      <p>Kebiasaan membedakan ketiganya membantu manusia menghindari kesimpulan yang terburu-buru. Sikap ini juga mendorong manusia untuk memeriksa alasan di balik pendapatnya dan bersedia memperbaiki pemahaman apabila diperlukan.</p>
 
       <h2>8. Kejernihan Cipta</h2>
 
-      <p>
-        Kejernihan cipta tumbuh ketika manusia berusaha melihat sesuatu
-        tanpa dikuasai prasangka, kepentingan sesaat, atau keinginan
-        untuk selalu membenarkan dirinya sendiri. Kejernihan bukan
-        berarti manusia tidak pernah keliru, melainkan kesediaan untuk
-        mengenali dan memperbaiki kekeliruan.
-      </p>
+      <p>Kejernihan cipta tumbuh ketika manusia berusaha melihat sesuatu tanpa dikuasai prasangka, kepentingan sesaat, atau keinginan untuk selalu membenarkan dirinya sendiri. Kejernihan bukan berarti manusia tidak pernah keliru, melainkan kesediaan untuk mengenali dan memperbaiki kekeliruan.</p>
 
-      <p>
-        Dalam kehidupan sehari-hari, kejernihan cipta dapat dilatih
-        dengan memperhatikan keadaan secara saksama, memeriksa informasi,
-        mempertimbangkan akibat suatu keputusan, serta membedakan hal
-        yang penting dari hal yang sia-sia.
-      </p>
+      <p>Dalam kehidupan sehari-hari, kejernihan cipta dapat dilatih dengan memperhatikan keadaan secara saksama, memeriksa informasi, mempertimbangkan akibat suatu keputusan, serta membedakan hal yang penting dari hal yang sia-sia.</p>
 
       <h2>9. Ketulusan Rasa</h2>
 
-      <p>
-        Ketulusan rasa tercermin dalam kesediaan memahami keadaan diri
-        dan orang lain secara jujur. Manusia tidak hanya memperhatikan
-        kepentingannya sendiri, tetapi juga mempertimbangkan dampak
-        perkataan dan tindakannya terhadap sesama.
-      </p>
+      <p>Ketulusan rasa tercermin dalam kesediaan memahami keadaan diri dan orang lain secara jujur. Manusia tidak hanya memperhatikan kepentingannya sendiri, tetapi juga mempertimbangkan dampak perkataan dan tindakannya terhadap sesama.</p>
 
-      <p>
-        Ketulusan rasa bukan sekadar perasaan yang muncul sesaat.
-        Ketulusan perlu tercermin dalam sikap yang nyata, seperti
-        menghormati orang lain, tidak sengaja menambah penderitaan,
-        serta bersedia membantu sesuai kemampuan dan keadaan.
-      </p>
+      <p>Ketulusan rasa bukan sekadar perasaan yang muncul sesaat. Ketulusan perlu tercermin dalam sikap yang nyata, seperti menghormati orang lain, tidak sengaja menambah penderitaan, serta bersedia membantu sesuai kemampuan dan keadaan.</p>
 
       <h2>10. Karsa Utama</h2>
 
-      <p>
-        Karsa Utama adalah kehendak yang diarahkan kepada tindakan
-        yang benar-benar bernilai dalam kehidupan. Kehendak tersebut
-        tidak hanya mengikuti keinginan sesaat, tetapi mempertimbangkan
-        kejernihan pemahaman, ketulusan rasa, dan akibat dari tindakan.
-      </p>
+      <p>Karsa Utama adalah kehendak yang diarahkan kepada tindakan yang benar-benar bernilai dalam kehidupan. Kehendak tersebut tidak hanya mengikuti keinginan sesaat, tetapi mempertimbangkan kejernihan pemahaman, ketulusan rasa, dan akibat dari tindakan.</p>
 
-      <p>
-        Karsa yang utama terwujud melalui pilihan dan laku nyata.
-        Tekad yang baik perlu disertai usaha, ketekunan, tanggung jawab,
-        serta kesediaan memperbaiki tindakan ketika hasilnya tidak
-        sesuai dengan tujuan yang benar.
-      </p>
+      <p>Karsa yang utama terwujud melalui pilihan dan laku nyata. Tekad yang baik perlu disertai usaha, ketekunan, tanggung jawab, serta kesediaan memperbaiki tindakan ketika hasilnya tidak sesuai dengan tujuan yang benar.</p>
 
       <h2>11. Pengetahuan yang Diwujudkan dalam Laku</h2>
 
-      <p>
-        Pengetahuan yang hanya disimpan dalam pikiran belum tentu
-        membawa perubahan dalam kehidupan. Pemahaman perlu diwujudkan
-        melalui cara manusia berbicara, mengambil keputusan,
-        memperlakukan sesama, dan menyelesaikan persoalan.
-      </p>
+      <p>Pengetahuan yang hanya disimpan dalam pikiran belum tentu membawa perubahan dalam kehidupan. Pemahaman perlu diwujudkan melalui cara manusia berbicara, mengambil keputusan, memperlakukan sesama, dan menyelesaikan persoalan.</p>
 
-      <p>
-        Laku nyata menjadi ukuran penting bagi manfaat pengetahuan.
-        Seseorang dapat berbicara mengenai kebaikan, tetapi nilai
-        pemahamannya terlihat lebih jelas melalui tindakan yang
-        dijalankan secara konsisten.
-      </p>
+      <p>Laku nyata menjadi ukuran penting bagi manfaat pengetahuan. Seseorang dapat berbicara mengenai kebaikan, tetapi nilai pemahamannya terlihat lebih jelas melalui tindakan yang dijalankan secara konsisten.</p>
 
       <h2>12. Pengenalan Diri</h2>
 
-      <p>
-        Pengenalan diri bukan hanya kegiatan mencari jawaban tentang
-        siapa dirinya. Pengenalan diri juga mencakup kesediaan melihat
-        kebiasaan, dorongan, kelemahan, kemampuan, dan alasan yang
-        mendasari tindakan.
-      </p>
+      <p>Pengenalan diri bukan hanya kegiatan mencari jawaban tentang siapa dirinya. Pengenalan diri juga mencakup kesediaan melihat kebiasaan, dorongan, kelemahan, kemampuan, dan alasan yang mendasari tindakan.</p>
 
-      <p>
-        Dengan mengenali gerak cipta, keadaan rasa, dan arah karsa,
-        manusia dapat memahami mengapa ia mengambil keputusan tertentu.
-        Pemahaman tersebut menjadi landasan untuk memperbaiki diri
-        secara bertahap melalui laku yang nyata.
-      </p>
+      <p>Dengan mengenali gerak cipta, keadaan rasa, dan arah karsa, manusia dapat memahami mengapa ia mengambil keputusan tertentu. Pemahaman tersebut menjadi landasan untuk memperbaiki diri secara bertahap melalui laku yang nyata.</p>
 
       <h2>13. Menghindari Hal yang Sia-sia</h2>
 
-      <p>
-        Tidak semua pikiran, keinginan, dan tindakan membawa manfaat.
-        Sebagian justru menghabiskan waktu, memperbesar persoalan,
-        memperkeruh hubungan, atau menjauhkan manusia dari tujuan
-        yang bernilai.
-      </p>
+      <p>Tidak semua pikiran, keinginan, dan tindakan membawa manfaat. Sebagian justru menghabiskan waktu, memperbesar persoalan, memperkeruh hubungan, atau menjauhkan manusia dari tujuan yang bernilai.</p>
 
-      <p>
-        Kejernihan pemahaman membantu manusia mengenali hal yang
-        sungguh diperlukan dan membedakannya dari hal yang sia-sia.
-        Dengan demikian, tenaga, perhatian, dan waktu dapat diarahkan
-        kepada kegiatan yang lebih bermanfaat.
-      </p>
+      <p>Kejernihan pemahaman membantu manusia mengenali hal yang sungguh diperlukan dan membedakannya dari hal yang sia-sia. Dengan demikian, tenaga, perhatian, dan waktu dapat diarahkan kepada kegiatan yang lebih bermanfaat.</p>
 
       <h2>14. Tanggung Jawab dalam Kehidupan</h2>
 
-      <p>
-        Pemahaman yang baik semestinya membantu manusia bertindak
-        secara bertanggung jawab. Setiap keputusan dapat membawa
-        akibat bagi diri sendiri, orang lain, dan lingkungan.
-        Karena itu, sebelum bertindak, manusia perlu mempertimbangkan
-        tujuan, cara, dan kemungkinan akibat dari pilihannya.
-      </p>
+      <p>Pemahaman yang baik semestinya membantu manusia bertindak secara bertanggung jawab. Setiap keputusan dapat membawa akibat bagi diri sendiri, orang lain, dan lingkungan. Karena itu, sebelum bertindak, manusia perlu mempertimbangkan tujuan, cara, dan kemungkinan akibat dari pilihannya.</p>
 
-      <p>
-        Tanggung jawab juga berarti bersedia mengakui kesalahan,
-        memperbaiki akibat yang ditimbulkan, dan tidak semata-mata
-        menyalahkan keadaan atau orang lain.
-      </p>
+      <p>Tanggung jawab juga berarti bersedia mengakui kesalahan, memperbaiki akibat yang ditimbulkan, dan tidak semata-mata menyalahkan keadaan atau orang lain.</p>
 
       <h2>15. Kawruh Sejati dalam Kehidupan Sehari-hari</h2>
 
-      <p>
-        Penerapan Kawruh Sejati dapat dimulai dari perkara sederhana:
-        memeriksa kebenaran informasi sebelum menyebarkannya,
-        mendengarkan pendapat orang lain dengan saksama, menahan
-        diri sebelum bereaksi, dan mempertimbangkan manfaat suatu
-        tindakan.
-      </p>
+      <p>Penerapan Kawruh Sejati dapat dimulai dari perkara sederhana: memeriksa kebenaran informasi sebelum menyebarkannya, mendengarkan pendapat orang lain dengan saksama, menahan diri sebelum bereaksi, dan mempertimbangkan manfaat suatu tindakan.</p>
 
-      <p>
-        Dalam menghadapi perbedaan pendapat, manusia dapat berusaha
-        memahami persoalan tanpa terburu-buru merendahkan pihak lain.
-        Dalam menghadapi kesalahan, manusia dapat menjadikannya
-        kesempatan untuk belajar dan memperbaiki diri.
-      </p>
+      <p>Dalam menghadapi perbedaan pendapat, manusia dapat berusaha memahami persoalan tanpa terburu-buru merendahkan pihak lain. Dalam menghadapi kesalahan, manusia dapat menjadikannya kesempatan untuk belajar dan memperbaiki diri.</p>
 
       <h2>16. Perkembangan Pemahaman Manusia</h2>
 
-      <p>
-        Pemahaman tidak selalu berkembang dalam satu langkah.
-        Pengalaman, pengamatan, pertimbangan, dan kesediaan memperbaiki
-        diri dapat membantu manusia melihat suatu persoalan dengan
-        lebih luas dan tepat.
-      </p>
+      <p>Pemahaman tidak selalu berkembang dalam satu langkah. Pengalaman, pengamatan, pertimbangan, dan kesediaan memperbaiki diri dapat membantu manusia melihat suatu persoalan dengan lebih luas dan tepat.</p>
 
-      <p>
-        Perkembangan tersebut bukan sekadar bertambahnya informasi.
-        Perkembangan pemahaman juga terlihat dalam berkurangnya
-        prasangka, meningkatnya ketelitian, tumbuhnya kepedulian,
-        dan semakin bertanggung jawabnya tindakan.
-      </p>
+      <p>Perkembangan tersebut bukan sekadar bertambahnya informasi. Perkembangan pemahaman juga terlihat dalam berkurangnya prasangka, meningkatnya ketelitian, tumbuhnya kepedulian, dan semakin bertanggung jawabnya tindakan.</p>
 
       <h2>17. Makna Kawruh Sejati bagi Kehidupan</h2>
 
-      <p>
-        Kawruh Sejati memberi arah bagi manusia untuk tidak berhenti
-        pada apa yang sekadar diketahui atau diyakini. Manusia perlu
-        berusaha memahami kenyataan dengan lebih jernih dan
-        menerapkan pemahamannya dalam kehidupan.
-      </p>
+      <p>Kawruh Sejati memberi arah bagi manusia untuk tidak berhenti pada apa yang sekadar diketahui atau diyakini. Manusia perlu berusaha memahami kenyataan dengan lebih jernih dan menerapkan pemahamannya dalam kehidupan.</p>
 
-      <p>
-        Dalam penerapannya, kejernihan cipta, ketulusan rasa, dan
-        Karsa Utama saling mendukung. Ketiganya membantu manusia
-        menilai keadaan dengan lebih tepat, memperlakukan sesama
-        secara manusiawi, serta memilih tindakan yang bermanfaat.
-      </p>
+      <p>Dalam penerapannya, kejernihan cipta, ketulusan rasa, dan Karsa Utama saling mendukung. Ketiganya membantu manusia menilai keadaan dengan lebih tepat, memperlakukan sesama secara manusiawi, serta memilih tindakan yang bermanfaat.</p>
 
-      <p>
-        Dengan demikian, nilai Kawruh Sejati tidak hanya terletak
-        pada pemahaman yang diucapkan, tetapi juga pada perubahan
-        nyata dalam cara manusia menjalani kehidupannya.
-      </p>
+      <p>Dengan demikian, nilai Kawruh Sejati tidak hanya terletak pada pemahaman yang diucapkan, tetapi juga pada perubahan nyata dalam cara manusia menjalani kehidupannya.</p>
 
       <section class="daftar-istilah">
         <h2>Daftar Istilah</h2>
@@ -529,7 +322,6 @@
       </div>
 
     </article>
-
   </main>
 
   <footer class="site-footer">
@@ -545,6 +337,25 @@
   <script>
     document.getElementById("tahun").textContent =
       new Date().getFullYear();
+
+    const tombolAtas = document.getElementById("backToTop");
+
+    function perbaruiTombolAtas() {
+      tombolAtas.classList.toggle("visible", window.scrollY > 260);
+    }
+
+    window.addEventListener("scroll", perbaruiTombolAtas, {
+      passive: true
+    });
+
+    tombolAtas.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    perbaruiTombolAtas();
   </script>
 
 </body>
