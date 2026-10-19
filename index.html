@@ -4,292 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="theme-color" content="#382719">
   <meta
     name="description"
-    content="Kawruh Urip, kumpulan pemaparan tentang kehidupan, jati diri, kesadaran, dan kasunyatan."
+    content="Kawruh Urip: pemaparan tentang urip, jati diri, kesadaran, dan kasunyatan."
   >
+  <meta name="theme-color" content="#382719">
 
-  <title>Kawruh Urip | Pamaparan Bab Urip lan Kasunyatan</title>
+  <title>Kawruh Urip | Pemaparan Bab Urip lan Kasunyatan</title>
 
   <link rel="stylesheet" href="style.css?v=5">
-
-  <style>
-    :root {
-      --cokelat: #5b3926;
-      --emas: #b58a45;
-      --krem: #f4ead9;
-      --putih: #fffdf8;
-      --teks: #382719;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--krem);
-      color: var(--teks);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.7;
-    }
-
-    .site-header {
-      position: relative;
-      overflow: hidden;
-      padding: 35px 16px 22px;
-      text-align: center;
-      color: #f8e8c5;
-      background:
-        linear-gradient(
-          rgba(45, 29, 19, 0.68),
-          rgba(45, 29, 19, 0.78)
-        ),
-        url("gambar/kayu.jpg") center/cover,
-        #382719;
-      border-bottom: 3px solid var(--emas);
-    }
-
-    .header-shade {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        135deg,
-        rgba(181, 138, 69, 0.12),
-        transparent 55%
-      );
-      pointer-events: none;
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 1;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .eyebrow {
-      margin: 0 0 8px;
-      color: #e5c486;
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: bold;
-    }
-
-    .site-header h1 {
-      margin: 0;
-      color: #f5dfad;
-      font-size: clamp(30px, 5vw, 46px);
-      letter-spacing: 3px;
-      line-height: 1.25;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.55);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 8px;
-      background: #e8d6ba;
-    }
-
-    nav a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 0;
-      padding: 7px 11px;
-      border: 1px solid var(--cokelat);
-      border-radius: 7px;
-      background: var(--cokelat);
-      color: white;
-      font-size: 13px;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    nav a:hover,
-    nav a.terpilih {
-      background: var(--emas);
-      border-color: var(--emas);
-      color: white;
-    }
-
-    nav a.tombol-beranda {
-      flex: 0 0 32px;
-      width: 32px;
-      height: 32px;
-      padding: 0;
-    }
-
-    nav a.tombol-beranda svg {
-      display: block;
-      width: 17px;
-      height: 17px;
-      fill: none;
-      stroke: white;
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    main {
-      max-width: 1050px;
-      margin: 28px auto;
-      padding: 0 18px;
-    }
-
-    .konten-utama {
-      padding: 25px;
-      background: var(--putih);
-      border: 1px solid #d7c3a1;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(62, 40, 22, 0.08);
-    }
-
-    .konten-utama h2 {
-      margin-top: 0;
-      color: var(--cokelat);
-    }
-
-    .konten-utama p {
-      margin: 0 0 16px;
-      text-align: justify;
-    }
-
-    .tautan-daftar-isi {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 9px 16px;
-      border: 1px solid var(--cokelat);
-      border-radius: 7px;
-      background: var(--cokelat);
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .tautan-daftar-isi:hover {
-      background: var(--emas);
-      border-color: var(--emas);
-      color: white;
-    }
-
-    @media (max-width: 560px) {
-      .site-header {
-        padding: 28px 12px 18px;
-      }
-
-      .eyebrow {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-      }
-
-      .site-header h1 {
-        letter-spacing: 2px;
-      }
-
-      nav {
-        gap: 5px;
-        padding: 12px 5px;
-      }
-
-      nav a {
-        padding: 7px 8px;
-        font-size: 11px;
-      }
-
-      nav a.tombol-beranda {
-        flex-basis: 30px;
-        width: 30px;
-        height: 30px;
-      }
-
-      main {
-        margin: 18px auto;
-        padding: 0 12px;
-      }
-
-      .konten-utama {
-        padding: 18px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      nav {
-        gap: 4px;
-      }
-
-      nav a {
-        padding: 7px 6px;
-        font-size: 10px;
-      }
-
-      nav a.tombol-beranda {
-        flex-basis: 28px;
-        width: 28px;
-        height: 28px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
+  <!-- KEPALA HALAMAN -->
   <header class="site-header">
     <div class="header-shade" aria-hidden="true"></div>
 
     <div class="header-content">
       <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
       <h1>KAWRUH URIP</h1>
+      <div id="navigasi-container"></div>
     </div>
   </header>
 
-  <nav aria-label="Navigasi utama">
-    <a class="tombol-beranda terpilih" href="index.html" aria-label="Beranda" title="Beranda">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 10.5 12 3l9 7.5"></path>
-        <path d="M5.5 9.5V21h13V9.5"></path>
-        <path d="M9 21v-7h6v7"></path>
-      </svg>
-    </a>
-    <a href="identitas.html">Identitas</a>
-    <a href="daftar-isi.html">Daftar Isi</a>
-    <a href="dokumentasi.html">Dokumentasi</a>
-  </nav>
+  <!-- ISI BERANDA -->
+  <main class="page-wrap">
 
-  <main>
-    <section class="konten-utama">
-      <h2>Bab Kawruh Urip</h2>
+    <section class="welcome paper">
+      <p class="section-kicker">SUGENG RAWUH</p>
+
+      <h2>Wilujeng Rawuh ing Kawruh Urip</h2>
 
       <p>
-        Kawruh Urip minangka papan pamaparan bab panguripan,
-        jati diri, kesadaran, lan kasunyatan. Pamedharan ing
-        papan iki ngandharake kawruh kanggo mbantu manungsa
-        luwih mangerteni urip lan nemtokake laku kanthi wening,
-        tulus, lan utama.
+        Kawruh Urip minangka papan kanggo nyimak lan mangerteni
+        babagan urip, jati diri, kesadaran, lan kasunyatan.
+        Isi lan pamaparan ing situs iki bakal dikembangake
+        kanthi bertahap.
       </p>
-
-      <p>
-        Pangerten marang urip ora mung dumunung ing kawruh
-        kang diwaca, nanging uga ing kepriye manungsa
-        ngresiki cipta, njernihake rasa, lan ngudi karsa
-        supaya tumindak saben dina luwih trep lan migunani.
-      </p>
-
-      <a class="tautan-daftar-isi" href="daftar-isi.html">
-        Waca Daftar Isi
-      </a>
     </section>
+
+    <section id="identitas" class="content-card">
+      <h2>Identitas</h2>
+
+      <p>
+        Kawruh Urip minangka papan pamaparan babagan urip,
+        jati diri, kesadaran, lan kasunyatan.
+        Bagian iki bakal dikembangake kanggo njlentrehake
+        identitas lan arah pamaparan Kawruh Urip.
+      </p>
+    </section>
+
+    <section id="daftar-isi" class="content-card">
+      <h2>Daftar Isi</h2>
+
+      <p>
+        Artikel lan pamaparan Kawruh Urip bakal ditambahake
+        kanthi bertahap.
+      </p>
+
+      <div class="article-placeholder">
+        <span class="article-mark">01</span>
+
+        <div>
+          <h3>Pamaparan Kawruh Urip</h3>
+
+          <p>
+            Pambuka kanggo mangerteni arah pamaparan
+            babagan urip lan kasunyatan.
+          </p>
+        </div>
+
+        <span class="coming-soon">Segera</span>
+      </div>
+    </section>
+
+    <section id="dokumentasi" class="content-card">
+      <h2>Dokumentasi</h2>
+
+      <p>
+        Dokumentasi bakal diisi kanthi bertahap
+        nalika bahan lan naskah wis disiapake.
+      </p>
+    </section>
+
   </main>
 
-  <div id="footer-container"></div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="footer-title">KAWRUH URIP</p>
 
-  <script src="footer.js"></script>
+    <p class="footer-note">
+      Pemaparan babagan urip lan kasunyatan.
+    </p>
+
+    <p class="copyright">
+      © Kawruh Urip
+    </p>
+  </footer>
+
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+  >↑</button>
+
+  <!-- JAVASCRIPT -->
+  <script src="navigasi.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
