@@ -1,6 +1,6 @@
 /* =========================================
    KAWRUH URIP — STYLE UTAMA
-   Tema kayu, krem, dan emas
+   Tema tekstur kayu, krem, dan emas
    ========================================= */
 
 :root {
@@ -30,15 +30,16 @@ body {
   margin: 0;
   padding: 0;
   color: var(--teks);
-  background:
-    linear-gradient(rgba(240, 222, 190, 0.72), rgba(240, 222, 190, 0.72)),
-    repeating-linear-gradient(
-      90deg,
-      #b38b5b 0,
-      #c6a477 35px,
-      #b58d5d 70px,
-      #d0ad7c 105px
-    );
+  background-color: #c6a477;
+  background-image:
+    linear-gradient(
+      rgba(240, 222, 190, 0.25),
+      rgba(240, 222, 190, 0.25)
+    ),
+    url("latar-kayu-terang.jpg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: auto, 500px auto;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 16px;
   line-height: 1.75;
@@ -59,30 +60,35 @@ a:hover {
   color: var(--emas-gelap);
 }
 
-/* HEADER KAYU */
+/* HEADER KAYU GELAP */
 .site-header {
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 25px 16px 18px;
   color: #f9ecd4;
   text-align: center;
-  background:
+  background-color: var(--kayu-gelap);
+  background-image:
     linear-gradient(
-      rgba(45, 29, 17, 0.92),
-      rgba(67, 43, 25, 0.96)
+      rgba(45, 29, 17, 0.35),
+      rgba(67, 43, 25, 0.45)
     ),
-    repeating-linear-gradient(
-      0deg,
-      #65452c 0,
-      #65452c 4px,
-      #4b301e 5px,
-      #4b301e 9px
-    );
+    url("header-kayu-gelap.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto, cover;
   border-bottom: 4px solid var(--emas);
   box-shadow: 0 3px 9px rgba(35, 23, 13, 0.3);
 }
 
+.header-shade {
+  display: none;
+}
+
 .header-content {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -111,7 +117,7 @@ a:hover {
   letter-spacing: 1.5px;
 }
 
-/* NAVIGASI: TRANSPARAN DI ATAS LATAR KAYU */
+/* NAVIGASI */
 #navigasi-container {
   display: block;
   width: 100%;
@@ -132,7 +138,7 @@ a:hover {
 #navigasi-container .navigasi-utama {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -201,7 +207,8 @@ main,
 /* PANEL KONTEN */
 section,
 .panel,
-.content-panel {
+.content-panel,
+.content-card {
   margin: 0 0 22px;
   padding: 22px;
   background: var(--krem-panel);
@@ -263,7 +270,7 @@ li {
   margin-bottom: 6px;
 }
 
-/* DAFTAR ARTIKEL */
+/* DAFTAR ARTIKEL UMUM */
 .daftar-isi,
 .daftar-artikel,
 .article-list {
@@ -397,7 +404,6 @@ button:hover,
   cursor: pointer;
 }
 
-/* PENTING: tampil ketika script.js menambahkan class visible */
 #backToTop.visible {
   display: flex;
 }
@@ -407,24 +413,22 @@ button:hover,
   color: #fff;
 }
 
-/* FOOTER KAYU */
+/* FOOTER KAYU GELAP */
 .site-footer {
   margin-top: 30px;
   padding: 22px 16px;
   color: #f4e4c8;
   text-align: center;
-  background:
+  background-color: var(--kayu-gelap);
+  background-image:
     linear-gradient(
-      rgba(45, 29, 17, 0.94),
-      rgba(67, 43, 25, 0.97)
+      rgba(45, 29, 17, 0.35),
+      rgba(67, 43, 25, 0.45)
     ),
-    repeating-linear-gradient(
-      0deg,
-      #65452c 0,
-      #65452c 4px,
-      #4b301e 5px,
-      #4b301e 9px
-    );
+    url("header-kayu-gelap.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto, cover;
   border-top: 4px solid var(--emas);
 }
 
@@ -477,8 +481,6 @@ button:hover,
   }
 
   #navigasi-container .navigasi-utama a {
-    flex: 0 1 auto;
-    min-width: 0;
     min-height: 30px;
     padding: 7px;
     font-size: 11px;
@@ -504,7 +506,8 @@ button:hover,
 
   section,
   .panel,
-  .content-panel {
+  .content-panel,
+  .content-card {
     padding: 16px;
     margin-bottom: 16px;
   }
@@ -570,7 +573,8 @@ button:hover,
 
   section,
   .panel,
-  .content-panel {
+  .content-panel,
+  .content-card {
     padding: 12px;
   }
 }
