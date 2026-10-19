@@ -1,4 +1,3 @@
-
 fetch("footer.html")
   .then(response => {
     if (!response.ok) {
