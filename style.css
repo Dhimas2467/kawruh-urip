@@ -14,8 +14,6 @@
   --bayangan: 0 5px 18px rgba(45, 28, 14, 0.18);
 }
 
-/* DASAR */
-
 * {
   box-sizing: border-box;
 }
@@ -32,7 +30,6 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 17px;
   line-height: 1.75;
-
   background-color: #c9a477;
   background-image:
     linear-gradient(
@@ -45,7 +42,7 @@ body {
   background-size: auto, 700px auto;
 }
 
-/* HEADER KAYU GELAP */
+/* HEADER */
 
 .site-header {
   position: relative;
@@ -54,13 +51,11 @@ body {
   padding: 42px 16px 28px;
   color: #fff4dc;
   text-align: center;
-
   background-color: var(--cokelat-gelap);
   background-image: url("header-kayu-gelap.jpg");
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
-
   border-bottom: 4px solid var(--emas);
   box-shadow: var(--bayangan);
 }
@@ -106,20 +101,18 @@ body {
   font-size: 1rem;
 }
 
-/* NAVIGASI: TOMBOL TERPISAH */
+/* NAVIGASI DESKTOP */
 
 .main-nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  gap: 6px;
-
+  gap: 7px;
   width: 100%;
   max-width: 100%;
   margin: 18px auto 0;
   padding: 0;
-
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -130,34 +123,29 @@ body {
   flex: 0 1 auto;
   justify-content: center;
   align-items: center;
-
   min-width: 0;
-  min-height: 28px;
-  padding: 5px 9px;
-
+  min-height: 30px;
+  padding: 5px 10px;
   color: #5a4029;
   background: #eedab7;
   border: 1px solid #b9955d;
   border-radius: 5px;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
   white-space: nowrap;
-
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   transition: background-color 0.2s ease;
 }
 
 .main-nav a[aria-current="page"] {
-  flex: 0 0 28px;
-  width: 28px;
-  min-width: 28px;
-  min-height: 28px;
+  flex: 0 0 30px;
+  width: 30px;
+  min-width: 30px;
+  min-height: 30px;
   padding: 5px;
-
   background: #e6cfa6;
   border-color: #a9874d;
 }
@@ -233,7 +221,6 @@ body {
 .content-card {
   margin-top: 24px;
   padding: 28px 30px;
-
   background: rgba(255, 250, 240, 0.96);
   border: 1px solid #dfc99f;
   border-radius: 12px;
@@ -264,7 +251,6 @@ body {
   gap: 16px;
   margin-top: 22px;
   padding: 18px;
-
   background: #f4e7cf;
   border: 1px solid #dcc397;
   border-radius: 10px;
@@ -277,12 +263,10 @@ body {
   height: 46px;
   justify-content: center;
   align-items: center;
-
   color: #fff3d6;
   background: var(--cokelat-gelap);
   border: 1px solid var(--emas);
   border-radius: 8px;
-
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -304,19 +288,17 @@ body {
   background: #ead4a5;
   border: 1px solid #d1b36e;
   border-radius: 20px;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
   font-weight: bold;
 }
 
-/* FOOTER KAYU GELAP */
+/* FOOTER */
 
 .site-footer {
   padding: 30px 20px;
   color: #f8e8c8;
   text-align: center;
-
   background-color: var(--cokelat-tua);
   background-image:
     linear-gradient(
@@ -324,11 +306,9 @@ body {
       rgba(35, 21, 12, 0.45)
     ),
     url("header-kayu-gelap.jpg");
-
   background-repeat: repeat;
   background-position: center;
   background-size: auto, cover;
-
   border-top: 4px solid var(--emas);
 }
 
@@ -352,29 +332,25 @@ body {
   font-size: 0.78rem;
 }
 
-/* TOMBOL KEMBALI KE ATAS */
+/* KEMBALI KE ATAS */
 
 .back-to-top {
   position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 100;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 46px;
   height: 46px;
-
   color: #342216;
   background: var(--emas-terang);
   border: 1px solid #9e7938;
   border-radius: 50%;
-
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
-
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
@@ -409,34 +385,46 @@ body {
     font-size: 0.85rem;
   }
 
-  /* Keempat tombol dipertahankan dalam satu baris */
-  .main-nav {
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 4px;
-    margin-top: 12px;
+  /*
+    GRID EMPAT KOLOM:
+    Semua tombol mendapat ruang masing-masing.
+    Navigasi tidak turun ke baris kedua.
+  */
+  .site-header .main-nav {
+    display: grid;
+    grid-template-columns: 28px repeat(3, minmax(0, 1fr));
+    justify-content: stretch;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    margin: 14px auto 0;
+    padding: 0;
   }
 
-  .main-nav a {
-    flex: 0 1 auto;
+  .site-header .main-nav a {
+    display: inline-flex;
+    justify-self: stretch;
+    width: 100%;
     min-width: 0;
-    min-height: 22px;
-    padding: 3px 5px;
-    font-size: 9px;
-    line-height: 1.2;
+    min-height: 27px;
+    padding: 4px 2px;
+    font-size: clamp(8px, 2.5vw, 10px);
+    line-height: 1.15;
+    white-space: nowrap;
+    text-align: center;
   }
 
-  .main-nav a[aria-current="page"] {
-    flex: 0 0 23px;
-    width: 23px;
-    min-width: 23px;
-    min-height: 22px;
-    padding: 3px;
+  .site-header .main-nav a[aria-current="page"] {
+    justify-self: center;
+    width: 28px;
+    min-width: 28px;
+    min-height: 27px;
+    padding: 4px;
   }
 
-  .main-nav a svg {
-    width: 12px;
-    height: 12px;
+  .site-header .main-nav a svg {
+    width: 13px;
+    height: 13px;
   }
 
   .page-wrap {
