@@ -3,16 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#382719">
-  <meta name="description" content="Daftar judul artikel Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan.">
+
+  <meta
+    name="theme-color"
+    content="#382719"
+  >
+  <meta
+    name="description"
+    content="Daftar isi Kawruh Urip, kumpulan artikel tentang kehidupan, jati diri, kesadaran, dan kasunyatan."
+  >
+
   <title>Daftar Isi | Kawruh Urip</title>
 
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 
   <style>
     .daftar-halaman {
       width: min(100% - 28px, 1000px);
       margin: 24px auto;
+    }
+
+    .daftar-halaman h2 {
+      color: #493222;
+    }
+
+    .daftar-halaman > section > p {
+      line-height: 1.8;
+      text-align: justify;
     }
 
     .daftar-artikel-dinamis {
@@ -47,6 +64,7 @@
     .daftar-artikel-dinamis a:hover {
       color: #76532f;
       text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .pesan-kosong {
@@ -55,51 +73,71 @@
       background: #fffaf0;
       border: 1px solid #d2bd98;
       border-radius: 8px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 560px) {
+      .daftar-artikel-dinamis {
+        padding: 18px;
+      }
     }
   </style>
 </head>
 
-<body id="beranda">
+<body>
 
+  <!-- KEPALA HALAMAN -->
   <header class="site-header">
     <div class="header-shade" aria-hidden="true"></div>
 
     <div class="header-content">
       <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
+
       <h1>KAWRUH URIP</h1>
+
       <p class="tagline">
         Mangerteni urip, ngenali dhiri, lan nyinau kasunyatan.
       </p>
+
       <div id="navigasi-container"></div>
     </div>
   </header>
 
-  <main class="daftar-halaman">
-    <section>
+  <!-- ISI DAFTAR -->
+  <main class="page-wrap daftar-halaman">
+
+    <section class="content-card">
       <h2>Daftar Isi Kawruh Urip</h2>
 
       <p>
-        Kumpulan judul artikel dan pemaparan Kawruh Urip tentang
-        kehidupan, jati diri, kesadaran, dan kasunyatan.
+        Kaca iki ngemot dhaptar artikel lan tulisan Kawruh Urip
+        babagan panguripan, jati diri, kesadaran, lan kasunyatan.
+        Pamaos bisa milih judhul kanggo maca pamaparan kanthi luwih
+        jangkep.
       </p>
     </section>
 
-    <div
+    <section
       id="daftar-artikel"
       class="daftar-artikel-dinamis"
-    ></div>
+      aria-label="Daftar judul artikel"
+    ></section>
 
-    <p id="pesan-kosong" class="pesan-kosong" hidden>
+    <p
+      id="pesan-kosong"
+      class="pesan-kosong"
+      role="status"
+      hidden
+    >
       Artikel durung ditambahake.
     </p>
+
   </main>
 
-  <footer class="site-footer">
-    <p class="footer-title">KAWRUH URIP</p>
-    <p class="footer-note">Pemaparan babagan urip lan kasunyatan.</p>
-    <p class="copyright">© Kawruh Urip</p>
-  </footer>
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
 
+  <!-- TOMBOL KEMBALI KE ATAS -->
   <button
     id="backToTop"
     class="back-to-top"
@@ -107,9 +145,11 @@
     aria-label="Kembali ke atas"
   >↑</button>
 
+  <!-- JAVASCRIPT -->
   <script src="navigasi.js"></script>
+  <script src="footer.js"></script>
   <script src="daftar-artikel.js"></script>
-  <script src="script.js?v=2"></script>
+  <script src="script.js"></script>
 
   <script>
     (function () {
@@ -119,6 +159,7 @@
 
       if (!Array.isArray(artikel) || artikel.length === 0) {
         pesan.hidden = false;
+        wadah.remove();
         return;
       }
 
