@@ -72,33 +72,34 @@ fetch("navigasi.html")
   align-items: center;
   gap: 18px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 12px 2px;
+  margin: -8px auto 0;
+  padding: 0;
   text-align: center;
+  line-height: 1;
   box-sizing: border-box;
 }
 
+.tombol-share a,
+.tombol-share button {
+  display: inline-flex;
+  flex: 0 0 30px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
 
-      .tombol-share a,
-      .tombol-share button {
-        display: inline-flex;
-        flex: 0 0 34px;
-        align-items: center;
-        justify-content: center;
-        width: 34px;
-        height: 34px;
-        padding: 0;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-      }
-
-      .tombol-share img {
-        display: block;
-        width: 30px;
-        height: 30px;
-        object-fit: contain;
-      }
+.tombol-share img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
 
       .tombol-share button:focus-visible,
       .tombol-share a:focus-visible {
