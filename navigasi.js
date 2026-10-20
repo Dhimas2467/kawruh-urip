@@ -1,4 +1,3 @@
-
 /* Memuat menu navigasi */
 fetch("navigasi.html")
   .then(response => {
@@ -65,18 +64,18 @@ fetch("navigasi.html")
     const style = document.createElement("style");
     style.textContent = `
       .tombol-share {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 18px;
-        width: 100%;
-        margin: 24px auto 0;
-        padding: 16px 12px 20px;
-        text-align: center;
-        box-sizing: border-box;
-      }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin: 8px auto 0;
+  padding: 6px 12px 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
       .tombol-share a,
       .tombol-share button {
