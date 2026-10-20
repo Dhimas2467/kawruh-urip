@@ -1,5 +1,12 @@
 window.DAFTAR_ARTIKEL = [
 {
+judul: "Jatining Dhiri dan Kesadaran",
+url: "jatining-dhiri.html",
+gambar: "jatining-dhiri.jpg",
+alt: "Ilustrasi Jatining Dhiri",
+ringkasan: "Jatining Dhiri dan kesadaran dalam Kawruh Sejati membahas pengenalan hakikat diri melalui mawas dhiri, cipta, rasa, karsa, dan panguripan."
+},
+{
 judul: "Kawruh Uttamopadesa",
 url: "kawruh-uttamopadesa.html",
 gambar: "uttamopadesa.jpg",
