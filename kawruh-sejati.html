@@ -321,41 +321,36 @@
     </article>
   </main>
 
-<footer class="site-footer">
-<p><small>© 2026 Kawruh Urip</small></p>
-<p><small class="footer-tagline">
-Kawruh kanggo dimangerteni, laku kanggo ditindakake.
-</small></p>
-</footer>
+<!-- FOOTER -->
+<div id="footer-container"></div>
 
   <button id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
 
-  <script src="navigasi.js"></script>
-  <script src="script.js"></script>
+  
+<script src="navigasi.js"></script>
+<script src="footer.js"></script>
+<script src="script.js"></script>
 
-  <script>
-    document.getElementById("tahun").textContent =
-      new Date().getFullYear();
+<script>
+  const tombolAtas = document.getElementById("backToTop");
 
-    const tombolAtas = document.getElementById("backToTop");
+  function perbaruiTombolAtas() {
+    tombolAtas.classList.toggle("visible", window.scrollY > 260);
+  }
 
-    function perbaruiTombolAtas() {
-      tombolAtas.classList.toggle("visible", window.scrollY > 260);
-    }
+  window.addEventListener("scroll", perbaruiTombolAtas, {
+    passive: true
+  });
 
-    window.addEventListener("scroll", perbaruiTombolAtas, {
-      passive: true
+  tombolAtas.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
+  });
 
-    tombolAtas.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-
-    perbaruiTombolAtas();
-  </script>
-
+  perbaruiTombolAtas();
+</script>
 </body>
 </html>
+
