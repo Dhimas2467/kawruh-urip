@@ -63,7 +63,8 @@ fetch("navigasi.html")
     /* Gaya tombol berbagi */
     const style = document.createElement("style");
     style.textContent = `
-      .tombol-share {
+      
+.tombol-share {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -71,11 +72,12 @@ fetch("navigasi.html")
   align-items: center;
   gap: 18px;
   width: 100%;
-  margin: 8px auto 0;
-  padding: 6px 12px 8px;
+  margin: 0 auto;
+  padding: 0 12px 2px;
   text-align: center;
   box-sizing: border-box;
 }
+
 
       .tombol-share a,
       .tombol-share button {
