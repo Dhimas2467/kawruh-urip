@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,51 +8,56 @@
   <title>Kawruh Sejati: Hakikat Pengetahuan, Kesadaran, dan Pemahaman terhadap Kenyataan | Kawruh Urip</title>
 
   <meta name="description" content="Pemaparan tentang hakikat Kawruh Sejati, kesadaran, pemahaman terhadap kenyataan, dan penerapannya dalam kehidupan manusia.">
-
   <meta name="author" content="Dhimas Purnomo">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#382719">
 
   <link rel="canonical" href="https://dhimas2467.github.io/kawruh-urip/kawruh-sejati.html">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=5">
 
   <style>
+    /* AREA ARTIKEL */
     .isi-artikel {
-      line-height: 1.85;
+      line-height: 1.7;
       overflow-wrap: anywhere;
     }
 
-    .isi-artikel h1 {
-      font-size: clamp(1.3rem, 4vw, 1.6rem);
+    .isi-artikel > header h1 {
+      margin: 0 0 18px;
+      font-size: clamp(1.4rem, 4.5vw, 1.9rem);
       line-height: 1.4;
-      margin-bottom: 18px;
+      color: var(--kayu-gelap);
     }
 
     .isi-artikel h2 {
-      margin-top: 32px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--garis);
+      margin: 26px 0 10px;
+      padding: 0 0 7px;
+      border-bottom: 1px solid var(--emas);
+      font-size: clamp(1.15rem, 3.8vw, 1.4rem);
+      line-height: 1.4;
+      color: var(--kayu-gelap);
     }
 
     .isi-artikel h3 {
-      margin-top: 24px;
+      margin: 20px 0 8px;
+      line-height: 1.45;
     }
 
-    /* Semua paragraf rata kiri-kanan, termasuk pada layar HP */
     .isi-artikel p {
-      margin: 14px 0;
-      text-align: justify !important;
+      margin: 10px 0;
+      line-height: 1.7;
+      text-align: justify;
       text-justify: inter-word;
     }
 
     .isi-artikel li {
-      margin-bottom: 8px;
+      line-height: 1.65;
     }
 
     .identitas-artikel {
+      margin: 12px 0 20px;
       color: var(--kayu-sedang);
-      font-size: 0.92rem;
-      margin-bottom: 24px;
+      font-size: 0.9rem;
     }
 
     .gambar-artikel {
@@ -59,65 +65,152 @@
       width: 100%;
       max-width: 800px;
       height: auto;
-      margin: 24px auto;
+      margin: 18px auto;
       border-radius: 8px;
     }
 
+    /* DAFTAR ISTILAH, FAQ, DAN BACAAN TERKAIT */
     .daftar-istilah,
     .faq-artikel,
     .tautan-terkait {
-      margin-top: 28px;
-      padding: 18px;
-      background: var(--krem-panel);
-      border: 1px solid var(--garis);
+      margin-top: 24px;
+      padding: 16px;
+      background: var(--krem);
+      border: 1px solid #d2bd98;
       border-radius: 8px;
     }
 
-    .daftar-istilah li,
+    .isi-artikel .daftar-istilah h2,
+    .isi-artikel .faq-artikel h2,
+    .isi-artikel .tautan-terkait h2 {
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+      line-height: 1.4;
+    }
+
+    .daftar-istilah ul,
+    .tautan-terkait ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .daftar-istilah li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .daftar-istilah li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* FAQ */
+    .faq-artikel ol {
+      margin: 0;
+      padding-left: 24px;
+    }
+
     .faq-artikel li {
-      margin-bottom: 14px;
+      margin: 0 0 16px;
+      padding-left: 2px;
+      line-height: 1.65;
+    }
+
+    .faq-artikel li:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-artikel li strong {
+      display: inline;
+    }
+
+    .faq-artikel li p {
+      margin: 6px 0 0;
+      line-height: 1.7;
+    }
+
+    /* TAUTAN */
+    .tautan-terkait li {
+      margin-bottom: 8px;
+    }
+
+    .tautan-terkait li:last-child {
+      margin-bottom: 0;
+    }
+
+    .tautan-terkait a,
+    .navigasi-artikel-bawah a {
+      color: var(--kayu-gelap);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .tautan-terkait a:hover,
+    .navigasi-artikel-bawah a:hover {
+      color: var(--kayu-sedang);
+      text-decoration: underline;
     }
 
     .navigasi-artikel-bawah {
-      margin-top: 32px;
-      padding-top: 20px;
-      border-top: 1px solid var(--garis);
+      margin-top: 22px;
+      padding-top: 14px;
+      border-top: 1px solid #d2bd98;
     }
 
-    .navigasi-artikel-bawah a,
-    .tautan-terkait a {
-      color: var(--emas-gelap);
-      font-weight: bold;
-    }
-
-    #backToTop {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 44px;
-      height: 44px;
-      border: none;
-      border-radius: 50%;
-      background: var(--kayu-gelap);
-      color: white;
-      font-size: 23px;
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
-      z-index: 1000;
-    }
-
-    #backToTop.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-
+    /* PENYESUAIAN HP */
     @media (max-width: 560px) {
+      .isi-artikel {
+        padding: 16px;
+        line-height: 1.65;
+      }
+
+      .isi-artikel > header h1 {
+        margin-bottom: 14px;
+      }
+
+      .isi-artikel h2 {
+        margin-top: 22px;
+        margin-bottom: 8px;
+      }
+
+      .isi-artikel p {
+        margin: 8px 0;
+        line-height: 1.65;
+      }
+
+      .gambar-artikel {
+        margin: 14px auto;
+      }
+
       .daftar-istilah,
       .faq-artikel,
       .tautan-terkait {
-        padding: 14px;
+        margin-top: 18px;
+        padding: 12px;
+      }
+
+      .isi-artikel .daftar-istilah h2,
+      .isi-artikel .faq-artikel h2,
+      .isi-artikel .tautan-terkait h2 {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+
+      .daftar-istilah li {
+        margin-bottom: 8px;
+      }
+
+      .faq-artikel li {
+        margin-bottom: 12px;
+      }
+
+      .faq-artikel li p {
+        margin-top: 5px;
+      }
+
+      .navigasi-artikel-bawah {
+        margin-top: 18px;
+        padding-top: 12px;
       }
     }
   </style>
@@ -125,13 +218,19 @@
 
 <body>
 
+  <!-- KEPALA HALAMAN -->
   <header class="site-header" id="beranda">
+    <div class="header-shade" aria-hidden="true"></div>
+
     <div class="header-content">
+      <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
       <h1>KAWRUH URIP</h1>
-      </div>
-  <div id="navigasi-container"></div>
+      <div id="navigasi-container"></div>
+    </div>
   </header>
-  <main class="site-main">
+
+  <!-- ISI ARTIKEL -->
+  <main class="page-wrap">
     <article class="content-panel isi-artikel">
 
       <header>
@@ -263,6 +362,7 @@
 
       <p>Dengan demikian, nilai Kawruh Sejati tidak hanya terletak pada pemahaman yang diucapkan, tetapi juga pada perubahan nyata dalam cara manusia menjalani kehidupannya.</p>
 
+      <!-- DAFTAR ISTILAH -->
       <section class="daftar-istilah">
         <h2>Daftar Istilah</h2>
         <ul>
@@ -276,36 +376,30 @@
         </ul>
       </section>
 
+      <!-- FAQ -->
       <section class="faq-artikel">
         <h2>Pertanyaan yang Sering Diajukan</h2>
-        <ol>
-          <li>
-            <strong>Apa yang dimaksud dengan Kawruh Sejati?</strong>
-            <p>Kawruh Sejati merupakan pepadhang untuk membantu manusia memahami kenyataan dan mengarahkan kehidupannya secara lebih jernih.</p>
-          </li>
-          <li>
-            <strong>Apakah pengetahuan manusia selalu benar?</strong>
-            <p>Tidak. Pengetahuan manusia memiliki batas dan dapat dipengaruhi oleh pengamatan yang tidak lengkap, ingatan, anggapan, serta kepentingan pribadi.</p>
-          </li>
-          <li>
-            <strong>Apa hubungan Kawruh Sejati dengan kesadaran?</strong>
-            <p>Kesadaran membantu manusia mengenali keadaan diri, mengamati proses pemahaman, dan membedakan apa yang diketahui dari apa yang baru diduga.</p>
-          </li>
-          <li>
-            <strong>Apa hubungan cipta, rasa, dan karsa?</strong>
-            <p>Cipta membantu memahami, rasa membantu menghayati dan mempertimbangkan keadaan, sedangkan karsa mengarahkan kehendak menuju tindakan.</p>
-          </li>
-          <li>
-            <strong>Bagaimana menerapkan Kawruh Sejati dalam kehidupan?</strong>
-            <p>Dimulai dengan memeriksa informasi, mempertimbangkan akibat tindakan, bersikap tulus kepada sesama, dan bersedia memperbaiki kesalahan.</p>
-          </li>
-          <li>
-            <strong>Apa ukuran manfaat Kawruh Sejati?</strong>
-            <p>Manfaatnya terlihat dalam kejernihan pemahaman, ketulusan sikap, tanggung jawab, dan tindakan nyata yang membawa kebaikan.</p>
-          </li>
-        </ol>
+        
+        <h3>Apa yang dimaksud dengan Kawruh Sejati?</h3>
+        <p>Kawruh Sejati merupakan pepadhang untuk membantu manusia memahami kenyataan dan mengarahkan kehidupannya secara lebih jernih.</p>
+            
+        <h3>Apakah pengetahuan manusia selalu benar?</h3>
+        <p>Tidak. Pengetahuan manusia memiliki batas dan dapat dipengaruhi oleh pengamatan yang tidak lengkap, ingatan, anggapan, serta kepentingan pribadi.</p>
+          
+        <h3>Apa hubungan Kawruh Sejati dengan kesadaran?</h3>
+        <p>Kesadaran membantu manusia mengenali keadaan diri, mengamati proses pemahaman, dan membedakan apa yang diketahui dari apa yang baru diduga.</p>
+        
+        <h3>Apa hubungan cipta, rasa, dan karsa?</h3>
+        <p>Cipta membantu memahami, rasa membantu menghayati dan mempertimbangkan keadaan, sedangkan karsa mengarahkan kehendak menuju tindakan.</p>
+          
+        <h3>Bagaimana menerapkan Kawruh Sejati dalam kehidupan?</h3>
+        <p>Dimulai dengan memeriksa informasi, mempertimbangkan akibat tindakan, bersikap tulus kepada sesama, dan bersedia memperbaiki kesalahan.</p>
+          
+        <h3>Apa ukuran manfaat Kawruh Sejati?</h3>
+        <p>Manfaatnya terlihat dalam kejernihan pemahaman, ketulusan sikap, tanggung jawab, dan tindakan nyata yang membawa kebaikan.</p>
       </section>
 
+      <!-- BACAAN TERKAIT -->
       <section class="tautan-terkait">
         <h2>Bacaan Terkait</h2>
         <ul>
@@ -321,36 +415,22 @@
     </article>
   </main>
 
-<!-- FOOTER -->
-<div id="footer-container"></div>
+  <!-- FOOTER BERSAMA -->
+  <div id="footer-container"></div>
 
-  <button id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button
+    id="backToTop"
+    class="back-to-top"
+    type="button"
+    aria-label="Kembali ke atas"
+    title="Kembali ke atas"
+  >↑</button>
 
-  
-<script src="navigasi.js"></script>
-<script src="footer.js"></script>
-<script src="script.js"></script>
+  <!-- SCRIPT BERSAMA -->
+  <script src="navigasi.js"></script>
+  <script src="footer.js"></script>
+  <script src="script.js"></script>
 
-<script>
-  const tombolAtas = document.getElementById("backToTop");
-
-  function perbaruiTombolAtas() {
-    tombolAtas.classList.toggle("visible", window.scrollY > 260);
-  }
-
-  window.addEventListener("scroll", perbaruiTombolAtas, {
-    passive: true
-  });
-
-  tombolAtas.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-
-  perbaruiTombolAtas();
-</script>
 </body>
 </html>
-
