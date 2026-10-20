@@ -1,11 +1,20 @@
+
 /* Memuat menu navigasi */
 fetch("navigasi.html")
-  .then(response => response.text())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Gagal memuat navigasi.html");
+    }
+    return response.text();
+  })
   .then(html => {
     const nav = document.getElementById("navigasi-container");
-    if (nav) nav.innerHTML = html;
+    if (nav) {
+      nav.innerHTML = html;
+    }
   })
   .catch(error => console.error("Gagal memuat navigasi:", error));
+
 
 /* Tombol berbagi otomatis */
 (function () {
@@ -19,33 +28,40 @@ fetch("navigasi.html")
 
     const share = document.createElement("div");
     share.className = "tombol-share";
+    share.setAttribute("aria-label", "Bagikan halaman");
 
     share.innerHTML = `
       <a href="https://www.facebook.com/sharer/sharer.php?u=${u}"
-         target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook">
         <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="Facebook">
       </a>
 
       <a href="https://twitter.com/intent/tweet?text=${t}"
-         target="_blank" rel="noopener noreferrer" aria-label="X">
+         target="_blank" rel="noopener noreferrer"
+         aria-label="X">
         <img src="https://cdn.simpleicons.org/x/000000" alt="X">
       </a>
 
-      <button type="button" class="share-instagram" aria-label="Instagram">
+      <button type="button" class="share-instagram"
+         aria-label="Instagram">
         <img src="https://cdn.simpleicons.org/instagram/E4405F" alt="Instagram">
       </button>
 
       <a href="https://api.whatsapp.com/send?text=${t}"
-         target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+         target="_blank" rel="noopener noreferrer"
+         aria-label="WhatsApp">
         <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp">
       </a>
 
       <a href="https://t.me/share/url?url=${u}&text=${encodeURIComponent(judul)}"
-         target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Telegram">
         <img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram">
       </a>
     `;
 
+    /* Gaya tombol berbagi */
     const style = document.createElement("style");
     style.textContent = `
       .tombol-share {
@@ -54,9 +70,10 @@ fetch("navigasi.html")
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        gap: 14px;
+        gap: 18px;
         width: 100%;
-        margin: 24px auto;
+        margin: 24px auto 0;
+        padding: 16px 12px 20px;
         text-align: center;
         box-sizing: border-box;
       }
@@ -77,28 +94,55 @@ fetch("navigasi.html")
 
       .tombol-share img {
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         object-fit: contain;
       }
-    `;
 
+      .tombol-share button:focus-visible,
+      .tombol-share a:focus-visible {
+        outline: 2px solid #c49a52;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+
+      @media (max-width: 360px) {
+        .tombol-share {
+          gap: 12px;
+        }
+      }
+    `;
     document.head.appendChild(style);
 
-    share.querySelector(".share-instagram").addEventListener("click", async function () {
-      if (navigator.share) {
-        try {
-          await navigator.share({
-            title: judul,
-            url: url
-          });
-        } catch (error) {}
-      } else {
-        window.open("https://www.instagram.com/", "_blank");
-      }
-    });
+    /* Fungsi berbagi Instagram */
+    share.querySelector(".share-instagram")
+      .addEventListener("click", async function () {
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: judul,
+              url: url
+            });
+          } catch (error) {
+            /* Pengguna membatalkan atau berbagi gagal */
+          }
+        } else {
+          window.open(
+            "https://www.instagram.com/",
+            "_blank",
+            "noopener,noreferrer"
+          );
+        }
+      });
 
-    document.body.appendChild(share);
+    /* Tempatkan tombol berbagi sebelum footer */
+    const footer = document.getElementById("footer-container");
+
+    if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(share, footer);
+    } else {
+      document.body.appendChild(share);
+    }
   }
 
   if (document.readyState === "loading") {
