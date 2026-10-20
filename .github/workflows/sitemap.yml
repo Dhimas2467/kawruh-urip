@@ -1,0 +1,84 @@
+
+name: Generate Sitemap
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'daftar-artikel.js'
+      - '*.html'
+      - 'sitemap.xml'
+      - '.github/workflows/sitemap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ambil repositori
+        uses: actions/checkout@v4
+
+      - name: Buat sitemap.xml
+        run: |
+          python3 <<'PY'
+          import re
+          from pathlib import Path
+          from xml.etree.ElementTree import Element, SubElement, ElementTree, indent
+
+          base = "https://dhimas2467.github.io/kawruh-urip/"
+          root_dir = Path(".")
+          urls = [
+              "index.html",
+              "landasan.html",
+              "dokumentasi.html",
+          ]
+
+          daftar = root_dir / "daftar-artikel.js"
+          if daftar.exists():
+              isi = daftar.read_text(encoding="utf-8")
+              urls.extend(re.findall(r'url\s*:\s*["\']([^"\']+)["\']', isi))
+
+          # Hanya masukkan halaman HTML yang benar-benar ada.
+          unik = []
+          for url in urls:
+              url = url.strip()
+              if url and url not in unik and (root_dir / url).is_file():
+                  unik.append(url)
+
+          sitemap = Element(
+              "urlset",
+              xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+          )
+
+          for halaman in unik:
+              entri = SubElement(sitemap, "url")
+              SubElement(entri, "loc").text = base + halaman
+
+          indent(sitemap, space="  ")
+          ElementTree(sitemap).write(
+              "sitemap.xml",
+              encoding="utf-8",
+              xml_declaration=True
+          )
+
+          print(f"Sitemap dibuat: {len(unik)} halaman")
+          for halaman in unik:
+              print(f"- {halaman}")
+          PY
+
+      - name: Simpan sitemap jika berubah
+        run: |
+          git add sitemap.xml
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Perbarui sitemap otomatis"
+            git push
+          else
+            echo "Sitemap tidak berubah."
+          fi
