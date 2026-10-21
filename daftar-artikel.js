@@ -1,5 +1,12 @@
 window.DAFTAR_ARTIKEL = [
 {
+judul: "9 Prinsip Utama Urip Sejati",
+url: "urip-sejati.html",
+gambar: "urip-sejati.jpg",
+alt: "Ilustrasi Urip Sejati",
+ringkasan: "9 Prinsip Utama Urip Sejati membahas sumber kehidupan, kesadaran, pengenalan diri, cipta, rasa, karsa, laku, dan hakikat kehidupan."
+},
+{
 judul: "Jatining Dhiri dan Kesadaran",
 url: "jatining-dhiri.html",
 gambar: "jatining-dhiri.jpg",
