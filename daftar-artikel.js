@@ -7,6 +7,13 @@ alt: "Ilustrasi Urip Sejati",
 ringkasan: "9 Prinsip Utama Urip Sejati membahas sumber kehidupan, kesadaran, pengenalan diri, cipta, rasa, karsa, laku, dan hakikat kehidupan."
 },
 {
+judul: "Nawa Samadhi sebagai Laku Sejati",
+url: "laku-sejati.html",
+gambar: "laku-sejati.jpg",
+alt: "Ilustrasi Laku Sejati",
+ringkasan: "Nawa Samadhi Uttamopadesa menjadi jalan laku sejati: kesadaran diwujudkan dalam cipta wening, rasa tulus, karsa utama, dan perilaku."
+},
+{
 judul: "Jatining Dhiri dan Kesadaran",
 url: "jatining-dhiri.html",
 gambar: "jatining-dhiri.jpg",
