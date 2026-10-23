@@ -1,5 +1,12 @@
 window.DAFTAR_ARTIKEL = [
 {
+judul: "Rasa Sejati Dalam Kawruh Uttamopadesa",
+url: "rasa-sejati.html",
+gambar: "rasa-sejati.jpg",
+alt: "Ilustrasi Rasa Sejati",
+ringkasan: "Rasa Sejati dalam Kawruh Uttamopadesa membahas hakikat penghayatan, ketulusan, welas asih, dan keselarasan Cipta, Rasa, Karsa dalam laku."
+},
+{
 judul: "9 Prinsip Utama Urip Sejati",
 url: "urip-sejati.html",
 gambar: "urip-sejati.jpg",
