@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,10 +8,10 @@
   <meta name="theme-color" content="#493222">
   <meta
     name="description"
-    content="Dokumentasi naskah dan karya tulis Kawruh Urip tentang kehidupan, jati diri, kesadaran, dan kasunyatan."
+    content="Katalog buku Kawruh Urip yang memuat karya tulis tentang Kawruh Sejati, Uttamopadesa, Rasa Sejati, dan pedoman laku kehidupan."
   >
 
-  <title>Dokumentasi | Kawruh Urip</title>
+  <title>Katalog Buku | Kawruh Urip</title>
 
   <link rel="stylesheet" href="style.css?v=5">
 
@@ -35,7 +36,7 @@
     }
 
     .pengantar-dokumentasi {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       padding: 20px;
       color: #493222;
       background: #fffaf0;
@@ -48,22 +49,61 @@
       text-align: justify;
     }
 
-    .status-dokumentasi {
-      padding: 20px;
+    .judul-daftar-buku {
+      margin: 0 0 14px;
       color: #493222;
-      background: #f2e7d2;
-      border: 1px solid #c7a66a;
-      border-radius: 8px;
+      font-size: 1.15rem;
     }
 
-    .status-dokumentasi h3 {
-      margin-top: 0;
+    .katalog-buku {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .tombol-buku {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 68px;
+      padding: 15px 18px;
+      color: #fffaf0;
+      background: #493222;
+      border: 1px solid #b69a6a;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.55;
+      box-sizing: border-box;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .tombol-buku:hover {
+      color: #ffffff;
+      background: #76532f;
+      border-color: #d2bd98;
+    }
+
+    .tombol-buku:focus-visible {
+      outline: 3px solid #b69a6a;
+      outline-offset: 3px;
+    }
+
+    .ikon-buku {
+      flex-shrink: 0;
+      color: #e5d1a0;
+      font-size: 1.25rem;
+    }
+
+    .catatan-katalog {
+      margin: 20px 0 0;
       color: #65472e;
-    }
-
-    .status-dokumentasi p {
-      margin-bottom: 0;
-      text-align: justify;
+      font-size: 0.92rem;
+      font-style: italic;
     }
 
     .kembali-beranda {
@@ -87,9 +127,18 @@
         padding: 18px;
       }
 
-      .pengantar-dokumentasi,
-      .status-dokumentasi {
+      .pengantar-dokumentasi {
         padding: 16px;
+      }
+
+      .katalog-buku {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .tombol-buku {
+        min-height: 60px;
+        padding: 14px 16px;
       }
     }
   </style>
@@ -105,22 +154,84 @@
       <p class="eyebrow">PAMAPARAN BAB URIP LAN KASUNYATAN</p>
 
       <h1>KAWRUH URIP</h1>
+
       <div id="navigasi-container"></div>
     </div>
   </header>
 
-  <!-- ISI DOKUMENTASI -->
+  <!-- ISI KATALOG BUKU -->
   <main class="page-wrap dokumentasi-wrap">
 
     <section class="content-card dokumentasi-panel">
 
       <h2 class="judul-dokumentasi">
-        Dokumentasi Kawruh Urip
+        Katalog Buku Kawruh Urip
       </h2>
-      <p><a href="https://drive.google.com/file/d/1LrnH5BpZASfN_Tmk8Q3VBgZpUy84cdwr/view?usp=drivesdk">Dasa Pangudi Sejatining Urip</a></p>
-      <p><a href="https://drive.google.com/file/d/1dwfqxj7AYBVBgb7B1Noh7CHr8qbAlbtY/view?usp=drivesdk">Piwulangan Uttamopadesa</a></p>
-      <p><a href="https://drive.google.com/file/d/1TRBVtJfzYTWZskC5596IITK-HCSybnAy/view?usp=drivesdk">Kawruh Sejati Dalam Perspektif Uttamopadesa</a></p>
-      <p><a href="https://drive.google.com/file/d/1dtRAD3M4kKPKtTZqC5NdCJNDqpuX0SeI/view?usp=drivesdk">Rasa Sejati Dalam Kawruh Uttamopadesa</a></p>
+
+      <div class="pengantar-dokumentasi">
+        <p>
+          Katalog ini memuat buku-buku karya tulis yang menjadi
+          sumber rujukan dan dokumentasi pemaparan Kawruh Sejati
+          serta Uttamopadesa. Setiap buku menyajikan pokok
+          pemahaman mengenai kehidupan, pengenalan diri,
+          kejernihan cipta, ketulusan rasa, dan laku yang selaras
+          dengan Tatananing Panguripan. Naskah lengkap dapat
+          dibaca melalui tautan masing-masing buku.
+        </p>
+      </div>
+
+      <h3 class="judul-daftar-buku">
+        Daftar Buku
+      </h3>
+
+      <div class="katalog-buku">
+
+        <a
+          class="tombol-buku"
+          href="https://drive.google.com/file/d/1LrnH5BpZASfN_Tmk8Q3VBgZpUy84cdwr/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Dasa Pangudi Sejatining Urip</span>
+          <span class="ikon-buku" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          class="tombol-buku"
+          href="https://drive.google.com/file/d/1dwfqxj7AYBVBgb7B1Noh7CHr8qbAlbtY/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Piwulangan Uttamopadesa</span>
+          <span class="ikon-buku" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          class="tombol-buku"
+          href="https://drive.google.com/file/d/1TRBVtJfzYTWZskC5596IITK-HCSybnAy/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Kawruh Sejati Dalam Perspektif Uttamopadesa</span>
+          <span class="ikon-buku" aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          class="tombol-buku"
+          href="https://drive.google.com/file/d/1dtRAD3M4kKPKtTZqC5NdCJNDqpuX0SeI/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Rasa Sejati Dalam Kawruh Uttamopadesa</span>
+          <span class="ikon-buku" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <p class="catatan-katalog">
+        Pilih judul buku untuk membuka dan membaca naskah lengkap
+        melalui Google Drive.
+      </p>
 
       <a class="kembali-beranda" href="index.html#beranda">
         ← Kembali ke Beranda
