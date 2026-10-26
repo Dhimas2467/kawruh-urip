@@ -1,5 +1,12 @@
 window.DAFTAR_ARTIKEL = [
 {
+judul: "Rasa Sejati Dalam Menerima Keterbatasan Diri",
+url: "rasa-sejati-diri-terbatas.html",
+gambar: "rasa-sejati-terbatas.jpg",
+alt: "Ilustrasi Rasa Sejati Keterbatasan Diri",
+ringkasan: "Rasa Sejati mengajarkan penerimaan keterbatasan diri melalui kejernihan cipta, ketulusan rasa, dan tindakan yang bijaksana."
+},
+{
 judul: "Rasa Sejati Dalam Kawruh Uttamopadesa",
 url: "rasa-sejati.html",
 gambar: "rasa-sejati.jpg",
